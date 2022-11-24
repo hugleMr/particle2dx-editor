@@ -1,0 +1,2743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0077)http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&id=0&uid=0 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:mixi="http://mixi-platform.com/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="description" content="EffectHub Cocos2dx , OnlineParticleEditor for cocos2dx CoronaSDK Win&amp;Mac">
+
+<meta property="og:title" content="EffectHub Cocos2dx">
+<meta property="og:type" content="tool">
+<meta property="og:url" content="http://particle2dx.com/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="http://particle2dx.com/thumbnail.png">
+<meta property="og:site_name" content="OnlineParticleEditor for cocos2dx CoronaSDK Win&amp;Mac ">
+<meta property="og:description" content="OnlineParticleEditor for cocos2dx CoronaSDK Win&amp;Mac ">
+
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/Huploadify.css">
+<script src="../../js/jquery.Huploadify.js" type="text/javascript"></script>
+<link href="../../css/popup.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script src="../../js/jquery.leanModal.min.js"></script>
+
+	<script src="../../js/jquery.idTabs.min.js"></script>
+<link href="../../css/main2.css" media="screen, projection" rel="stylesheet" type="text/css">
+<script>
+	boxsize=200;
+</script>
+<title>EffectHub Cocos2dx</title>
+<style>
+
+	body{
+		font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #bbbbbb;
+		font-size:80%;
+		background-color:#222222;	
+	}
+		input{
+		background-color:#dddddd;
+		opacity:0.7;	
+	}
+		h3{
+		color:white;
+		border-bottom:1px solid #444444;
+	}
+	
+	#login ul.tabs {
+margin-top: -2px;
+border-bottom: 1px solid #999;
+background: none;
+}
+#login ul.tabs li {
+position: relative;
+float: left;
+margin: 0 20px 0 0;
+line-height: 1;
+color: #bbb;
+list-style: none;
+}
+#login ul.tabs li a.selected{
+	font-weight: bold;
+}
+#login ul.tabs {
+margin-top: -2px;
+border-bottom: 1px solid #999;
+background: none;
+height:40px
+}
+	h4{
+		color:#cccccc;
+		border-bottom:1px solid #444444;
+		padding: 0px;
+		margin-top : 4px;
+		margin-bottom : 4px;
+		margin-left : 0px;
+	}
+	.shortc{
+		color:#88bbbb;	
+	}
+	
+	a:link {color: #88ccff;text-decoration: none; }
+	a:visited {color: #88ccff;text-decoration: none;}
+	a:hover {color: #88ccff;text-decoration: underline;}
+	
+	.headchar {color: #5588cc;text-decoration: none; font-size:110%; font-weight:bold;}
+
+</style>
+<script src="../../js/ga.js" async="true"></script></head>
+<body style="padding: 0px; border-width: 0px; border-style: initial; border-color: initial; margin: 0px;">
+
+<!-- facebook 
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=254469811382518";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+-->
+<div style="background-color:#393939;padding:3px;padding-left:10px;">
+	 <span style="font-size:170%;font-weight:bold;color:white;">Particle2dx For EffectHub </span>
+	 design particle for Cocos2dx CoronaSDK
+	 <script>
+	    function topPaneToggle(p_name){
+	    	if (p_name=="tutorial"){
+		    	$('#top_pane_shortcut').hide();
+	    	}else{
+		    	$('#top_pane_tutorial').hide();
+	    	}
+		    $('#top_pane_'+p_name).slideToggle(100);
+	    }
+	 </script>
+ 
+	 <a href="javascript:$(&#39;#top_pane_shortcut&#39;).slideToggle(30); ">About</a> &nbsp;&nbsp;&nbsp;&nbsp;
+	 <a target="_blank" href="http://www.effecthub.com/item/demo/Particle2dx/">Recent Works</a>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	 <a target="_blank" href="http://www.effecthub.com/donate">Donate</a>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+
+	 <!-- facebook 
+	 <div class="fb-like" data-href="http://particle2dx.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+	 -->
+	 <!-- twitter 
+<a href="https://twitter.com/intent/tweet?button_hashtag=particle2dx&text=My%20impression%20is...%20%20My%20feedback%20is....%20%20I%20found%20Bug....%20" class="twitter-hashtag-button" data-url="http://particle2dx.com">Tweet #particle2dx</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> 
+-->
+</div>
+
+<div id="top_pane_shortcut" style="display:none; padding-left:10px; padding-right:10px; padding-bottom:10px; background-color:#393939">
+
+	<div style="padding:15px;font-size:15px; background-color:#222222; 
+	    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */  
+		-moz-border-radius: 10px;   /* Firefox用 */  ">	
+		<!--
+		 <a href="https://www.youtube.com/channel/UCAa8s6pDjeER0SqMgvme4ew" target="_blank" style="font-size:140%;font-weight:bold;" >YoutubeTutorial</a> <span style='color:gray'>10 second videos</span><br/>
+		 <a href="https://www.facebook.com/particle2dx" target="_blank" style="font-size:140%;font-weight:bold;" >FacebookPage</a><br/>
+		 -->
+		 <!--a href="doc.html" target="_blank">Document(Japanese)</a><br/>
+		 <a href="https://github.com/mash76/particle2dx" target="_blank" style="font-size:140%;font-weight:bold;" >Github</a> <span style='color:gray;'>sourcecode of this site</span>
+	 -->
+	 Forked from Particle2dx 
+		 <br><br>
+	
+		<span style="font-size:140%; font-weight:bold;">Keyboard Shortcuts</span>
+		<table>
+			<tbody><tr><td style="vertical-align:top;" width="200">
+				<h4>Panel</h4>
+				<div style="padding-left:5px;">
+				 <span class="shortc">Alt C</span> &nbsp; Color&amp;Shape <br>
+				 <span class="shortc">Alt M</span> &nbsp; Motion <br>
+				 <span class="shortc">Alt T</span> &nbsp; Template <br>
+				 <span class="shortc">Alt I</span> &nbsp; Inout<br>
+				</div>
+				 
+			</td><td style="vertical-align:top;" width="200">
+				<h4>Edit Particle</h4>
+				<div style="padding-left:5px;">
+				 <span class="shortc">Alt ←→</span> &nbsp; Rotate<br>
+				 <span class="shortc">Alt ↑↓</span> &nbsp; Scaling<br>
+				 <span class="shortc">Alt D</span> &nbsp; Duplicate<br>
+				 <span class="shortc">Alt S</span> &nbsp; Snapshot<br>
+				 <span class="shortc">Alt P</span> &nbsp; Plist download<br>
+				</div>
+				 
+			</td><td style="vertical-align:top;" width="200">	
+				<h4>Emitter Type</h4>
+				<div style="padding-left:5px;">
+				 <span class="shortc">Alt G</span> &nbsp; Gravity<br>
+				 <span class="shortc">Alt R</span> &nbsp; Radius<br>
+				</div>
+							 
+			</td><td style="vertical-align:top;">
+			
+				<h4>Multi Emitter</h4>
+				<div style="padding-left:5px;">			
+				 <span class="shortc">Alt A</span>   &nbsp; Add emitter<br>
+				 <span class="shortc">Alt 1-9</span> &nbsp; Show(select)/hide emitter<br>
+				 <span class="shortc">Alt 0</span>   &nbsp; Hide all emitters<br>
+				</div>
+			</td></tr>
+		</tbody></table>
+	</div>
+</div>
+
+		<table><tbody><tr>
+		<td style="vertical-align:top;padding:10px;">
+				<!-- canvas -->
+					<div>
+						<a id="link a" href="javascript:$(&#39;#panel_resolution&#39;).slideToggle(30)"> 
+					      <span id="canvas_size_x" style="font-size:140%;font-weight:bold;">750x1334 iPhone6/6s/7</span>
+					    </a>						
+						&nbsp; 
+						
+						<a id="scale_25" href="javascript:current_reso_scale=0.25; setCSize(current_reso,current_reso_scale);">S</a> 
+						<a id="scale_50" href="javascript:current_reso_scale=0.5;  setCSize(current_reso,current_reso_scale);" style="font-weight: bold;">M</a> 
+						<a id="scale_100" href="javascript:current_reso_scale=1;   setCSize(current_reso,current_reso_scale);">L(100%)</a> 
+						
+						<a id="panelink_template" href="javascript:$(&#39;#background&#39;).slideToggle(30);">
+							<strong>Background </strong>
+						</a>
+						
+						<!--
+						<a href="javascript:void(0)" onClick="devicePreview()" >DevicePreview</a> 
+						<span id='keypass' style='font-size:200%;' >****</span>			
+						-->
+
+					    	<script>
+					    		function devicePreview(){
+						    		keypass=Math.floor(Math.random()*8000);
+						    		
+						    		$('#keypass').html(("0000"+keypass).slice(-4));
+
+									//画像保存
+									
+									//json保存
+									$.post("?" , 
+										{ type:"corona_json_device" , key:keypass , 
+										 json:encodeURIComponent(baseXML2Plist(slot,false,'corona',corona_base_json)) } ,
+										function(data){}
+									); 
+									//画像保存
+									$.post("?" , 
+										{ type:"corona_png_device" , key:keypass , 
+										 b64:png_gz_b64[slot] } ,
+										function(data){}
+									); 
+									
+									
+									
+									
+									//document.form_post_dl.type.value="corona_json_dl";
+									//document.form_post_dl.plist_xml.value=encodeURIComponent(baseXML2Plist(p_slot,false,corona_base_json));
+									//document.form_post_dl.submit();
+						    		
+						    		console.log(xmls[slot])
+					    		}
+					    		
+					    	
+						    	setCSize=function(reso,scale){
+						    	
+							    	$('a[id^=scale_]').css('font-weight','');
+						    		$('#scale_'+(scale*100)).css('font-weight','bold');
+						    	
+									current_reso={'name':reso['name'],'x':reso['x'],'y':reso['y']};
+									
+									$('#Cocos2dGameContainer').css("width",parseInt(reso['x'] * scale)).css("height",parseInt(reso['y'] * scale));
+									$('#gameCanvas').css("width",parseInt(reso['x'] * scale)).css("height",parseInt(reso['y'] * scale));
+							    	cc.EGLView.getInstance().setDesignResolutionSize(parseInt(reso['x']),parseInt(reso['y']), cc.RESOLUTION_POLICY.SHOW_ALL);//エリア内仮想解像度
+
+
+									$('#Cocos2dGameContainer').css("margin","0px");
+
+							    	$("#canvas_size_x").html(reso['x'] + "x" + reso['y'] + " " + reso['name']);
+						    	} 
+					    	</script>
+
+<div id="background" style="display:none; ">							
+
+			<table id="palette_bg" cellspacing="1" border="0"><tbody><tr>
+				    </tr><tr>						<td col="bg" title="#333" style="background-color:#333;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#336" style="background-color:#336;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#339" style="background-color:#339;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#33c" style="background-color:#33c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#33f" style="background-color:#33f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#363" style="background-color:#363;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#366" style="background-color:#366;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#369" style="background-color:#369;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#36c" style="background-color:#36c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#36f" style="background-color:#36f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#393" style="background-color:#393;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#396" style="background-color:#396;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#399" style="background-color:#399;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#39c" style="background-color:#39c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#39f" style="background-color:#39f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3c3" style="background-color:#3c3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3c6" style="background-color:#3c6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3c9" style="background-color:#3c9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3cc" style="background-color:#3cc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3cf" style="background-color:#3cf;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3f3" style="background-color:#3f3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3f6" style="background-color:#3f6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3f9" style="background-color:#3f9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3fc" style="background-color:#3fc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#3ff" style="background-color:#3ff;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+						</tr><tr>						<td col="bg" title="#633" style="background-color:#633;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#636" style="background-color:#636;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#639" style="background-color:#639;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#63c" style="background-color:#63c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#63f" style="background-color:#63f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#663" style="background-color:#663;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#666" style="background-color:#666;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#669" style="background-color:#669;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#66c" style="background-color:#66c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#66f" style="background-color:#66f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#693" style="background-color:#693;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#696" style="background-color:#696;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#699" style="background-color:#699;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#69c" style="background-color:#69c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#69f" style="background-color:#69f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6c3" style="background-color:#6c3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6c6" style="background-color:#6c6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6c9" style="background-color:#6c9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6cc" style="background-color:#6cc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6cf" style="background-color:#6cf;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6f3" style="background-color:#6f3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6f6" style="background-color:#6f6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6f9" style="background-color:#6f9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6fc" style="background-color:#6fc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#6ff" style="background-color:#6ff;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+						</tr><tr>						<td col="bg" title="#933" style="background-color:#933;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#936" style="background-color:#936;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#939" style="background-color:#939;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#93c" style="background-color:#93c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#93f" style="background-color:#93f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#963" style="background-color:#963;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#966" style="background-color:#966;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#969" style="background-color:#969;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#96c" style="background-color:#96c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#96f" style="background-color:#96f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#993" style="background-color:#993;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#996" style="background-color:#996;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#999" style="background-color:#999;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#99c" style="background-color:#99c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#99f" style="background-color:#99f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9c3" style="background-color:#9c3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9c6" style="background-color:#9c6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9c9" style="background-color:#9c9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9cc" style="background-color:#9cc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9cf" style="background-color:#9cf;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9f3" style="background-color:#9f3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9f6" style="background-color:#9f6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9f9" style="background-color:#9f9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9fc" style="background-color:#9fc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#9ff" style="background-color:#9ff;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+						</tr><tr>						<td col="bg" title="#c33" style="background-color:#c33;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c36" style="background-color:#c36;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c39" style="background-color:#c39;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c3c" style="background-color:#c3c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c3f" style="background-color:#c3f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c63" style="background-color:#c63;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c66" style="background-color:#c66;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c69" style="background-color:#c69;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c6c" style="background-color:#c6c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c6f" style="background-color:#c6f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c93" style="background-color:#c93;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c96" style="background-color:#c96;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c99" style="background-color:#c99;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c9c" style="background-color:#c9c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#c9f" style="background-color:#c9f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cc3" style="background-color:#cc3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cc6" style="background-color:#cc6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cc9" style="background-color:#cc9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ccc" style="background-color:#ccc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ccf" style="background-color:#ccf;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cf3" style="background-color:#cf3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cf6" style="background-color:#cf6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cf9" style="background-color:#cf9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cfc" style="background-color:#cfc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#cff" style="background-color:#cff;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+						</tr><tr>						<td col="bg" title="#f33" style="background-color:#f33;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f36" style="background-color:#f36;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f39" style="background-color:#f39;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f3c" style="background-color:#f3c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f3f" style="background-color:#f3f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f63" style="background-color:#f63;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f66" style="background-color:#f66;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f69" style="background-color:#f69;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f6c" style="background-color:#f6c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f6f" style="background-color:#f6f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f93" style="background-color:#f93;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f96" style="background-color:#f96;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f99" style="background-color:#f99;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f9c" style="background-color:#f9c;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#f9f" style="background-color:#f9f;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fc3" style="background-color:#fc3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fc6" style="background-color:#fc6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fc9" style="background-color:#fc9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fcc" style="background-color:#fcc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fcf" style="background-color:#fcf;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ff3" style="background-color:#ff3;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ff6" style="background-color:#ff6;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ff9" style="background-color:#ff9;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#ffc" style="background-color:#ffc;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+												<td col="bg" title="#fff" style="background-color:#fff;width:8px;height:8px;font-size:6px;">&nbsp;
+						</td>
+						</tr>			</tbody></table>	
+		
+			alpha<input type="range" id="bg_alpha" min="0" max="1" step="0.01" value="1" onmousemove="if (!flg_mousedown) return;  setBGColor(bg_col,this.value);">
+
+
+	    <script>
+						   var bg_col="rgb(0,0,0)";
+						   $("td[col=bg]").bind("mousedown",function(){ 
+						   	  bg_col=$(this).css("background-color");
+						   	  $("#bg_alpha").val(1);
+						   	  setBGColor(bg_col,1);
+						   });
+						   function setBGColor(p_bg_col,p_alpha){
+								p_bg_col = p_bg_col.replace("rgb(","");
+								p_bg_col = p_bg_col.replace(")","");
+								p_ary = p_bg_col.split(",");
+						   	   col_3b= cc.c3b(p_ary[0],p_ary[1],p_ary[2]);
+						   	   col_4f=cc.c4FFromccc3B(col_3b);
+						   	   col_4f=cc.c4f(p_ary[0]/255,p_ary[1]/255,p_ary[2]/255,p_alpha);
+						   	   
+						   	   //drawnodeを作り四角で塗りつぶす
+						   	   size = cc.Director.getInstance().getWinSize();
+						   	   if (typeof(bg_node) != "undefined") {
+						   	   		bg_node.removeFromParent();
+						   	   		bg_node=null;
+						   	   }
+						   	   bg_node=cc.DrawNode.create();
+						   	   bg_node.drawPoly([cc.p(0,0),cc.p(size.width,0),cc.p(size.width,size.height),cc.p(0,size.height)] , 
+						   	   				col_4f, 2, col_4f);
+							   layers=cc.Director.getInstance().getRunningScene().getChildren();
+							   layers[0].addChild(bg_node,0);		   
+						   } 	
+	    </script>
+	
+		<br>
+		
+		<table><tbody><tr>
+			<td id="dropzone_bg" dropzone="" style="border:1px solid #666666; width:160px; height:80px;">
+									<a rel="leanModal" type="button" name="login" href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#login">Background</a>
+								<script type="text/javascript">
+		$(function() {
+			$('#bg_share_upload').Huploadify({
+				'formData'     : {
+					'method'   : 'post',
+					'queueID'  : 'bgsharequeue',
+					'PHPSESSID' : '',
+					'timestamp' : '1669278908',
+					'token'     : '80ee8318cf1fdbb20e3879cf63175a8f'
+				},
+				fileObjName:'Filedata',
+				auto:true,
+				'buttonClass' : 'disk-upload-button',
+				'buttonText' : 'Background',
+				'swf'      : 'http://www.effecthub.com/swf/uploadify.swf',
+				'uploader' : 'http://www.effecthub.com/disk/uploadShareFile',
+				'onUploadSuccess' : function(file, data, response) {
+						var filedata = JSON.parse(data);
+						var response = filedata.download_url;
+						response = response.replace("http://www.effecthub.com", "");
+						
+						bgid = filedata.id;
+						var size = cc.Director.getInstance().getWinSize();
+						if (bg_sprite){
+							bg_sprite.removeFromParent();
+							bg_sprite=null;
+						}
+						$("#dropzone_bg").css("background-image",'url("'+response+'")');
+						bg_sprite=cc.Sprite.create(''+response);
+						bg_sprite.setPosition(size.width/2,size.height/2);
+						layers=cc.Director.getInstance().getRunningScene().getChildren();
+						layers[0].addChild(bg_sprite,2);
+						
+						slot_bg=-1;
+						dumpToInputTag(slot);
+			    }
+			});
+			$('#fg_share_upload').Huploadify({
+				'formData'     : {
+					'method'   : 'post',
+					'queueID'  : 'fgsharequeue',
+					'PHPSESSID' : '',
+					'timestamp' : '1669278908',
+					'token'     : '80ee8318cf1fdbb20e3879cf63175a8f'
+				},
+				fileObjName:'Filedata',
+				auto:true,
+				'buttonClass' : 'disk-upload-button',
+				'buttonText' : 'Foreground',
+				'swf'      : 'http://www.effecthub.com/swf/uploadify.swf',
+				'uploader' : 'http://www.effecthub.com/disk/uploadShareFile',
+				'onUploadSuccess' : function(file, data, response) {
+						var filedata = JSON.parse(data);
+						var response = filedata.download_url;
+						response = response.replace("http://www.effecthub.com", "");
+						
+						fgid = filedata.id;
+						var size = cc.Director.getInstance().getWinSize();
+						if (fg_sprite){
+							fg_sprite.removeFromParent();
+							fg_sprite=null;
+						}
+						$("#dropzone_fg").css("background-image",'url("'+response+'")');
+						fg_sprite=cc.Sprite.create(''+response);
+						fg_sprite.setPosition(size.width/2,size.height/2);
+						layers=cc.Director.getInstance().getRunningScene().getChildren();
+						layers[0].addChild(fg_sprite,7);
+						
+						slot_bg=-2;
+						dumpToInputTag(slot);
+			    }
+			});
+		});
+	</script>
+			</td>
+			<td id="dropzone_fg" dropzone="" style="border:1px solid #666666; width:160px; height:80px;">
+									<a rel="leanModal" type="button" name="login" href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#login">Foreground</a>
+							</td>
+		</tr><tr>
+			<td>
+				<a href="javascript:
+					bg_sprite.removeFromParent();
+					bg_sprite=null;
+					$(&#39;#dropzone_bg&#39;).css(&#39;background-image&#39;,&#39;&#39;);
+				">Del</a>
+			</td><td>
+				<a href="javascript:
+					fg_sprite.removeFromParent();
+					fg_sprite=null;
+					$(&#39;#dropzone_fg&#39;).css(&#39;background-image&#39;,&#39;&#39;);						
+				">Del</a>
+			</td>
+		</tr></tbody></table>
+	
+	    <script>  
+	    
+	      $('#dropzone_bg').on('drop', function(event) {
+		      //ファイル取得
+		      var file = event.originalEvent.dataTransfer.files[0];
+	          var formData = new FormData();
+	          formData.append('file', file);
+	          
+	          //アップロード してbgスプライトに登録
+			  $.ajax('http://www.effecthub.com/editor/particle2dx/index_cn.php?type=bg_png_upload', {
+				   method: 'POST',
+				   contentType: false,
+				   processData: false,
+				   data:formData,
+				   error: function(xhr, error) {
+				      clog('ul fail');
+				      clog(error);
+				   },
+				   success: function(response) {
+					    clog('ul success');
+					    var size = cc.Director.getInstance().getWinSize();
+						if (bg_sprite){
+							bg_sprite.removeFromParent();
+							bg_sprite=null;
+						}
+						$("#dropzone_bg").css("background-image",'url("png_ul_bg/'+response+'")');
+						bg_sprite=cc.Sprite.create('png_ul_bg/'+response);
+						bg_sprite.setPosition(size.width/2,size.height/2);
+						layers=cc.Director.getInstance().getRunningScene().getChildren();
+						layers[0].addChild(bg_sprite,2);
+						
+						slot_bg=-2;
+						dumpToInputTag(slot);
+					}
+			  });
+		      return false;
+	      }).on('dragover', function(event) {
+			  return false;
+	  	  });
+
+	      $('#dropzone_fg').on('drop', function(event) {
+		      //ファイル取得
+		      var file = event.originalEvent.dataTransfer.files[0];
+	          var formData = new FormData();
+	          formData.append('file', file);
+	          
+	          //アップロード
+			  $.ajax('http://www.effecthub.com/editor/particle2dx/index_cn.php?type=bg_png_upload', {
+				   method: 'POST',
+				   contentType: false,
+				   processData: false,
+				   data:formData,
+				   error: function(xhr, error) {
+				      clog('ul fail');
+				      clog(error);
+				   },
+				   success: function(response) {
+					    clog('ul success');
+					    var size = cc.Director.getInstance().getWinSize();
+						if (fg_sprite){
+							fg_sprite.removeFromParent();
+							fg_sprite=null;
+						}
+						$("#dropzone_fg").css("background-image",'url("png_ul_bg/'+response+'")');
+						fg_sprite=cc.Sprite.create('png_ul_bg/'+response);
+						fg_sprite.setPosition(size.width/2,size.height/2);
+						layers=cc.Director.getInstance().getRunningScene().getChildren();
+						layers[0].addChild(fg_sprite,7);
+						
+						slot_bg=-2;
+						dumpToInputTag(slot);
+					}
+			  });
+		      return false;
+	      }).on('dragover', function(event) {
+			  return false;
+	  	  });
+	    </script>
+</div>
+
+<div id="panel_resolution" style="display:none; border-top:1px solid #444444;">
+	<div id="resolution_contents"><table><tbody><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPhone&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPhone</a></td><td>	<span style="color:gray;">320x480</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPhone4&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPhone4</a></td><td>	<span style="color:gray;">640x960</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPhone5/5s&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPhone5/5s</a></td><td>	<span style="color:gray;">640x1136</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPhone6/6s/7&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPhone6/6s/7</a></td><td>	<span style="color:gray;">750x1334</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPhone6Plus/6sPlus/7Plus&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPhone6/6s/7Plus</a></td><td>	<span style="color:gray;">1080x1920</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPad&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPad</a></td><td>	<span style="color:gray;">768x1024</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;iPad Retina&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">iPad Retina</a></td><td>	<span style="color:gray;">1536x2048</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;android&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">android</a></td><td>	<span style="color:gray;">720x1280</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;android2 &#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">android2</a></td><td>	<span style="color:gray;">1080x1920</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPhone&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPhone</a></td><td>	<span style="color:gray;">480x320</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPhone4&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPhone4</a></td><td>	<span style="color:gray;">960x640</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPhone5/5s&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPhone5</a></td><td>	<span style="color:gray;">1136x640</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPhone6/6s&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPhone6</a></td><td>	<span style="color:gray;">1334x750</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPhone6Plus/6sPlus&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPhone6Plus</a></td><td>	<span style="color:gray;">1920x1080</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscapeiPad&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPad</a></td><td>	<span style="color:gray;">1024x768</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape iPad Retina&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape iPad Retina</a></td><td>	<span style="color:gray;">2047x1536</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape android&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape android</a></td><td>	<span style="color:gray;">1280x720</span></td></tr><tr><td>	<a id="res_size_4" href="javascript:setCSize(resos[&#39;landscape android2&#39;],current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30);">landscape android2</a></td><td>	<span style="color:gray;">1920x1080</span></td></tr></tbody></table></div> 
+	
+	<input type="text" id="reso_x" size="4" length="4" value="">x<input type="text" id="reso_y" size="4" length="4" value="">
+	<input type="button" id="reso_submit" value="set" onclick="setCSize({name:&#39;custom&#39;,x:$(&#39;#reso_x&#39;).val(),y:$(&#39;#reso_y&#39;).val()},current_reso_scale); setGrid($(&#39;#grid&#39;).val()); $(&#39;#panel_resolution&#39;).slideToggle(30); ">
+</div>
+
+						<script>
+							resos = {
+								"iPhone" 	:{name:"iPhone",x:320,y:480},							
+								"iPhone4"	:{name:"iPhone4",x:640,y:960},
+								"iPhone5/5s":{name:"iPhone5/5s",x:640,y:1136},
+								"iPhone6/6s/7":{name:"iPhone6/6s/7",x:750,y:1334},
+								"iPhone6Plus/6sPlus/7Plus":{name:"iPhone6/6s/7Plus",x:1080,y:1920},
+								"iPad"		:{name:"iPad",x:768,y:1024},
+								"iPad Retina":{name:"iPad Retina",x:1536,y:2048},
+
+								"android"	:{name:"android",x:720,y:1280},			
+								"android2 "	:{name:"android2",x:1080,y:1920},
+
+								"landscape iPhone"		:{name:"landscape iPhone",x:480,y:320},
+								"landscape iPhone4"		:{name:"landscape iPhone4",x:960,y:640},
+								"landscape iPhone5/5s"	:{name:"landscape iPhone5",x:1136,y:640},
+								"landscape iPhone6/6s"	:{name:"landscape iPhone6",x:1334,y:750},
+								"landscape iPhone6Plus/6sPlus"	:{name:"landscape iPhone6Plus",x:1920,y:1080},
+																
+								"landscapeiPad"			:{name:"landscape iPad",x:1024,y:768},
+								"landscape iPad Retina"	:{name:"landscape iPad Retina",x:2047,y:1536},
+								
+								"landscape android"		:{name:"landscape android",x:1280,y:720},
+								"landscape android2"	:{name:"landscape android2",x:1920,y:1080}
+							};
+							
+							reso_html = "<table>";
+							for (ind in resos){
+								js_src="javascript:setCSize(resos['"+ind+"'],current_reso_scale); setGrid($('#grid').val()); $('#panel_resolution').slideToggle(30);";
+								
+								reso_html+='<tr><td>'+	
+												'	<a id="res_size_4" href="'+js_src+'" >'+resos[ind]['name']+'</a>'+
+												'</td><td>'+
+									    		'	<span style="color:gray;">'+resos[ind]['x']+'x'+resos[ind]['y']+'</span>'+
+									    		'</td></tr>';
+							}
+							reso_html+="</table>";							
+							$("#resolution_contents").html(reso_html);
+						</script>
+						
+						<br>
+					    pos <span id="emitter_posi">524 278</span>
+	
+						<span id="isActive" style="color: white;">true</span>
+						<span id="loadingStatus">**</span>
+					</div>
+
+						<div id="Cocos2dGameContainer" style="width: 395px; height: 703px; margin: 0px; position: relative; overflow: hidden;"><canvas id="gameCanvas" style="border: 1px solid rgb(68, 68, 68); background-color: black; outline: none; cursor: default; width: 395px; height: 703px;" width="395" height="703" tabindex="1"></canvas></div>
+
+					<script>
+						  function showparticle(file){
+								var dFile = document.getElementById(file.id);
+								if(!dFile.value.match(/.plist|.json/i)){
+							   		alert('文件类型必须是: .plist or .json !');
+							   		return;
+								}
+								if(dFile.files){
+									var reader = new FileReader();
+									reader.onload = function(e) {
+										if (e.target.result.substr(0,1)=="[") {
+										     decodeP2DX(e.target.result);
+										}else if (e.target.result.substr(0,1)=="{"){  // coronaJson
+											coronaJson2Emitter(e.target.result);
+											
+										}else{  //単体plist cocos2dx
+										     xmlStr2emitter(e.target.result);
+										     //画面の中央に
+										     var size = cc.Director.getInstance().getWinSize();
+										     emitter[0].setPosition(cc.p(size.width/2,size.height/2));
+										}
+									};
+									reader.readAsText(dFile.files[0]);
+								}
+							}
+							
+					      $('#gameCanvas').on('drop', function(event) {
+						     //ファイル取得
+						     var file = event.originalEvent.dataTransfer.files[0];
+							 var reader = new FileReader();
+						     reader.onload = function(e){
+						      	 //alert(e.target.result);
+							  	 // 最初の1文字が[ なら alljson
+							  	 if (e.target.result.substr(0,1)=="[") {
+								     decodeP2DX(e.target.result);
+								}else if (e.target.result.substr(0,1)=="{"){  // coronaJson
+									coronaJson2Emitter(e.target.result);
+									
+								}else{  //単体plist cocos2dx
+								     xmlStr2emitter(e.target.result);
+								     //画面の中央に
+								     var size = cc.Director.getInstance().getWinSize();
+								     emitter[0].setPosition(cc.p(size.width/2,size.height/2));
+								}
+						     };
+						     reader.readAsText(file);
+						     return false;
+					      }).on('dragover', function(event) {
+							  return false;
+					  	  });	
+					</script>
+					
+					
+					
+					<a href="javaScript:toggleStats();">Stats</a>
+					<a href="javaScript:toggleGrid();">Grid</a> 
+					
+					<input type="range" id="grid" name="grid" min="20" max="160" step="10" value="100" onmousemove="
+						if (!flg_mousedown) return;
+						setGrid(this.value);
+						$(&#39;#grid_disp&#39;).html(this.value+&#39;px&#39;);
+						">
+					
+					<span id="grid_disp">100</span> 
+			
+		<!--a href="javaScript:toggleDebug();">DebugOnScreen</a-->
+		<!--BG<input type="text" id="bg_color" value="#000000" placeholder="BGColor" 
+		     onMouseMove="alert('set color'); "> -->
+
+<!--
+	<a href="http://www.cocos2d-x.org/reference/native-cpp/V3.0alpha1/db/dd9/classcocos2d_1_1_particle_system.html">CCParticleAPI</a> <br/>
+	<a href="https://github.com/cocos2d/cocos2d-x/blob/f042edd31b61ac53192f3fcd0d97b67374b69475/cocos/2d/CCParticleSystem.cpp">plist:CCParticleSystem.cpp</a> <br/>
+
+
+	textureImageData = png > gzip > base64<br/>
+	textureFileName = TextureCacheのキー名になる<br/>
+	同じキー名のパーティクルを読み込むとテクスチャが上書き<br/>
+	<br/>
+-->
+
+</td><td style="vertical-align:top;">
+
+<div style="border-bottom:1px solid #444444;  width:900; nowrap;">
+
+	<div id="slots"><table><tbody><tr><td style="vertical-align:top;"><a href="javascript:setBGSlot(-1);" id="slot_m1" style="font-size: 130%; color: rgb(136, 136, 136);">BG</a> <a href="javascript:setBGSlot(-2);" id="slot_m2" style="font-size: 130%; color: rgb(136, 136, 136);">FG</a> </td><td style="vertical-align:top;"><a href="javascript:setSlot(0); " id="slot_0" style="font-size: 130%; font-weight: bold;" onmouseover="checkSlot(0);" onmouseout="checkSlotOff(0)">Emit1</a> <a href="javascript:addSlot();" id="plusbutton" style="font-size:130%">(Add Emitter)</a> <br><a href="javascript:setSlotOff(0);" id="slot_off_0" style="color: rgb(136, 136, 136);">Off1</a> </td></tr></tbody></table></div>
+
+	<span id="current_slot" style="font-size:180%;font-weight:bold;color:white;">Emit1</span> 
+	&nbsp;
+	<input type="file" name="url" id="upload_file_hide" style="display:none" onchange="showparticle(this);">
+	<a id="panelink_import" href="javascript:" onclick="$(&#39;#upload_file_hide&#39;).click()" style="font-size:140%;">
+	<strong><span class="headchar">I</span>mport</strong></a>&nbsp;
+	<a id="panelink_shape" href="javascript:toggleTopleftPane(&#39;shape&#39;);" style="font-size:140%;">
+	<strong><span class="headchar">C</span>olor&amp;Shape</strong></a>&nbsp;
+	<a id="panelink_motion" href="javascript:toggleTopleftPane(&#39;motion&#39;);" style="font-size:140%;">
+	<strong><span class="headchar">M</span>otion</strong></a>&nbsp;
+	<a id="panelink_template" href="javascript:toggleTopleftPane(&#39;template&#39;);" style="font-size:140%;">
+	<strong><span class="headchar">T</span>emplate</strong></a>&nbsp;
+	<a id="panelink_template" href="javascript:toggleTopleftPane(&#39;import&#39;);" style="font-size:140%;">
+	<strong><span class="headchar">E</span>xport</strong></a>&nbsp; 
+			<a style="font-size:140%;" rel="leanModal" type="button" name="login" href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#login"><strong><span class="headchar">S</span>ave</strong></a>&nbsp;
+		
+	<a href="javascript:removeSlot(slot);">Remove</a> 
+	<a href="javascript:duplicateSlot(slot);">Duplicate</a>
+	<a href="javascript:getSnapshot();">Snapshot</a>
+	
+	<span id="snapshots"></span>
+	<a href="javascript:clrSnapshot();" style="color:#dddddd;">clear</a>
+	<br>
+	
+	<!--
+		VariationCopy 
+		<a href="javascript:color9Slot(slot);">18Cols</a> 
+		<a href="javascript:size4Slot(slot);">4size</a> 
+		<a href="javascript:speed4Slot(slot);">4Speeds</a>	
+	-->
+
+
+
+
+</div>	
+<br>
+
+<script>
+	function toggleTopleftPane(name){
+		$("div[id^=topleft_pane_]").hide();		
+		$("#topleft_pane_"+name).slideToggle(100);
+	}
+</script>
+
+<div id="topleft_pane_save" style=" display:none; ">	
+
+		<form name="form_post_save" method="post">
+			Title&nbsp;&nbsp;&nbsp;<input type="text" name="png_workname" id="png_workname" value="particle_texture" onkeyup=" $(&#39;a[id^=dl_link_]&#39;).html(this.value+&#39;.png&#39;); return "><br><br>
+			Price&nbsp;&nbsp;<input type="text" id="price" name="price" placeholder="" value="10">
+		            <select name="price_type" id="price_type">
+						<option value="1">Coin</option>
+						<option value="2">RMB</option>
+						<option value="3">USD</option>
+                    </select>
+				<br><br>
+			    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+			    <input type="button" id="panelink_save_btn" value="Save to Cloud">
+			    <label id="uploadtext" style="display:none">Uploading to Cloud...</label>
+		</form>
+		<br>
+		<div>
+<script async="" src="./f.txt"></script>
+<!-- Effecthub -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px" data-ad-client="ca-pub-2434823751262999" data-ad-slot="7085536553"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<div id="topleft_pane_import" style=" display:none; ">	
+
+	<a id="p2dx_export" href="javascript:
+							document.form_post_dl.type.value=&#39;p2dx_json&#39;;
+							$(&#39;#p2dx_out&#39;).text(JSON.stringify(xmls)).html(); 
+							$(&#39;#p2dx_json&#39;).attr(&#39;value&#39;,JSON.stringify(xmls));  
+							document.form_post_dl.submit(); " style="font-size:120%;font-weight:bold;">AllJson</a><span style="color:gray;"> array of all emitter as JSON</span>		<br><br>
+
+		<form name="form_post_dl" method="post">
+			<input type="hidden" name="type" id="type">
+			<input type="hidden" name="p2dx_json" id="p2dx_json">
+			<input type="hidden" name="plist_xml" id="plist_xml">
+			<input type="hidden" name="png_dl64gz" id="png_dl64gz">
+
+			filename<input type="text" name="png_filename" id="png_filename" value="particle_texture" onkeyup=" $(&#39;a[id^=dl_link_]&#39;).html(this.value+&#39;.png&#39;); return ">
+				<br><br>
+		</form>
+		
+		<table>
+			<tbody><tr><td>					
+				<a id="dl" href="javascript:
+						document.form_post_dl.type.value=&#39;cocos_plist_dl&#39;;
+						document.form_post_dl.plist_xml.value=encodeURIComponent(xml);
+						document.form_post_dl.submit();"> 
+					<img src="./logo_cocos_arrow.png">
+				</a>
+			</td><td colspan="2">	
+				<span style="font-size:120%;"><span style="color:gray;">PNG Contained</span></span>
+			</td></tr>
+			<tr><td>
+				<a href="javascript:downloadPlistNoImg(slot);">
+					<img src="./logo_cocos_arrow.png">	
+				</a> 
+			</td><td>
+				+ 
+			</td><td>			
+				<a id="dl_link_cocos" href="javascript:downloadPng(slot);" style="font-size:120%;">particle_texture.png</a>
+			</td></tr>
+			<tr><td>
+				<a href="javascript:downloadJsonNoImg(slot);">
+					<img src="./logo_corona_arrow.png">				
+				</a>
+			</td><td>	
+				+ 
+			</td><td>					
+				<a id="dl_link_corona" href="javascript:downloadPng(slot);" style="font-size:120%;">particle_texture.png</a>
+			</td></tr>
+		</tbody></table>
+		<br>
+		<div>
+<script async="" src="./f.txt"></script>
+<!-- Effecthub -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px" data-ad-client="ca-pub-2434823751262999" data-ad-slot="7085536553"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<div id="topleft_pane_template" style="">
+	<table>
+	<tbody><tr><td><strong>BG</strong></td><td>			<a href="javascript:getPlist(&#39;bg_galaxy.plist&#39;)" onmouseover="prevParticle(&#39;bg_galaxy.plist&#39;);" onmouseout="prevEnd(); ">galaxy</a>
+					<a href="javascript:getPlist(&#39;bg_galaxy2.plist&#39;)" onmouseover="prevParticle(&#39;bg_galaxy2.plist&#39;);" onmouseout="prevEnd(); ">galaxy2</a>
+					<a href="javascript:getPlist(&#39;bg_galaxy3.plist&#39;)" onmouseover="prevParticle(&#39;bg_galaxy3.plist&#39;);" onmouseout="prevEnd(); ">galaxy3</a>
+					<a href="javascript:getPlist(&#39;bg_kirabrown.plist&#39;)" onmouseover="prevParticle(&#39;bg_kirabrown.plist&#39;);" onmouseout="prevEnd(); ">kirabrown</a>
+					<a href="javascript:getPlist(&#39;bg_kirawine.plist&#39;)" onmouseover="prevParticle(&#39;bg_kirawine.plist&#39;);" onmouseout="prevEnd(); ">kirawine</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Water</strong></td><td>			<a href="javascript:getPlist(&#39;water_funsui.plist&#39;)" onmouseover="prevParticle(&#39;water_funsui.plist&#39;);" onmouseout="prevEnd(); ">funsui</a>
+					<a href="javascript:getPlist(&#39;water_taki.plist&#39;)" onmouseover="prevParticle(&#39;water_taki.plist&#39;);" onmouseout="prevEnd(); ">taki</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;water_fall1.p2dx_json&#39;)">water_fall1</a> </td></tr> <tr><td><strong>Fire</strong></td><td>			<a href="javascript:getPlist(&#39;fire_bar.plist&#39;)" onmouseover="prevParticle(&#39;fire_bar.plist&#39;);" onmouseout="prevEnd(); ">bar</a>
+					<a href="javascript:getPlist(&#39;fire_fire01.plist&#39;)" onmouseover="prevParticle(&#39;fire_fire01.plist&#39;);" onmouseout="prevEnd(); ">fire01</a>
+					<a href="javascript:getPlist(&#39;fire_floor.plist&#39;)" onmouseover="prevParticle(&#39;fire_floor.plist&#39;);" onmouseout="prevEnd(); ">floor</a>
+					<a href="javascript:getPlist(&#39;fire_jet.plist&#39;)" onmouseover="prevParticle(&#39;fire_jet.plist&#39;);" onmouseout="prevEnd(); ">jet</a>
+					<a href="javascript:getPlist(&#39;fire_katamari.plist&#39;)" onmouseover="prevParticle(&#39;fire_katamari.plist&#39;);" onmouseout="prevEnd(); ">katamari</a>
+					<a href="javascript:getPlist(&#39;fire_moeagari_bg.plist&#39;)" onmouseover="prevParticle(&#39;fire_moeagari_bg.plist&#39;);" onmouseout="prevEnd(); ">moeagari_bg</a>
+					<a href="javascript:getPlist(&#39;fire_ring.plist&#39;)" onmouseover="prevParticle(&#39;fire_ring.plist&#39;);" onmouseout="prevEnd(); ">ring</a>
+					<a href="javascript:getPlist(&#39;fire_spark1.plist&#39;)" onmouseover="prevParticle(&#39;fire_spark1.plist&#39;);" onmouseout="prevEnd(); ">spark1</a>
+					<a href="javascript:getPlist(&#39;fire_sun1.plist&#39;)" onmouseover="prevParticle(&#39;fire_sun1.plist&#39;);" onmouseout="prevEnd(); ">sun1</a>
+					<a href="javascript:getPlist(&#39;fire_sun2.plist&#39;)" onmouseover="prevParticle(&#39;fire_sun2.plist&#39;);" onmouseout="prevEnd(); ">sun2</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;fire_1.p2dx_json&#39;)">fire_1</a> </td></tr> <tr><td><strong>FireWorks</strong></td><td>			<a href="javascript:getPlist(&#39;fireworks_fw1.plist&#39;)" onmouseover="prevParticle(&#39;fireworks_fw1.plist&#39;);" onmouseout="prevEnd(); ">fw1</a>
+					<a href="javascript:getPlist(&#39;fireworks_fw2.plist&#39;)" onmouseover="prevParticle(&#39;fireworks_fw2.plist&#39;);" onmouseout="prevEnd(); ">fw2</a>
+					<a href="javascript:getPlist(&#39;fireworks_fw3.plist&#39;)" onmouseover="prevParticle(&#39;fireworks_fw3.plist&#39;);" onmouseout="prevEnd(); ">fw3</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Explosion</strong></td><td>			<a href="javascript:getPlist(&#39;explosion_exp1.plist&#39;)" onmouseover="prevParticle(&#39;explosion_exp1.plist&#39;);" onmouseout="prevEnd(); ">exp1</a>
+					<a href="javascript:getPlist(&#39;explosion_exp2.plist&#39;)" onmouseover="prevParticle(&#39;explosion_exp2.plist&#39;);" onmouseout="prevEnd(); ">exp2</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Meteor</strong></td><td>			<a href="javascript:getPlist(&#39;meteor_me1.plist&#39;)" onmouseover="prevParticle(&#39;meteor_me1.plist&#39;);" onmouseout="prevEnd(); ">me1</a>
+					<a href="javascript:getPlist(&#39;meteor_me2.plist&#39;)" onmouseover="prevParticle(&#39;meteor_me2.plist&#39;);" onmouseout="prevEnd(); ">me2</a>
+					<a href="javascript:getPlist(&#39;meteor_me3.plist&#39;)" onmouseover="prevParticle(&#39;meteor_me3.plist&#39;);" onmouseout="prevEnd(); ">me3</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Snow</strong></td><td>			<a href="javascript:getPlist(&#39;snow_rain.plist&#39;)" onmouseover="prevParticle(&#39;snow_rain.plist&#39;);" onmouseout="prevEnd(); ">rain</a>
+					<a href="javascript:getPlist(&#39;snow_snow1.plist&#39;)" onmouseover="prevParticle(&#39;snow_snow1.plist&#39;);" onmouseout="prevEnd(); ">snow1</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Click</strong></td><td>			<a href="javascript:getPlist(&#39;click_circle1.plist&#39;)" onmouseover="prevParticle(&#39;click_circle1.plist&#39;);" onmouseout="prevEnd(); ">circle1</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Smoke</strong></td><td>			<a href="javascript:getPlist(&#39;smoke_bg1.plist&#39;)" onmouseover="prevParticle(&#39;smoke_bg1.plist&#39;);" onmouseout="prevEnd(); ">bg1</a>
+					<a href="javascript:getPlist(&#39;smoke_bomb.plist&#39;)" onmouseover="prevParticle(&#39;smoke_bomb.plist&#39;);" onmouseout="prevEnd(); ">bomb</a>
+					<a href="javascript:getPlist(&#39;smoke_ghost.plist&#39;)" onmouseover="prevParticle(&#39;smoke_ghost.plist&#39;);" onmouseout="prevEnd(); ">ghost</a>
+					<a href="javascript:getPlist(&#39;smoke_sm1.plist&#39;)" onmouseover="prevParticle(&#39;smoke_sm1.plist&#39;);" onmouseout="prevEnd(); ">sm1</a>
+					<a href="javascript:getPlist(&#39;smoke_sm2.plist&#39;)" onmouseover="prevParticle(&#39;smoke_sm2.plist&#39;);" onmouseout="prevEnd(); ">sm2</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> <tr><td><strong>Magic</strong></td><td>			<a href="javascript:getPlist(&#39;magic_damage1.plist&#39;)" onmouseover="prevParticle(&#39;magic_damage1.plist&#39;);" onmouseout="prevEnd(); ">damage1</a>
+					<a href="javascript:getPlist(&#39;magic_damage2.plist&#39;)" onmouseover="prevParticle(&#39;magic_damage2.plist&#39;);" onmouseout="prevEnd(); ">damage2</a>
+					<a href="javascript:getPlist(&#39;magic_damage3.plist&#39;)" onmouseover="prevParticle(&#39;magic_damage3.plist&#39;);" onmouseout="prevEnd(); ">damage3</a>
+					<a href="javascript:getPlist(&#39;magic_heal1.plist&#39;)" onmouseover="prevParticle(&#39;magic_heal1.plist&#39;);" onmouseout="prevEnd(); ">heal1</a>
+					<a href="javascript:getPlist(&#39;magic_heal2.plist&#39;)" onmouseover="prevParticle(&#39;magic_heal2.plist&#39;);" onmouseout="prevEnd(); ">heal2</a>
+					<a href="javascript:getPlist(&#39;magic_sparc.plist&#39;)" onmouseover="prevParticle(&#39;magic_sparc.plist&#39;);" onmouseout="prevEnd(); ">sparc</a>
+				</td><td>
+		 MultiEmitter 
+		<a href="javascript:getP2dx(&#39;&#39;)"></a> </td></tr> 	</tbody></table>
+	<br>
+	<div>
+<script async="" src="./f.txt"></script>
+<!-- Effecthub -->
+<ins class="adsbygoogle" style="display:inline-block;width:200px;height:200px" data-ad-client="ca-pub-2434823751262999" data-ad-slot="7085536553"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+<div id="topleft_pane_shape" style="display:none;">
+
+	<!-- texture -->
+	<script>
+		// textureをセット
+		var old_name;
+		function setTex(name){ //name texture filename
+			prev_string.setVisible(false);
+			//alert(name + " : " + png_gz_b64[name]);
+			texture1 = cc.TextureCache.getInstance().addImage('png/'+name+'.png');//元画像を用意
+			emitter[0].setTexture(texture1);
+			png_gz_b64[slot]=png_gz_b64[name]; //slotのpngをセット
+			dumpToInputTag(slot);//inputタグに書き出す
+		}
+		
+		function setUpload(id){ //name texture filename
+			var name = $('#'+id).attr('src');
+			prev_string.setVisible(false);
+			//alert(name + " : " + png_gz_b64[name]);
+			texture1 = cc.TextureCache.getInstance().addImage(name);//元画像を用意
+			emitter[0].setTexture(texture1);
+			url="http://www.effecthub.com/editor/particle2dx/index_cn.php?type=b64gzpng_dl&filename="+name;
+			$.ajax({
+			   async:false,
+			   type: "GET",
+			   url: url,
+			   success:function(data){
+				   png_gz_b64[slot]=data;// gzip > base64 したファイルを取得
+			   }
+			});	
+			dumpToInputTag(slot);//inputタグに書き出す
+		}
+		
+		function prevTex(name){
+			prev_string.setVisible(false);
+			var temp_tex = cc.TextureCache.getInstance().addImage('png/'+name+'.png');//元画像を用意
+			clog("prevTex " + 'png/'+name+'.png')
+			emitter[0].setTexture(temp_tex);
+			prev_string.setVisible(true);
+		}
+		
+		function prevMouseOut(name){
+			clog('prevMouseOut texture1=' + texture1);
+			emitter[0].setTexture(texture1);
+			prev_string.setVisible(false);
+
+			dumpToInputTag(slot);//inputタグに書き出す
+		}
+		
+	</script>
+	
+	<table><tbody><tr><td id="textures">
+		<a href="javascript:void(0)" onclick="setTex(&quot;1f_6&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1f_6&quot;);" onmouseout="prevMouseOut();"><img src="./1f_6.png" alt="1f_6"></a><a href="javascript:void(0)" onclick="setTex(&quot;1f_circle&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1f_circle&quot;);" onmouseout="prevMouseOut();"><img src="./1f_circle.png" alt="1f_circle"></a><a href="javascript:void(0)" onclick="setTex(&quot;1f_rect&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1f_rect&quot;);" onmouseout="prevMouseOut();"><img src="./1f_rect.png" alt="1f_rect"></a><a href="javascript:void(0)" onclick="setTex(&quot;1f_star&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1f_star&quot;);" onmouseout="prevMouseOut();"><img src="./1f_star.png" alt="1f_star"></a><a href="javascript:void(0)" onclick="setTex(&quot;1w_6&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1w_6&quot;);" onmouseout="prevMouseOut();"><img src="./1w_6.png" alt="1w_6"></a><a href="javascript:void(0)" onclick="setTex(&quot;1w_circle&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1w_circle&quot;);" onmouseout="prevMouseOut();"><img src="./1w_circle.png" alt="1w_circle"></a><a href="javascript:void(0)" onclick="setTex(&quot;1w_rect&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1w_rect&quot;);" onmouseout="prevMouseOut();"><img src="./1w_rect.png" alt="1w_rect"></a><a href="javascript:void(0)" onclick="setTex(&quot;1w_star&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;1w_star&quot;);" onmouseout="prevMouseOut();"><img src="./1w_star.png" alt="1w_star"></a><a href="javascript:void(0)" onclick="setTex(&quot;_s_fire&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;_s_fire&quot;);" onmouseout="prevMouseOut();" style="font-weight:bold"><img src="./_s_fire.png" alt="_s_fire"></a><a href="javascript:void(0)" onclick="setTex(&quot;_s_snow&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;_s_snow&quot;);" onmouseout="prevMouseOut();"><img src="./_s_snow.png" alt="_s_snow"></a><a href="javascript:void(0)" onclick="setTex(&quot;_s_stars&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;_s_stars&quot;);" onmouseout="prevMouseOut();"><img src="./_s_stars.png" alt="_s_stars"></a><a href="javascript:void(0)" onclick="setTex(&quot;line&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;line&quot;);" onmouseout="prevMouseOut();"><img src="./line.png" alt="line"></a><a href="javascript:void(0)" onclick="setTex(&quot;smoke&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;smoke&quot;);" onmouseout="prevMouseOut();"><img src="./smoke.png" alt="smoke"></a><a href="javascript:void(0)" onclick="setTex(&quot;snow2&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " onmouseover="prevTex(&quot;snow2&quot;);" onmouseout="prevMouseOut();"><img src="./snow2.png" alt="snow2"></a>		<a href="javascript:void(0)" onclick="setUpload(&quot;uploaded_png&quot;); 
+													$(&quot;#textures&quot;).children(&quot;a&quot;).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;&quot;); 
+													$(this).children(&quot;img&quot;).css(&quot;background-color&quot;,&quot;#aaaaff&quot;); " style="font-weight:bold">
+		    <img id="uploaded_png" width="50px" src="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0">
+		</a>
+		
+	</td><td>
+		<div id="dropzone" dropzone="" style="border:1px solid #666666; width:160px; height:80px;">
+							<a rel="leanModal" type="button" name="login" href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#login">Upload Texture</a>
+						</div>
+		<script type="text/javascript">
+		var response;
+		$(function() {
+			$('#share_upload').Huploadify({
+				'formData'     : {
+					'method'   : 'post',
+					'queueID'  : 'sharequeue',
+					'PHPSESSID' : '',
+					'timestamp' : '1669278909',
+					'token'     : 'e3747061b2fc33906b2b7b3d92605015'
+				},
+				fileObjName:'Filedata',
+				auto:true,
+				'buttonClass' : 'disk-upload-button',
+				'buttonText' : 'Upload Texture',
+				'swf'      : 'http://www.effecthub.com/swf/uploadify.swf',
+				'uploader' : 'http://www.effecthub.com/disk/uploadShareFile',
+				'onUploadSuccess' : function(file, data, response) {
+						var filedata = JSON.parse(data);
+						response = filedata.download_url;
+						$("#uploaded_png").attr('src',''+response);
+					    var myTexture = cc.TextureCache.getInstance().addImage(''+response);//元画像を用意
+						emitter[0].setTexture(myTexture);
+						
+						url="http://www.effecthub.com/editor/particle2dx/index_cn.php?type=b64gzpng_dl&filename="+response;
+						$.ajax({
+						   async:false,
+						   type: "GET",
+						   url: url,
+						   success:function(data){
+							   png_gz_b64[slot]=data;// gzip > base64 したファイルを取得
+						   }
+						});	
+						dumpToInputTag(slot);//inputタグに書き出す
+					
+			    }
+			});
+		});
+	</script>
+	    <script>
+	      $('#dropzone').on('drop', function(event) {
+		      //ファイル取得
+		      var file = event.originalEvent.dataTransfer.files[0];
+	          var formData = new FormData();
+	          formData.append('file', file);
+
+	          //アップロード
+			  $.ajax('http://www.effecthub.com/editor/particle2dx/index_cn.php?type=texture_png_upload', {
+			   method: 'POST',
+			   contentType: false,
+			   processData: false,
+			   data:formData,
+			   error: function(xhr, error) {
+			    clog('ul fail');
+			    clog(error);
+			   },
+			   success: function(response) {
+			    clog('ul success');
+			    clog(response);
+			    $("#uploaded_png").attr('src','png_ul/'+response);
+			    var myTexture = cc.TextureCache.getInstance().addImage('png_ul/'+response);//元画像を用意
+				emitter[0].setTexture(myTexture);
+				
+				url="http://www.effecthub.com/editor/particle2dx/index_cn.php?type=b64gzpng_dl&filename="+response;
+				$.ajax({
+				   async:false,
+				   type: "GET",
+				   url: url,
+				   success:function(data){
+					   png_gz_b64[slot]=data;// gzip > base64 したファイルを取得
+				   }
+				});	
+				dumpToInputTag(slot);//inputタグに書き出す
+			   }
+			  });
+		      return false;
+	      }).on('dragover', function(event) {
+			  return false;
+	  	  });
+	    </script>
+    
+	</td></tr></tbody></table>   
+
+<table><tbody><tr><td style="vertical-align:top;">
+	</td><td style="vertical-align:top;">	
+		<div id="start_color" style="background-color: rgb(51, 102, 178);">rgb(51, 102, 178)</div>	
+		
+		<table id="palette" cellspacing="1" border="0"><tbody><tr>
+			    </tr><tr>					<td col="col" title="#333" style="background-color:#333;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#336" style="background-color:#336;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#339" style="background-color:#339;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#33c" style="background-color:#33c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#33f" style="background-color:#33f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#363" style="background-color:#363;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#366" style="background-color:#366;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#369" style="background-color:#369;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#36c" style="background-color:#36c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#36f" style="background-color:#36f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#393" style="background-color:#393;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#396" style="background-color:#396;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#399" style="background-color:#399;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#39c" style="background-color:#39c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#39f" style="background-color:#39f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3c3" style="background-color:#3c3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3c6" style="background-color:#3c6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3c9" style="background-color:#3c9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3cc" style="background-color:#3cc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3cf" style="background-color:#3cf;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3f3" style="background-color:#3f3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3f6" style="background-color:#3f6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3f9" style="background-color:#3f9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3fc" style="background-color:#3fc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#3ff" style="background-color:#3ff;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+					</tr><tr>					<td col="col" title="#633" style="background-color:#633;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#636" style="background-color:#636;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#639" style="background-color:#639;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#63c" style="background-color:#63c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#63f" style="background-color:#63f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#663" style="background-color:#663;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#666" style="background-color:#666;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#669" style="background-color:#669;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#66c" style="background-color:#66c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#66f" style="background-color:#66f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#693" style="background-color:#693;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#696" style="background-color:#696;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#699" style="background-color:#699;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#69c" style="background-color:#69c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#69f" style="background-color:#69f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6c3" style="background-color:#6c3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6c6" style="background-color:#6c6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6c9" style="background-color:#6c9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6cc" style="background-color:#6cc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6cf" style="background-color:#6cf;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6f3" style="background-color:#6f3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6f6" style="background-color:#6f6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6f9" style="background-color:#6f9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6fc" style="background-color:#6fc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#6ff" style="background-color:#6ff;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+					</tr><tr>					<td col="col" title="#933" style="background-color:#933;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#936" style="background-color:#936;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#939" style="background-color:#939;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#93c" style="background-color:#93c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#93f" style="background-color:#93f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#963" style="background-color:#963;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#966" style="background-color:#966;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#969" style="background-color:#969;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#96c" style="background-color:#96c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#96f" style="background-color:#96f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#993" style="background-color:#993;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#996" style="background-color:#996;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#999" style="background-color:#999;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#99c" style="background-color:#99c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#99f" style="background-color:#99f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9c3" style="background-color:#9c3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9c6" style="background-color:#9c6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9c9" style="background-color:#9c9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9cc" style="background-color:#9cc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9cf" style="background-color:#9cf;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9f3" style="background-color:#9f3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9f6" style="background-color:#9f6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9f9" style="background-color:#9f9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9fc" style="background-color:#9fc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#9ff" style="background-color:#9ff;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+					</tr><tr>					<td col="col" title="#c33" style="background-color:#c33;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c36" style="background-color:#c36;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c39" style="background-color:#c39;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c3c" style="background-color:#c3c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c3f" style="background-color:#c3f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c63" style="background-color:#c63;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c66" style="background-color:#c66;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c69" style="background-color:#c69;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c6c" style="background-color:#c6c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c6f" style="background-color:#c6f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c93" style="background-color:#c93;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c96" style="background-color:#c96;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c99" style="background-color:#c99;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c9c" style="background-color:#c9c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#c9f" style="background-color:#c9f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cc3" style="background-color:#cc3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cc6" style="background-color:#cc6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cc9" style="background-color:#cc9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ccc" style="background-color:#ccc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ccf" style="background-color:#ccf;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cf3" style="background-color:#cf3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cf6" style="background-color:#cf6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cf9" style="background-color:#cf9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cfc" style="background-color:#cfc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#cff" style="background-color:#cff;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+					</tr><tr>					<td col="col" title="#f33" style="background-color:#f33;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f36" style="background-color:#f36;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f39" style="background-color:#f39;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f3c" style="background-color:#f3c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f3f" style="background-color:#f3f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f63" style="background-color:#f63;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f66" style="background-color:#f66;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f69" style="background-color:#f69;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f6c" style="background-color:#f6c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f6f" style="background-color:#f6f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f93" style="background-color:#f93;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f96" style="background-color:#f96;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f99" style="background-color:#f99;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f9c" style="background-color:#f9c;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#f9f" style="background-color:#f9f;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fc3" style="background-color:#fc3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fc6" style="background-color:#fc6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fc9" style="background-color:#fc9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fcc" style="background-color:#fcc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fcf" style="background-color:#fcf;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ff3" style="background-color:#ff3;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ff6" style="background-color:#ff6;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ff9" style="background-color:#ff9;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#ffc" style="background-color:#ffc;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+										<td col="col" title="#fff" style="background-color:#fff;width:8px;height:8px;font-size:6px;">&nbsp;
+					</td>
+					</tr>		</tbody></table>
+
+	<script>
+	   var palette_col;
+	   $("td[col=col]").bind("mouseover",function(){ 
+	   
+	   	  palette_col=$(this).css("background-color");
+	   	  $("#start_color").css("background-color",palette_col);
+			palette_col = palette_col.replace("rgb(","");
+			palette_col = palette_col.replace(")","");
+			p_ary = palette_col.split(",");
+	   	   col_3b= cc.c3b(p_ary[0],p_ary[1],p_ary[2]);
+	   	   col_4f=cc.c4FFromccc3B(col_3b);
+	   	   emitter[0].setStartColor(col_4f);
+	   	   prev_string.setVisible(true);
+	   	   //emitter からテキストボックスへ
+	   	   dumpToInputTag(slot);
+	   });
+
+	   $("td[col=col]").bind("mousedown",function(){ 
+	   	  palette_col=$(this).css("background-color");
+	   	  $("#start_color").css("background-color",palette_col);
+			palette_col = palette_col.replace("rgb(","");
+			palette_col = palette_col.replace(")","");
+			p_ary = palette_col.split(",");
+	   	   col_3b= cc.c3b(p_ary[0],p_ary[1],p_ary[2]);
+	   	   col_4f=cc.c4FFromccc3B(col_3b);
+	   	   emitter[0].setStartColor(col_4f);
+	   	   prev_string.setVisible(false);
+	   	   
+	   	   current_start_color=emitter[0].getStartColor();
+	   	   //emitter からテキストボックスへ
+	   	   dumpToInputTag(slot);
+	   });
+
+	   $("td[col=col]").bind("mouseout",function(){ 
+	   	  palette_col=$(this).css("background-color");
+	   	  $("#start_color").css("background-color",palette_col);
+	   	   emitter[0].setStartColor(current_start_color);
+	   	   prev_string.setVisible(false);
+	   	   //emitter からテキストボックスへ
+	   	   dumpToInputTag(slot);
+	   });
+	   
+	</script>
+	</td><td style="vertical-align:top;padding-left:20px">
+				Blend: 
+			  <a id="blend_add" href="javascript:emitter[0].setBlendAdditive(true);  dumpToInputTag(slot);" style="font-weight: bold;">Additive</a> 
+			  <a id="blend_normal" href="javascript:emitter[0].setBlendAdditive(false); dumpToInputTag(slot);" style="font-weight: normal;">Normal</a> 
+			  <br>
+			  Template:
+<a id="blend_1" href="javascript:emitter[0].setBlendFunc(gl.SRC_ALPHA, gl.ONE); dumpToInputTag(slot);">Diffuse</a>	
+<a id="blend_2" href="javascript:emitter[0].setBlendFunc(gl.ONE, gl.ONE); dumpToInputTag(slot);">Linear Dodge</a>	
+<a id="blend_3" href="javascript:emitter[0].setBlendFunc(gl.ONE_MINUS_DST_COLOR, gl.ONE); dumpToInputTag(slot);">Screen</a>	
+<a id="blend_4" href="javascript:emitter[0].setBlendFunc(gl.DST_COLOR, gl.ONE_MINUS_SRC_ALPHA); dumpToInputTag(slot);">Mutiply</a>	
+<a id="blend_5" href="javascript:emitter[0].setBlendFunc(gl.ONE, gl.ZERO); dumpToInputTag(slot);">Dissolve</a>	
+<a id="blend_6" href="javascript:emitter[0].setBlendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); dumpToInputTag(slot);">Premnitiply</a>
+<a id="blend_7" href="javascript:emitter[0].setBlendFunc(gl.DST_COLOR, gl.SRC_COLOR); dumpToInputTag(slot);">Lighten</a>
+				<br>
+			  Custom:<br>
+			  <form name="form_blend">
+			   SRC<select name="blend_src" id="blend_src">
+						<option value="ZERO">GL_ZERO</option>
+						<option value="ONE">GL_ONE</option>
+						<option value="SRC_COLOR">GL_SRC_COLOR</option>
+						<option value="ONE_MINUS_SRC_COLOR">GL_ONE_MINUS_SRC_COLOR</option>
+						<option value="SRC_ALPHA">GL_SRC_ALPHA</option>
+						<option value="ONE_MINUS_SRC_ALPHA">GL_ONE_MINUS_SRC_ALPHA</option>
+						<option value="DST_COLOR">GL_DST_COLOR</option>
+						<option value="ONE_MINUS_DST_COLOR">GL_ONE_MINUS_DST_COLOR</option>
+						<option value="DST_ALPHA">GL_DST_ALPHA</option>
+						<option value="ONE_MINUS_DST_ALPHA">GL_ONE_MINUS_DST_ALPHA</option>
+						<option value="SRC_ALPHA_SATURATE">GL_SRC_ALPHA_SATURATE</option>
+                    </select>
+             DST<select name="blend_dst" id="blend_dst">
+						<option value="ZERO">GL_ZERO</option>
+						<option value="ONE">GL_ONE</option>
+						<option value="SRC_COLOR">GL_SRC_COLOR</option>
+						<option value="ONE_MINUS_SRC_COLOR">GL_ONE_MINUS_SRC_COLOR</option>
+						<option value="SRC_ALPHA">GL_SRC_ALPHA</option>
+						<option value="ONE_MINUS_SRC_ALPHA">GL_ONE_MINUS_SRC_ALPHA</option>
+						<option value="DST_COLOR">GL_DST_COLOR</option>
+						<option value="ONE_MINUS_DST_COLOR">GL_ONE_MINUS_DST_COLOR</option>
+						<option value="DST_ALPHA">GL_DST_ALPHA</option>
+						<option value="ONE_MINUS_DST_ALPHA">GL_ONE_MINUS_DST_ALPHA</option>
+						<option value="SRC_ALPHA_SATURATE">GL_SRC_ALPHA_SATURATE</option>
+                    </select> 
+                    </form>      
+                    <script>
+    $('#blend_src').live('change',function(){
+    	var start = 'gl.'+$(this).val();
+    	var end = 'gl.'+document.form_blend.blend_dst.value;
+		emitter[0].setBlendFunc(eval(start), eval(end)); 
+		dumpToInputTag(slot);
+	});	
+	$('#blend_dst').live('change',function(){
+    	var end = 'gl.'+$(this).val();
+    	var start = 'gl.'+document.form_blend.blend_src.value;
+		emitter[0].setBlendFunc(eval(start), eval(end)); 
+		dumpToInputTag(slot);
+	});	
+		
+		</script>							
+</td></tr></tbody></table>
+<table><tbody><tr><td>
+	<h3><span style="color:gray;">Start</span></h3>
+	
+	<script>
+		updStartCol=function(){
+			emitter[0].setStartColor(new cc.Color4F(parseFloat($("#start_r").val()),parseFloat($("#start_g").val()),parseFloat($("#start_b").val()),
+		   						parseFloat($("#start_a").val())));//r,g,b,a 
+		    current_start_color=emitter[0].getStartColor();
+		};
+		updStartColVar=function(){
+			emitter[0].setStartColorVar(new cc.Color4F(parseFloat($("#start_r_var").val()),parseFloat($("#start_g_var").val()),parseFloat($("#start_b_var").val()),
+		   						parseFloat($("#start_a_var").val())));//r,g,b,a
+		};
+		updEndCol=function(){
+			emitter[0].setEndColor(new cc.Color4F(parseFloat($("#end_r").val()),parseFloat($("#end_g").val()),parseFloat($("#end_b").val()),
+		   						parseFloat($("#end_a").val())));//r,g,b,a
+		};
+		updEndColVar=function(){
+			emitter[0].setEndColorVar(new cc.Color4F(parseFloat($("#end_r_var").val()),parseFloat($("#end_g_var").val()),parseFloat($("#end_b_var").val()),
+		   						parseFloat($("#end_a_var").val())));//r,g,b,a
+		};
+	</script>
+
+			<table>
+			<tbody><tr><td>
+					Size 
+			</td><td width="100">
+					<span id="start_size_disp">111±10</span>
+			</td><td>
+					<input type="range" id="startSize" name="startSize" mix="0" max="400" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setStartSize(parseFloat(this.value)); dumpToInputTag(slot);">
+					<input type="text" size="4" id="startSize_text" name="startSize_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setStartSize(parseFloat(this.value)); dumpToInputTag();"> 
+					<input type="range" id="startSizeVar" name="startSize" mix="0" max="400" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setStartSizeVar(parseFloat(this.value)); dumpToInputTag(slot);">
+					<input type="text" size="4" id="startSizeVar_text" name="startSizeVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setStartSizeVar(parseFloat(this.value)); dumpToInputTag();"> 
+			</td>
+			</tr>
+			<tr><td>
+				Spin 
+			</td><td>
+				<span id="start_spin_disp">720±0</span>  
+			</td><td>
+				<input type="range" id="startSpin" name="startSpin" min="-1440" max="1440" value="" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setStartSpin(parseFloat(this.value));dumpToInputTag(slot);">
+				<input type="text" size="4" id="startSpin_text" name="startSpin_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setStartSpin(parseFloat(this.value)); dumpToInputTag();"> 
+				<input type="range" id="startSpin_var" name="startSpin_var" min="0" max="1440" value="" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setStartSpinVar(parseFloat(this.value));dumpToInputTag(slot);">	
+				<input type="text" size="4" id="startSpin_var_text" name="startSpin_var_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setStartSpinVar(parseFloat(this.value)); dumpToInputTag();"> 	
+			</td></tr>
+			<tr><td>																
+					a 
+			</td><td>
+				<span id="start_a_disp">1±0.1</span> 
+			</td><td>
+				<input type="range" id="start_a" name="start_a" mix="0" max="1" step="0.05" onmousemove="
+					if (!flg_mousedown) return;
+					//$(&#39;img[id*=start_size_pic]&#39;).css(&#39;opacity&#39;,this.value);
+					updStartCol(); 
+					dumpToInputTag();">
+				 <input type="range" id="start_a_var" name="start_a_var" mix="0" max="1" step="0.05" onmousemove="updStartColVar(); dumpToInputTag();"> 
+				 
+			</td></tr>
+			<tr><td>
+						r 
+			</td><td>
+				<span id="start_r_disp">0.2±0</span>   
+			</td><td>
+				<input type="range" size="5" id="start_r" name="start_r" mix="0" max="1" step="0.05" onmousemove="
+				if (!flg_mousedown) return;
+				updStartCol();     dumpToInputTag();">
+				<input type="range" size="5" id="start_r_var" name="start_r_var" mix="0" max="1" step="0.05" onmousemove="
+				if (!flg_mousedown) return;
+				updStartColVar();  dumpToInputTag();">	
+			</td></tr>
+			<tr><td>					
+						g 
+			</td><td>
+				<span id="start_g_disp">0.4±0</span>
+			</td><td>
+				<input type="range" size="5" id="start_g" name="start_g" mix="0" max="1" step="0.05" onmousemove="
+				if (!flg_mousedown) return;
+				updStartCol();     dumpToInputTag();">
+				<input type="range" size="5" id="start_g_var" name="start_g_var" mix="0" max="1" step="0.05" onmousemove="
+				if (!flg_mousedown) return;
+				updStartColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			<tr><td>	
+						b 
+			</td><td>
+						<span id="start_b_disp">0.69±0.2</span>   
+			</td><td>
+				<input type="range" size="5" id="start_b" name="start_b" mix="0" max="1" step="0.05" onmousemove="
+					if (!flg_mousedown) return;
+					updStartCol();     dumpToInputTag();">
+				<input type="range" size="5" id="start_b_var" name="start_b_var" mix="0" max="1" step="0.05" onmousemove="
+					if (!flg_mousedown) return;
+					updStartColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			</tbody></table>
+	
+		</td><td style="vertical-align:top;" width="50%">
+
+			<h3><span style="color:gray;">End</span></h3>
+			
+			<table>
+			<tbody><tr><td>		
+					Size 
+			</td><td td="" width="100">
+					<span id="end_size_disp">40±0</span>
+			</td><td>
+					<input type="range" id="endSize" name="endSize" mix="0" max="400" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setEndSize(parseFloat(this.value)); dumpToInputTag(slot);">
+					<input type="text" size="4" id="endSize_text" name="endSize_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setEndSize(parseFloat(this.value)); dumpToInputTag();"> 
+					<input type="range" id="endSizeVar" name="endSize" mix="0" max="400" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setEndSizeVar(parseFloat(this.value)); dumpToInputTag(slot);">
+					<input type="text" size="4" id="endSizeVar_text" name="endSizeVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setEndSizeVar(parseFloat(this.value)); dumpToInputTag();"> 
+			</td></tr>
+			<tr><td>
+				Spin 
+			</td><td>
+				<span id="end_spin_disp">0±0</span>  
+			</td><td>
+				<input type="range" id="endSpin" name="endSpin" min="-1440" max="1440" value="" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setEndSpin(parseFloat(this.value));dumpToInputTag(slot);">
+				<input type="text" size="4" id="endSpin_text" name="endSpin_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setEndSpin(parseFloat(this.value)); dumpToInputTag();"> 
+				<input type="range" id="endSpin_var" name="endSpin_var" min="0" max="1440" value="" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setEndSpinVar(parseFloat(this.value));dumpToInputTag(slot);">		
+				<input type="text" size="4" id="endSpin_var_text" name="endSpin_var_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setEndSpinVar(parseFloat(this.value)); dumpToInputTag();"> 
+			</td></tr>
+			<tr><td>
+					a
+			</td><td>
+					<span id="end_a_disp">1±0</span>	
+			</td><td>	
+						<input type="range" id="end_a" name="end_a" min="0" max="1" step="0.05" onmousemove="
+							if (!flg_mousedown) return;
+							//$(&#39;#img[id*=end_size_pic]&#39;).css(&#39;opacity&#39;,this.value); updEndCol(); dumpToInputTag();">
+					    <input type="range" size="5" id="end_a_var" name="end_a_var" min="0" max="1" step="0.05" onmousemove="
+					    	if (!flg_mousedown) return;
+					    	updEndColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			<tr><td>
+						r     
+			</td><td>
+						<span id="end_r_disp">0±0</span>	 
+			</td><td>
+						<input type="range" size="5" id="end_r" name="end_r" mix="0" max="1" step="0.05" onmousemove="
+							if (!flg_mousedown) return;
+							updEndCol();     dumpToInputTag();">
+						 <input type="range" size="5" id="end_r_var" name="end_r_var" mix="0" max="1" step="0.05" onmousemove="
+						 	if (!flg_mousedown) return;
+						 	updEndColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			<tr><td>
+						g 
+			</td><td>    
+						<span id="end_g_disp">0±0</span>	 
+			</td><td>
+						<input type="range" size="5" id="end_g" name="end_g" mix="0" max="1" step="0.05" onmousemove="
+							if (!flg_mousedown) return;
+							updEndCol();     dumpToInputTag();">
+						 <input type="range" size="5" id="end_g_var" name="end_g_var" mix="0" max="1" step="0.05" onmousemove="
+						 	if (!flg_mousedown) return;
+						 	updEndColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			<tr><td>
+						b     
+			</td><td>
+						<span id="end_b_disp">0±0</span>	 
+			</td><td>
+						<input type="range" size="5" id="end_b" name="end_b" mix="0" max="1" step="0.05" onmousemove="
+							if (!flg_mousedown) return;
+							updEndCol();     dumpToInputTag();">
+						 <input type="range" size="5" id="end_b_var" name="end_b_var" mix="0" max="1" step="0.05" onmousemove="
+						 	if (!flg_mousedown) return;
+						 	updEndColVar();  dumpToInputTag();"> <br>
+			</td></tr>
+			</tbody></table>
+
+		</td></tr>
+		<tr><td style="vertical-align:top;">
+			</td><td style="vertical-align:top;">				
+		
+				<div id="end_color" style="background-color: rgb(0, 0, 0);">rgb(0, 0, 0)</div>
+						
+		</td></tr>				
+		</tbody></table>
+
+
+	ColorVariance
+	<a id="cv_1" href="javascript:setColorInit(); dumpToInputTag();">0%</a> 
+	<a id="cv_2" href="javascript:
+				emitter[0].setStartColorVar(  cc.c4f(0.1,0.1,0.1,0.5)  ); 
+				emitter[0].setEndColor(emitter[0].getStartColor()); 
+				emitter[0].setEndColorVar(  cc.c4f(0,0,0,0) ); 
+				dumpToInputTag();">10%</a>
+	<a id="cv_3" href="javascript:
+				emitter[0].setStartColorVar(  cc.c4f(0.2,0.2,0.2,0.5) ); 
+				dumpToInputTag();">20%</a>
+	<a id="cv_4" href="javascript:
+				emitter[0].setStartColorVar(  cc.c4f(0.4,0.4,0.4,0.5) ); 
+				dumpToInputTag();">40%</a>
+	
+	<a id="cv_5" href="javascript:    
+				emitter[0].setStartColorVar(cc.c4f(1,1,1,1));  
+				dumpToInputTag();">100%</a> 								
+
+
+	<br>
+
+	</div><!-- pane_shape -->
+
+	<div id="topleft_pane_motion" style="display: none;">
+	
+		<div style="border-bottom:1px solid #444444;">
+			<h4>
+			<a id="type_grav" href="javascript:toggleGravityRadius(&#39;gravity&#39;,slot);" style="font-size: 140%; font-weight: bold;">Gravity</a>    
+			<a id="type_rad" href="javascript:toggleGravityRadius(&#39;radius&#39;,slot);" style="font-size: 140%; font-weight: normal;">Radius</a> 
+			</h4>
+		
+			<table>
+			<tbody><tr><td width="100">
+					Max Particles
+				</td><td width="80">
+					<span id="particleNum_disp">289</span> 
+				</td><td>
+					<input type="range" id="particleNum" name="particleNum" min="1" max="2000" step="10" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setTotalParticles(parseFloat(this.value));
+						emitter[0].resetSystem();
+						dumpToInputTag();">
+					<input type="text" size="4" id="particleNum_text" name="particleNum_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setTotalParticles(parseFloat(this.value));
+							emitter[0].resetSystem();
+							dumpToInputTag(); "> 
+					
+					<a href="javascript:emitter[0].setTotalParticles(1);   dumpToInputTag();">1</a>
+					<a href="javascript:emitter[0].setTotalParticles(10); dumpToInputTag();">10</a> 				
+					<a href="javascript:emitter[0].setTotalParticles(100); dumpToInputTag();">100</a> 					
+					<a href="javascript:emitter[0].setTotalParticles(1000);  dumpToInputTag();">1000</a> 
+					
+				</td></tr>
+				<tr><td width="100">
+					Duration
+				</td><td width="80">
+					<span id="duration_disp">-1</span> sec 
+				</td><td>
+					<input type="range" id="duration" name="duration" min="-1" max="10" step="0.02" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setDuration(parseFloat(this.value));
+						emitter[0].resetSystem();
+						dumpToInputTag();">
+					<input type="text" size="4" id="duration_text" name="duration_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setDuration(parseFloat(this.value));
+							emitter[0].resetSystem();
+							dumpToInputTag(); "> 
+					<span id="duration_forever_disp"><span style="color:red;">forever</span></span>
+					
+					<a href="javascript:emitter[0].setDuration(-1);   dumpToInputTag();">Forever</a>
+					<a href="javascript:emitter[0].setDuration(0.01); dumpToInputTag();">0.01</a> 				
+					<a href="javascript:emitter[0].setDuration(0.05); dumpToInputTag();">0.05</a> 					
+					<a href="javascript:emitter[0].setDuration(0.5);  dumpToInputTag();">0.5</a> 
+					
+				</td></tr>
+				
+				<tr><td>		
+					Lifetime 
+				</td><td>
+				
+					<span id="life_disp">1.1±0.4</span>
+					
+				</td><td>
+				
+					<input type="range" id="life" name="life" min="0.01" max="10" step="0.01" onmousemove="
+								if (!flg_mousedown) return;	
+								emitter[0].setLife( parseFloat(this.value) );
+								emitter[0].setTotalParticles(parseInt(emitter[0].getEmissionRate() * emitter[0].getLife() ));
+								dumpToInputTag(slot); ">
+					<input type="text" size="4" id="life_text" name="life_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setLife(parseFloat(this.value));
+							emitter[0].setTotalParticles(parseInt(emitter[0].getEmissionRate() * emitter[0].getLife()));
+							dumpToInputTag(); "> 
+								
+					<input type="range" id="lifeVar" name="lifeVar" min="0" max="10" step="0.1" onmousemove="
+								if (!flg_mousedown) return;
+								emitter[0].setLifeVar(parseFloat(this.value));
+								dumpToInputTag(slot); ">
+	
+					<input type="text" size="4" id="lifeVar_text" name="lifeVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+							emitter[0].setLifeVar(parseFloat(this.value));
+							dumpToInputTag(); "> 
+	
+								
+				</td></tr>	
+				<tr><td>
+					EmissionRate 
+				</td><td>
+						<span id="emit_rate_disp">262.72</span>
+				</td><td>
+				<input id="emissionRate" name="emissionRate" type="range" min="1" max="800" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setEmissionRate(parseInt(this.value));																								emitter[0].setTotalParticles(parseInt(emitter[0].getEmissionRate()*emitter[0].getLife()));
+					dumpToInputTag(slot);">
+					
+				<input type="text" size="4" id="emissionRate_text" name="emissionRate_text" onchange="
+						if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 					
+						emitter[0].setEmissionRate(parseInt(this.value));																								emitter[0].setTotalParticles(parseInt(emitter[0].getEmissionRate()*emitter[0].getLife()));
+						dumpToInputTag(slot);">
+					
+				</td></tr>
+				<tr><td>				
+						Angle 
+						</td><td width="80">
+							<span id="angle_disp">146±50</span>
+						</td><td>
+							<input id="angle" type="range" guide="1" min="-180" max="180" step="1" onmousemove="
+										if (!flg_mousedown) return;
+										emitter[0].setAngle(parseInt(this.value)); 
+										setGuideObj(slot);
+										guiderect[slot].setVisible(true);   
+										drawAngle(slot ,emitter[0].getAngle(),emitter[0].getSpeed()); 
+										dumpToInputTag(slot); ">
+
+							<input type="text" size="4" id="angle_text" name="angle_text" onchange="
+									if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 					
+									emitter[0].setAngle(parseInt(this.value));												
+									dumpToInputTag(slot);">
+									
+							<input id="angle_var" type="range" guide="1" min="0" max="180" step="1" onmousemove="
+										if (!flg_mousedown) return;
+										emitter[0].setAngleVar(parseInt(this.value));
+										setGuideObj(slot); 
+										guiderect[slot].setVisible(true);
+										drawAngle(slot,emitter[0].getAngle(),emitter[0].getSpeed()); 
+										dumpToInputTag(slot);">
+
+							<input type="text" size="4" id="angle_var_text" name="angle_var_text" onchange="
+									if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 					
+									emitter[0].setAngleVar(parseInt(this.value));												
+									dumpToInputTag(slot);">
+
+				</td></tr>				
+			</tbody></table>	
+		</div>
+
+		<div id="pane_gravity" style="">
+		
+			<div style="border-bottom:1px solid #444444;">
+			
+			<table><tbody><tr><td style="vertical-align:top;">
+					Angle 
+					<span id="disp_angle">146</span> Speed <span id="disp_speed">244</span><br>		
+					<canvas id="cv_angle" style="background-color:#333333; width:200px; height:200px;" width="200" height="200">
+					</canvas>
+	
+				
+				<script>
+					var angle_x=0,angle_y=0,angle_flag=0;
+	
+				    var cv_angle = document.getElementById('cv_angle');
+				    var ctx_angle = cv_angle.getContext('2d');
+						cv_angle.setAttribute("width", boxsize);
+						cv_angle.setAttribute("height",boxsize);
+						ctx_angle.scale( 1,1 );	
+									    
+					function drawAngle(p_slot,kakudo,speed){
+	
+						kakudo=parseInt(kakudo);
+						speed=parseInt(speed);
+	
+						clog("drawAngle p_slot:"+p_slot+ " emitters:"+emitter.length + " angle:" + kakudo + " speed:" + speed);
+						
+						this.rad=parseFloat(kakudo * Math.PI / 180 );
+	
+						//線を引く
+						ctx_angle.clearRect(0,0,boxsize,boxsize);				
+						
+						to_x=boxsize/2 + Math.cos(this.rad) * speed / 10;
+						to_y=boxsize/2 - Math.sin(this.rad) * speed / 10;
+						//speed,angle
+						ctx_angle.beginPath();
+						ctx_angle.strokeStyle=' rgb(255,88,88) ';
+						ctx_angle.moveTo(boxsize/2,boxsize/2);
+						ctx_angle.lineTo(to_x , to_y);
+						ctx_angle.closePath();
+						ctx_angle.stroke();
+						
+						//angleVarの円弧
+						ctx_angle.beginPath();
+						anglevar=parseInt(emitter[p_slot].getAngleVar());
+						rad_from = round2((kakudo - anglevar) * Math.PI / 180 * -1);
+						rad_to = round2((kakudo + anglevar) * Math.PI / 180 * -1);
+						clog(" kakudo:"+kakudo+" anglevar:"+anglevar+" radian from:"+rad_from+" to:"+rad_to);
+						ctx_angle.arc(boxsize/2, boxsize/2, 30,rad_from,rad_to, true); // x , y , 半径 , 開始度ラジアン , 終了度ラジアン , true
+						ctx_angle.stroke();
+						
+						//speedVar
+						this.spdVar=emitter[p_slot].getSpeedVar();
+						ctx_angle.beginPath();
+						ctx_angle.strokeStyle=' rgb(150,150,150) ';
+						ctx_angle.moveTo(to_x - Math.cos(this.rad) * this.spdVar / 10 + Math.sin(this.rad) *3, to_y + Math.sin(this.rad) * this.spdVar / 10 + Math.cos(this.rad) *3);
+						ctx_angle.lineTo(to_x + Math.cos(this.rad) * this.spdVar / 10 + Math.sin(this.rad) *3, to_y - Math.sin(this.rad) * this.spdVar / 10 + Math.cos(this.rad) *3);
+						ctx_angle.closePath();					
+	
+						ctx_angle.stroke();
+					}
+					
+					$("#cv_angle").bind("mousedown",function(e){
+						angle_flag=1;
+					});
+					$("#cv_angle").bind("mousemove",function(e){
+						if (angle_flag==0) { return; }
+						off=$("#cv_angle").offset();
+						rect = e.target.getBoundingClientRect();
+						
+	                	angle_x = e.clientX - rect.left - boxsize/2;
+						angle_y = e.clientY - rect.top  - boxsize/2;
+	
+						angle_x=Math.floor(angle_x * 10);
+						angle_y=Math.floor(angle_y * 10);
+	
+						kakudo = Math.floor(Math.atan2(angle_y,angle_x) * 180 / Math.PI ) * -1;
+						speed  = Math.floor(Math.sqrt(angle_x * angle_x + angle_y * angle_y));
+						clog ("speed:"+ speed);
+	
+						emitter[0].setSpeed(speed);
+						emitter[0].setAngle(kakudo);
+						$("#speed").attr("value",speed);
+						dumpToInputTag(slot);
+					});
+					$("#cv_angle").bind("mouseup",function(e){
+						angle_flag=0;
+						dumpToInputTag(slot);
+					});
+				</script>
+				<br>
+	
+				<div>
+				Speed 
+				<a href="javascript:emitter[0].setSpeed(emitter[0].getSpeed()*2); 
+																		emitter[0].setRadialAccel(emitter[0].getRadialAccel()*2);     
+																		emitter[0].setTangentialAccel(emitter[0].getTangentialAccel()*2);    
+																		dumpToInputTag(slot);">x2</a> 	
+				<a href="javascript:emitter[0].setSpeed(emitter[0].getSpeed()/2); 
+																		emitter[0].setRadialAccel(emitter[0].getRadialAccel()/2);     
+																		emitter[0].setTangentialAccel(emitter[0].getTangentialAccel()/2);    
+																		dumpToInputTag(slot);">/2</a>		
+			    &nbsp;&nbsp;				
+			
+				Rotate
+				<a href="javascript:rotateSlot(slot,10)">10</a>
+				<a href="javascript:rotateSlot(slot,90)">90</a>			
+				</div>
+	
+	
+			</td><td style="vertical-align:top;">
+	
+				EmitArea <span id="emit_area"> 30 40</span><br>
+				<canvas id="set_pos" style="background-color:#333333; width:200px; height:200px;" width="200" height="200">
+				</canvas>
+				<br>
+				<a href="javascript:emitter[0].setPosVar(cc.p(0,0));     dumpToInputTag(slot);">0x0</a>
+				<a href="javascript:emitter[0].setPosVar(cc.p(160,5));   dumpToInputTag(slot);">Hor</a>			
+				<a href="javascript:emitter[0].setPosVar(cc.p(5,240));   dumpToInputTag(slot);">Ver</a>						
+				<a href="javascript:emitter[0].setPosVar(cc.p(160,240)); dumpToInputTag(slot);">320x480</a>
+				
+				<script>
+					var emit_x=0,emit_y=0,emit_flag=0;
+	
+				    var cv = document.getElementById('set_pos');
+				    var emit_ctx = cv.getContext('2d');
+						cv.setAttribute("width", boxsize);
+						cv.setAttribute("height",boxsize);
+						emit_ctx.scale( 1,1 );	
+				    
+					function drawEmitArea(p_slot,xx,yy){
+	
+						xx=Math.floor(xx);
+						yy=Math.floor(yy);
+						$("#emit_area").html(" " +  Math.abs(xx *2) + " " + Math.abs(yy *2)  ); //プラスマイナスつくので2倍サイズ
+						guiderect[p_slot].setScaleX(xx *2 / 100);
+						guiderect[p_slot].setScaleY(yy *2 / 100);
+	
+						//四角を描く
+						emit_ctx.clearRect(0,0,boxsize,boxsize);				
+						emit_ctx.beginPath();
+						emit_ctx.strokeStyle=' rgb(255,88,88) ';
+						emit_ctx.strokeRect(boxsize/2 - Math.floor( xx/5  ) , boxsize/2 - Math.floor(yy / 5 ),  Math.floor(xx/5) * 2 ,  Math.floor(yy / 5) *2 );
+						emit_ctx.closePath();
+						emit_ctx.stroke();
+					}
+					
+					$("#set_pos").bind("mousedown",function(e){
+						emit_flag=1;
+						guiderect[slot].setVisible(true);
+					});
+					$("#set_pos").bind("mousemove",function(e){
+						if (emit_flag==0) { return; }
+						off=$("#set_pos").offset();
+						
+						rect = e.target.getBoundingClientRect();
+	                	emit_x = Math.abs(e.clientX - rect.left - boxsize/2) * 5;
+						emit_y = Math.abs(e.clientY - rect.top  - boxsize/2) * 5;					
+	
+						emitter[0].setPosVar(cc.p( parseInt(emit_x)  , parseInt(emit_y) ));
+						drawEmitArea( slot , emit_x , emit_y );
+						dumpToInputTag(slot);
+					});
+					$("#set_pos").bind("mouseup",function(e){
+						emit_flag=0;
+						guiderect[slot].setVisible(false);
+						dumpToInputTag(slot);
+					});
+				</script>
+	
+			</td><td style="vertical-align:top;">
+			
+				Gravity <span id="grav_01"> -1000 740</span><br>
+				<canvas id="grav_pad" style="background-color:#333333; width:200px; height:200px;" width="200" height="200">
+				</canvas>
+				<script>
+				    var cv_grav = document.getElementById('grav_pad');
+				    var ctx_grav = cv_grav.getContext('2d');
+					var grav_x=0,grav_y=0,grav_flag=0;
+						cv_grav.setAttribute("width", boxsize);
+						cv_grav.setAttribute("height",boxsize);
+						ctx_grav.scale( 1,1 );
+					
+					function drawGrav(p_slot,xx,yy){
+						xx=Math.floor(xx);
+						yy=Math.floor(yy);
+						$("#grav_01").html(" " + xx + " " + yy );
+						
+						emitter[p_slot].setGravity(cc.p( xx , yy ));
+						
+						//中心から線を引く
+						ctx_grav.clearRect(0,0,boxsize,boxsize);				
+						ctx_grav.beginPath();
+						ctx_grav.strokeStyle=' rgb(255,88,88) ';
+						ctx_grav.moveTo(boxsize/2,boxsize/2);
+						ctx_grav.lineTo(boxsize/2+ xx/20 , boxsize/2 - yy / 20);
+						ctx_grav.closePath();
+						ctx_grav.stroke();
+					}
+					$("#grav_pad").bind("mousedown",function(e){
+						grav_flag=1;
+					});
+					$("#grav_pad").bind("mousemove",function(e){
+						if (grav_flag==0) { return; }
+						off=$("#grav_pad").offset();
+						
+						rect = e.target.getBoundingClientRect();
+	                	grav_x = (e.clientX - rect.left - boxsize/2) ;
+						grav_y = (e.clientY - rect.top  - boxsize/2) * -1;					
+						
+						drawGrav(slot,grav_x*20,grav_y*20);
+						dumpToInputTag(slot);
+					});
+					
+					$("#grav_pad").bind("mouseup",function(e){
+						grav_flag=0;
+						dumpToInputTag(slot);
+					});
+				</script>
+				<br>			
+				<a href="javascript:drawGrav(slot,0,0);dumpToInputTag(slot);">OFF</a> 
+				<a href="javascript:drawGrav(slot,emitter[0].getGravity().x * 0.8,emitter[0].getGravity().y * 0.8);  dumpToInputTag(slot);">80%</a> 
+				<a href="javascript:drawGrav(slot,emitter[0].getGravity().x * 1.2,emitter[0].getGravity().y * 1.2);  dumpToInputTag(slot);">120%</a> 
+		</td></tr></tbody></table>
+		
+			</div>
+
+			
+
+		
+		<table>
+			<tbody><tr><td width="100">
+				Speed 
+			</td><td width="80">
+				<span id="speedVar_disp">244±5</span>			
+			</td><td>
+				<input type="range" id="speed" name="speed" guide="1" min="0" max="600" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setSpeed(parseFloat(this.value));
+					dumpToInputTag(slot);">
+
+					<input type="text" size="4" id="speed_text" name="speed_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setSpeed(parseFloat(this.value));
+							dumpToInputTag(); "> 
+
+
+				<input type="range" id="speedVar" name="speedVar" guide="1" min="0" max="600" onmousemove="
+					if (!flg_mousedown) return;
+					emitter[0].setSpeedVar(parseFloat(this.value));
+					dumpToInputTag(slot);">
+
+					<input type="text" size="4" id="speedVar_text" name="speedVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setSpeedVar(parseFloat(this.value));
+							dumpToInputTag(); "> 
+
+			</td></tr>
+			
+			<tr><td>
+				PosVar 
+			</td><td>
+				<span id="pos_var_disp">15x-20</span>
+			</td><td>
+			
+				<input id="pos_var_x" name="pos_var_x" type="range" guide="1" min="0" max="800" onmousemove="
+				   		if (!flg_mousedown) return;
+				   		emitter[0].setPosVar(cc.p(parseInt(this.value),parseInt(emitter[0].getPosVar().y)));
+				   		setGuideObj(slot);
+						guiderect[slot].setVisible(true); 
+						dumpToInputTag(slot);">
+						
+				<input type="text" size="4" id="pos_var_x_text" name="pos_var_x_text" onchange="
+						if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+						emitter[0].setPosVar(cc.p(parseInt(this.value),parseInt(emitter[0].getPosVar().y)));
+						dumpToInputTag(); "> 
+						
+				<input id="pos_var_y" name="pos_var_y" type="range" guide="1" min="0" max="800" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setPosVar(cc.p(parseInt(emitter[0].getPosVar().x),parseInt(this.value)));
+						setGuideObj(slot);
+						guiderect[slot].setVisible(true); 
+						dumpToInputTag(slot);">
+						
+				<input type="text" size="4" id="pos_var_y_text" name="pos_var_y_text" onchange="
+						if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+						emitter[0].setPosVar(cc.p(parseInt(emitter[0].getPosVar().x),parseInt(this.value)));
+						dumpToInputTag(); "> 			
+					
+			</td></tr>			
+			
+			<tr><td>
+				GravityXY
+			</td><td>
+				<span id="gravity_disp">-1000x740</span>
+			</td><td>
+
+				<input id="gravity_x" name="gravity_x" type="range" guide="1" min="-1200" max="1200" onmousemove="
+									if (!flg_mousedown) return;
+									emitter[0].setGravity(cc.p(this.value,emitter[0].getGravity().y)); 
+								    dumpToInputTag(slot);">
+								    
+				<input type="text" size="4" id="gravity_x_text" name="gravity_x_text" onchange="
+						if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+						emitter[0].setGravity(cc.p(this.value,emitter[0].getGravity().y)); 
+						dumpToInputTag(); "> 					    
+								    
+				<input id="gravity_y" name="gravity_y" type="range" guide="1" min="-1200" max="1200" onmousemove="
+									if (!flg_mousedown) return;
+									emitter[0].setGravity(cc.p(emitter[0].getGravity().x,this.value));
+								    dumpToInputTag(slot);">
+
+				<input type="text" size="4" id="gravity_y_text" name="gravity_y_text" onchange="
+						if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 
+						emitter[0].setGravity(cc.p(emitter[0].getGravity().x , this.value)); 
+						dumpToInputTag(); "> 
+
+			</td></tr>			
+				<tr><td>	 
+						AccelRad  
+				</td><td>		
+						<span id="rad_accel_disp">0±0</span> 
+				</td><td>
+						<input type="range" id="rad_accel" name="rad_accel" min="-800" max="600" onmousemove="
+							if (!flg_mousedown) return;
+							emitter[0].setRadialAccel(parseFloat(this.value)); 
+							dumpToInputTag(slot); ">
+							
+						<input type="text" size="4" id="rad_accel_text" name="rad_accel_text" onchange="
+								if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+								emitter[0].setRadialAccel(parseFloat(this.value)); 
+								dumpToInputTag(); "> 			
+					
+												
+						 <input type="range" id="rad_accel_var" name="rad_accel_var" min="0" max="600" onmousemove="
+						  		if (!flg_mousedown) return;
+								emitter[0].setRadialAccelVar(parseFloat(this.value)); 
+								dumpToInputTag(slot);">
+								
+						<input type="text" size="4" id="rad_accel_var_text" name="rad_accel_var_text" onchange="
+								if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+								emitter[0].setRadialAccelVar(parseFloat(this.value)); 
+								dumpToInputTag(); "> 										
+								
+				</td></tr>
+				<tr><td>			
+						AccelTan 	
+				</td><td>
+						<span id="tan_accel_disp">0±0</span> 
+				</td><td>
+					<input type="range" id="tan_accel" name="tan_accel" min="-800" max="800" onmousemove="
+							if (!flg_mousedown) return;
+							emitter[0].setTangentialAccel(parseFloat(this.value)); 
+							dumpToInputTag(slot); ">
+
+					<input type="text" size="4" id="tan_accel_text" name="tan_accel_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setTangentialAccel(parseFloat(this.value)); 
+							dumpToInputTag(); "> 	
+	
+					 <input type="range" id="tan_accel_var" name="tan_accel_var" min="0" max="600" onmousemove="
+						 	if (!flg_mousedown) return;
+						 	emitter[0].setTangentialAccelVar(parseFloat(this.value)); 
+						 	dumpToInputTag(slot);"> 	
+
+					<input type="text" size="4" id="tan_accel_var_text" name="tan_accel_var_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setTangentialAccelVar(parseFloat(this.value)); 
+							dumpToInputTag(); "> 	
+
+				</td></tr>
+			</tbody></table>
+			 		
+	</div><!-- pane_gravity -->
+
+	<div id="pane_radius" style="display: none;">
+			
+			<table><tbody><tr><td width="100">
+					MaxRadius 
+			</td><td width="80">
+				<span id="max_radius_disp">**</span>
+			</td><td>			
+					<input type="range" id="maxRadius" name="maxRadius" guide="1" min="0" max="1000" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setStartRadius(parseFloat(this.value)); 
+						setGuideObj(slot);
+						guiderect[slot].setVisible(true); 
+						dumpToInputTag(slot);">
+						
+					<input type="text" size="4" id="maxRadius_text" name="maxRadius_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setStartRadius(parseFloat(this.value)); 
+							dumpToInputTag(); "> 
+						
+						
+					<input type="range" id="maxRadiusVar" name="maxRadiusVar" guide="1" min="0" max="1000" onmousemove="
+						if (!flg_mousedown) return;
+						emitter[0].setStartRadiusVar(parseFloat(this.value)); 
+						setGuideObj(slot);
+						guiderect[slot].setVisible(true); 
+						dumpToInputTag(slot);">	
+					
+					<input type="text" size="4" id="maxRadiusVar_text" name="maxRadiusVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setStartRadiusVar(parseFloat(this.value)); 
+							dumpToInputTag(); "> 					
+					<span style="color:gray;">発生位置:px</span>	
+			</td></tr>			
+			<tr><td>
+					MinRadius 
+			</td><td>
+				<span id="min_radius_disp">**</span>
+			</td><td>
+					<input type="range" id="minRadius" name="minRadius" guide="1" min="0" max="1000" onmousemove="
+							if (!flg_mousedown) return;
+							emitter[0].setEndRadius(parseFloat(this.value)); 
+							setGuideObj(slot);
+							guiderect[slot].setVisible(true); 
+							dumpToInputTag(slot);">
+							
+					<input type="text" size="4" id="minRadius_text" name="minRadius_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setEndRadius(parseFloat(this.value)); 
+							dumpToInputTag(); "> 	
+							<span style="color:gray;">終了位置:px</span>			</td></tr>
+			<tr><td>
+					Rotate/Sec
+			</td><td>
+					<span id="rotate_par_second_disp">**</span>
+			</td><td>
+					 <input type="range" id="rotatePerSecond" name="rotatePerSecond" guide="1" min="-1000" max="1000" onmousemove="
+					 	if (!flg_mousedown) return;
+					 	emitter[0].setRotatePerSecond(parseFloat(this.value)); 
+					 	dumpToInputTag(slot);
+					 	guiderect[slot].setVisible(true); ">
+
+					<input type="text" size="4" id="rotatePerSecond_text" name="rotatePerSecond_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setRotatePerSecond(parseFloat(this.value)); 
+							dumpToInputTag(); "> 	
+
+					 	
+					 <input type="range" id="rotatePerSecondVar" name="rotatePerSecondVar" guide="1" min="0" max="1000" onmousemove="
+					 	if (!flg_mousedown) return;
+					 	emitter[0].setRotatePerSecondVar(parseFloat(this.value)); 
+					 	dumpToInputTag(slot);
+					 	guiderect[slot].setVisible(true); ">
+
+					<input type="text" size="4" id="rotatePerSecondVar_text" name="rotatePerSecondVar_text" onchange="
+							if (!$.isNumeric(this.value)) { alert(&#39;set number!&#39;); return false; } 						
+							emitter[0].setRotatePerSecondVar(parseFloat(this.value)); 
+							dumpToInputTag(); "> 	<span style="color:gray;">円周に沿った回転量</span>
+					 	
+
+			</td></tr>
+			</tbody></table>
+
+			<script src="./cocos2d.js"></script>
+
+			<script>
+				
+				var flg_mousedown=0;
+				var slot=0;
+				var slot_bg=0;
+		
+				var png_gz_b64={"1f_6":"H4sIAAAAAAAAAwEqDtXxiVBORw0KGgoAAAANSUhEUgAAADcAAAAwCAYAAAC13uL+AAAKQWlDQ1BJQ0MgUHJvZmlsZQAASA2dlndUU9kWh8+9N73QEiIgJfQaegkg0jtIFQRRiUmAUAKGhCZ2RAVGFBEpVmRUwAFHhyJjRRQLg4Ji1wnyEFDGwVFEReXdjGsJ7601896a\/cdZ39nnt9fZZ+9917oAUPyCBMJ0WAGANKFYFO7rwVwSE8vE9wIYEAEOWAHA4WZmBEf4RALU\/L09mZmoSMaz9u4ugGS72yy\/UCZz1v9\/kSI3QyQGAApF1TY8fiYX5QKUU7PFGTL\/BMr0lSkyhjEyFqEJoqwi48SvbPan5iu7yZiXJuShGlnOGbw0noy7UN6aJeGjjAShXJgl4GejfAdlvVRJmgDl9yjT0\/icTAAwFJlfzOcmoWyJMkUUGe6J8gIACJTEObxyDov5OWieAHimZ+SKBIlJYqYR15hp5ejIZvrxs1P5YjErlMNN4Yh4TM\/0tAyOMBeAr2+WRQElWW2ZaJHtrRzt7VnW5mj5v9nfHn5T\/T3IevtV8Sbsz55BjJ5Z32zsrC+9FgD2JFqbHbO+lVUAtG0GQOXhrE\/vIADyBQC03pzzHoZsXpLE4gwnC4vs7GxzAZ9rLivoN\/ufgm\/Kv4Y595nL7vtWO6YXP4EjSRUzZUXlpqemS0TMzAwOl89k\/fcQ\/+PAOWnNycMsnJ\/AF\/GF6FVR6JQJhIlou4U8gViQLmQKhH\/V4X8YNicHGX6daxRodV8AfYU5ULhJB8hvPQBDIwMkbj96An3rWxAxCsi+vGitka9zjzJ6\/uf6Hwtcim7hTEEiU+b2DI9kciWiLBmj34RswQISkAd0oAo0gS4wAixgDRyAM3AD3iAAhIBIEAOWAy5IAmlABLJBPtgACkEx2AF2g2pwANSBetAEToI2cAZcBFfADXALDIBHQAqGwUswAd6BaQiC8BAVokGqkBakD5lC1hAbWgh5Q0FQOBQDxUOJkBCSQPnQJqgYKoOqoUNQPfQjdBq6CF2D+qAH0CA0Bv0BfYQRmALTYQ3YALaA2bA7HAhHwsvgRHgVnAcXwNvhSrgWPg63whfhG\/AALIVfwpMIQMgIA9FGWAgb8URCkFgkAREha5EipAKpRZqQDqQbuY1IkXHkAwaHoWGYGBbGGeOHWYzhYlZh1mJKMNWYY5hWTBfmNmYQM4H5gqVi1bGmWCesP3YJNhGbjS3EVmCPYFuwl7ED2GHsOxwOx8AZ4hxwfrgYXDJuNa4Etw\/XjLuA68MN4SbxeLwq3hTvgg\/Bc\/BifCG+Cn8cfx7fjx\/GvyeQCVoEa4IPIZYgJGwkVBAaCOcI\/YQRwjRRgahPdCKGEHnEXGIpsY7YQbxJHCZOkxRJhiQXUiQpmbSBVElqIl0mPSa9IZPJOmRHchhZQF5PriSfIF8lD5I\/UJQoJhRPShxFQtlOOUq5QHlAeUOlUg2obtRYqpi6nVpPvUR9Sn0vR5Mzl\/OX48mtk6uRa5Xrl3slT5TXl3eXXy6fJ18hf0r+pvy4AlHBQMFTgaOwVqFG4bTCPYVJRZqilWKIYppiiWKD4jXFUSW8koGStxJPqUDpsNIlpSEaQtOledK4tE20Otpl2jAdRzek+9OT6cX0H+i99AllJWVb5SjlHOUa5bPKUgbCMGD4M1IZpYyTjLuMj\/M05rnP48\/bNq9pXv+8KZX5Km4qfJUilWaVAZWPqkxVb9UU1Z2qbapP1DBqJmphatlq+9Uuq43Pp893ns+dXzT\/5PyH6rC6iXq4+mr1w+o96pMamhq+GhkaVRqXNMY1GZpumsma5ZrnNMe0aFoLtQRa5VrntV4wlZnuzFRmJbOLOaGtru2nLdE+pN2rPa1jqLNYZ6NOs84TXZIuWzdBt1y3U3dCT0svWC9fr1HvoT5Rn62fpL9Hv1t\/ysDQINpgi0GbwaihiqG\/YZ5ho+FjI6qRq9Eqo1qjO8Y4Y7ZxivE+41smsImdSZJJjclNU9jU3lRgus+0zwxr5mgmNKs1u8eisNxZWaxG1qA5wzzIfKN5m\/krCz2LWIudFt0WXyztLFMt6ywfWSlZBVhttOqw+sPaxJprXWN9x4Zq42Ozzqbd5rWtqS3fdr\/tfTuaXbDdFrtOu8\/2DvYi+yb7MQc9h3iHvQ732HR2KLuEfdUR6+jhuM7xjOMHJ3snsdNJp9+dWc4pzg3OowsMF\/AX1C0YctFx4bgccpEuZC6MX3hwodRV25XjWuv6zE3Xjed2xG3E3dg92f24+ysPSw+RR4vHlKeT5xrPC16Il69XkVevt5L3Yu9q76c+Oj6JPo0+E752vqt9L\/hh\/QL9dvrd89fw5\/rX+08EOASsCegKpARGBFYHPgsyCRIFdQTDwQHBu4IfL9JfJFzUFgJC\/EN2hTwJNQxdFfpzGC4sNKwm7Hm4VXh+eHcELWJFREPEu0iPyNLIR4uNFksWd0bJR8VF1UdNRXtFl0VLl1gsWbPkRoxajCCmPRYfGxV7JHZyqffS3UuH4+ziCuPuLjNclrPs2nK15anLz66QX8FZcSoeGx8d3xD\/iRPCqeVMrvRfuXflBNeTu4f7kufGK+eN8V34ZfyRBJeEsoTRRJfEXYljSa5JFUnjAk9BteB1sl\/ygeSplJCUoykzqdGpzWmEtPi000IlYYqwK10zPSe9L8M0ozBDuspp1e5VE6JA0ZFMKHNZZruYjv5M9UiMJJslg1kLs2qy3mdHZZ\/KUcwR5vTkmuRuyx3J88n7fjVmNXd1Z752\/ob8wTXuaw6thdauXNu5Tnddwbrh9b7rj20gbUjZ8MtGy41lG99uit7UUaBRsL5gaLPv5sZCuUJR4b0tzlsObMVsFWzt3WazrWrblyJe0fViy+KK4k8l3JLr31l9V\/ndzPaE7b2l9qX7d+B2CHfc3em681iZYlle2dCu4F2t5czyovK3u1fsvlZhW3FgD2mPZI+0MqiyvUqvakfVp+qk6oEaj5rmvep7t+2d2sfb17\/fbX\/TAY0DxQc+HhQcvH\/I91BrrUFtxWHc4azDz+ui6rq\/Z39ff0TtSPGRz0eFR6XHwo911TvU1zeoN5Q2wo2SxrHjccdv\/eD1Q3sTq+lQM6O5+AQ4ITnx4sf4H++eDDzZeYp9qukn\/Z\/2ttBailqh1tzWibakNml7THvf6YDTnR3OHS0\/m\/989Iz2mZqzymdLz5HOFZybOZ93fvJCxoXxi4kXhzpXdD66tOTSna6wrt7LgZevXvG5cqnbvfv8VZerZ645XTt9nX297Yb9jdYeu56WX+x+aem172296XCz\/ZbjrY6+BX3n+l37L972un3ljv+dGwOLBvruLr57\/17cPel93v3RB6kPXj\/Mejj9aP1j7OOiJwpPKp6qP6391fjXZqm99Oyg12DPs4hnj4a4Qy\/\/lfmvT8MFz6nPK0a0RupHrUfPjPmM3Xqx9MXwy4yX0+OFvyn+tveV0auffnf7vWdiycTwa9HrmT9K3qi+OfrW9m3nZOjk03dp76anit6rvj\/2gf2h+2P0x5Hp7E\/4T5WfjT93fAn88ngmbWbm3\/eE8\/syOll+AAAACXBIWXMAAAsTAAALEwEAmpwYAAADj0lEQVRoBd2aTYiNURjH54oRRVKM8lk+Z2FirJjSSBaGncFCFlNTFiyGZkpRUoOQUBaywEKhZiNFYUGZLHwrGh+LiaxIM4tp1JTr97+85r33vh\/nvF33fc996nS+nuc5\/\/\/7P3Pufc\/cXF1Cy+fz7YQuTBhuG3Y3l8u9sw3K2QbIH2KNVG8oE9Wvgj1hjRYI5m3WmmDj7PM9S7taxLTsWsouNWzMWjlU28oCt20WqZDvV\/IsR70R03xWykFsEonPmCavsN9c8h2scM7xdJDrpqRpoyxufIgZb0uSzobmR8r0cbqptPrYmttNVrbZlscyQEyc2nnQ603IGSlHstUke0axeRgm6yf1eUXgGhT8FZXAFOx5kpj6Rq1XqblVJOqMSxarHKrtIMnNuEQpzH9jzaWoNxy2dqQaEJtC4Omw4JTHZ7H+kSgMkeQI7KEsiEqQ8tw+BFgWhiF0WxI0j6D3lKlhwRkZv8PW3BKEJUq5kw4QE6c2hNgcRC5QOZzX4dwfFJDRsQFwNaHgmB9fmXIQE2Ed\/S7ZCsDuLQVcphzkOnC6XOroQH8IjPpo+O5hLVIOYtOYOO5NOlbPAG+vH3MROSYOUeb4HRxrdyJQk4f537ZkcDGDbymTvUlH64dszQ3C7ldOL6GuExOnVoTapkZBOTobaT\/QQI3YIDwaPXIv6eibdi1Zt7ctH9cSK7joCrDfU24mHV0hqK4Fu8ahsrugHI0fMIp8fXCI8QhYC7dk3rYU9osUfRS4bicQS3ecf05Ljw2n5iba97y+g\/UgmBsh91PY\/crVMXifsVuacNR6PGLCXzhQ\/ERQbwl9bc96\/7gD7UcQa\/XjLFJOEzh8ojrnd3KgrSu+rlKcZcrJAfX0dqCPhgb1HbBLiLKnFGcgOTlBsIPKhfc6Xe3pPU5XfUVWti19s1dpP\/f1s9o8GkRMYEOV0yTqtVBl+auZbudWQm5MeEstSjkdLrokul4alKH+gTBiwhipnBxQbz7VACVr95f6EUCbMIZZpHIKIsEXqlNhCVIa1zbcH7d2LLm\/CUTuc1yyKs5f4KHr7y3SYrelF8323En7htdPsdbVnY7+oTgMpsppe+rfWFk4OQ+bEBNxY+XkjHrNVE8pxg9FcRW01+Rqhpy+bsWaFUiSviDjldis\/8+hy5RYIgio10AZplTb+hIBtg2CVbV\/j6LfnyyyxZnIn4XqKR8o1bLeREBrOeg3tiai1oPkzgAAAAAASUVORK5CYILIWYVUKg4AAA==","1f_circle":"H4sIAAAAAAAAAwGqDVXyiVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAKQWlDQ1BJQ0MgUHJvZmlsZQAASA2dlndUU9kWh8+9N73QEiIgJfQaegkg0jtIFQRRiUmAUAKGhCZ2RAVGFBEpVmRUwAFHhyJjRRQLg4Ji1wnyEFDGwVFEReXdjGsJ7601896a\/cdZ39nnt9fZZ+9917oAUPyCBMJ0WAGANKFYFO7rwVwSE8vE9wIYEAEOWAHA4WZmBEf4RALU\/L09mZmoSMaz9u4ugGS72yy\/UCZz1v9\/kSI3QyQGAApF1TY8fiYX5QKUU7PFGTL\/BMr0lSkyhjEyFqEJoqwi48SvbPan5iu7yZiXJuShGlnOGbw0noy7UN6aJeGjjAShXJgl4GejfAdlvVRJmgDl9yjT0\/icTAAwFJlfzOcmoWyJMkUUGe6J8gIACJTEObxyDov5OWieAHimZ+SKBIlJYqYR15hp5ejIZvrxs1P5YjErlMNN4Yh4TM\/0tAyOMBeAr2+WRQElWW2ZaJHtrRzt7VnW5mj5v9nfHn5T\/T3IevtV8Sbsz55BjJ5Z32zsrC+9FgD2JFqbHbO+lVUAtG0GQOXhrE\/vIADyBQC03pzzHoZsXpLE4gwnC4vs7GxzAZ9rLivoN\/ufgm\/Kv4Y595nL7vtWO6YXP4EjSRUzZUXlpqemS0TMzAwOl89k\/fcQ\/+PAOWnNycMsnJ\/AF\/GF6FVR6JQJhIlou4U8gViQLmQKhH\/V4X8YNicHGX6daxRodV8AfYU5ULhJB8hvPQBDIwMkbj96An3rWxAxCsi+vGitka9zjzJ6\/uf6Hwtcim7hTEEiU+b2DI9kciWiLBmj34RswQISkAd0oAo0gS4wAixgDRyAM3AD3iAAhIBIEAOWAy5IAmlABLJBPtgACkEx2AF2g2pwANSBetAEToI2cAZcBFfADXALDIBHQAqGwUswAd6BaQiC8BAVokGqkBakD5lC1hAbWgh5Q0FQOBQDxUOJkBCSQPnQJqgYKoOqoUNQPfQjdBq6CF2D+qAH0CA0Bv0BfYQRmALTYQ3YALaA2bA7HAhHwsvgRHgVnAcXwNvhSrgWPg63whfhG\/AALIVfwpMIQMgIA9FGWAgb8URCkFgkAREha5EipAKpRZqQDqQbuY1IkXHkAwaHoWGYGBbGGeOHWYzhYlZh1mJKMNWYY5hWTBfmNmYQM4H5gqVi1bGmWCesP3YJNhGbjS3EVmCPYFuwl7ED2GHsOxwOx8AZ4hxwfrgYXDJuNa4Etw\/XjLuA68MN4SbxeLwq3hTvgg\/Bc\/BifCG+Cn8cfx7fjx\/GvyeQCVoEa4IPIZYgJGwkVBAaCOcI\/YQRwjRRgahPdCKGEHnEXGIpsY7YQbxJHCZOkxRJhiQXUiQpmbSBVElqIl0mPSa9IZPJOmRHchhZQF5PriSfIF8lD5I\/UJQoJhRPShxFQtlOOUq5QHlAeUOlUg2obtRYqpi6nVpPvUR9Sn0vR5Mzl\/OX48mtk6uRa5Xrl3slT5TXl3eXXy6fJ18hf0r+pvy4AlHBQMFTgaOwVqFG4bTCPYVJRZqilWKIYppiiWKD4jXFUSW8koGStxJPqUDpsNIlpSEaQtOledK4tE20Otpl2jAdRzek+9OT6cX0H+i99AllJWVb5SjlHOUa5bPKUgbCMGD4M1IZpYyTjLuMj\/M05rnP48\/bNq9pXv+8KZX5Km4qfJUilWaVAZWPqkxVb9UU1Z2qbapP1DBqJmphatlq+9Uuq43Pp893ns+dXzT\/5PyH6rC6iXq4+mr1w+o96pMamhq+GhkaVRqXNMY1GZpumsma5ZrnNMe0aFoLtQRa5VrntV4wlZnuzFRmJbOLOaGtru2nLdE+pN2rPa1jqLNYZ6NOs84TXZIuWzdBt1y3U3dCT0svWC9fr1HvoT5Rn62fpL9Hv1t\/ysDQINpgi0GbwaihiqG\/YZ5ho+FjI6qRq9Eqo1qjO8Y4Y7ZxivE+41smsImdSZJJjclNU9jU3lRgus+0zwxr5mgmNKs1u8eisNxZWaxG1qA5wzzIfKN5m\/krCz2LWIudFt0WXyztLFMt6ywfWSlZBVhttOqw+sPaxJprXWN9x4Zq42Ozzqbd5rWtqS3fdr\/tfTuaXbDdFrtOu8\/2DvYi+yb7MQc9h3iHvQ732HR2KLuEfdUR6+jhuM7xjOMHJ3snsdNJp9+dWc4pzg3OowsMF\/AX1C0YctFx4bgccpEuZC6MX3hwodRV25XjWuv6zE3Xjed2xG3E3dg92f24+ysPSw+RR4vHlKeT5xrPC16Il69XkVevt5L3Yu9q76c+Oj6JPo0+E752vqt9L\/hh\/QL9dvrd89fw5\/rX+08EOASsCegKpARGBFYHPgsyCRIFdQTDwQHBu4IfL9JfJFzUFgJC\/EN2hTwJNQxdFfpzGC4sNKwm7Hm4VXh+eHcELWJFREPEu0iPyNLIR4uNFksWd0bJR8VF1UdNRXtFl0VLl1gsWbPkRoxajCCmPRYfGxV7JHZyqffS3UuH4+ziCuPuLjNclrPs2nK15anLz66QX8FZcSoeGx8d3xD\/iRPCqeVMrvRfuXflBNeTu4f7kufGK+eN8V34ZfyRBJeEsoTRRJfEXYljSa5JFUnjAk9BteB1sl\/ygeSplJCUoykzqdGpzWmEtPi000IlYYqwK10zPSe9L8M0ozBDuspp1e5VE6JA0ZFMKHNZZruYjv5M9UiMJJslg1kLs2qy3mdHZZ\/KUcwR5vTkmuRuyx3J88n7fjVmNXd1Z752\/ob8wTXuaw6thdauXNu5Tnddwbrh9b7rj20gbUjZ8MtGy41lG99uit7UUaBRsL5gaLPv5sZCuUJR4b0tzlsObMVsFWzt3WazrWrblyJe0fViy+KK4k8l3JLr31l9V\/ndzPaE7b2l9qX7d+B2CHfc3em681iZYlle2dCu4F2t5czyovK3u1fsvlZhW3FgD2mPZI+0MqiyvUqvakfVp+qk6oEaj5rmvep7t+2d2sfb17\/fbX\/TAY0DxQc+HhQcvH\/I91BrrUFtxWHc4azDz+ui6rq\/Z39ff0TtSPGRz0eFR6XHwo911TvU1zeoN5Q2wo2SxrHjccdv\/eD1Q3sTq+lQM6O5+AQ4ITnx4sf4H++eDDzZeYp9qukn\/Z\/2ttBailqh1tzWibakNml7THvf6YDTnR3OHS0\/m\/989Iz2mZqzymdLz5HOFZybOZ93fvJCxoXxi4kXhzpXdD66tOTSna6wrt7LgZevXvG5cqnbvfv8VZerZ645XTt9nX297Yb9jdYeu56WX+x+aem172296XCz\/ZbjrY6+BX3n+l37L972un3ljv+dGwOLBvruLr57\/17cPel93v3RB6kPXj\/Mejj9aP1j7OOiJwpPKp6qP6391fjXZqm99Oyg12DPs4hnj4a4Qy\/\/lfmvT8MFz6nPK0a0RupHrUfPjPmM3Xqx9MXwy4yX0+OFvyn+tveV0auffnf7vWdiycTwa9HrmT9K3qi+OfrW9m3nZOjk03dp76anit6rvj\/2gf2h+2P0x5Hp7E\/4T5WfjT93fAn88ngmbWbm3\/eE8\/syOll+AAAACXBIWXMAAAsTAAALEwEAmpwYAAADD0lEQVRoBe2avWsUURTFMxoXIwkKgiQIqZQUgZBCQQzENYgWItjYWCg2prCw8x9QCDZWIlgISiCmESwUImIUIaaxUJGIpSkSQUXCQoJKsv7OkDvMbMaNzu7svAdeOPvevLlz3zlz78530JaTVavVbYTuAjvACqgEQfCTtukWNCMihHcS5wgYAYOgD3SDWvvGwEfwDrwA0wj7QluMQTwAp8AD8ANksVU2egLOAmWuNcZkIq9J50Az7RPBLoF8xTDBAJgBedp7gg\/nkhICXwZZy+ZfRa+xwRhob4oYApXAJCjCnjOpDhrZjQCd4Bko0t4yedqRLhL2x0MsG5bwegyORd7FdXRIHuZwvJRGYUva4PrYHVoXBIjOAHjIjv37\/wjOo8BFG5OiWttQTjDfj5PSt73W2YHlKhzKlNXLOJe0crqJg4sCxFs7\/RY7OnFCTIhg5UmcjsvbYeuH28U4v0Q5IWKWlYfiDo725+G1j7L6JX5RJhAwxLIPAsS7F5xRRxaJoH8uHPHn57xRDcuJLGxl4CvYZSs8aNfg2K37EcvEAc8EaB+L+4h11Jb146GVxdkyodO6jxbyNhG6J\/bRQt4mYq+PCuC8m4NSyUR0eipCtLtMRIfHIjpMxLLHIpZNRMVjERUTMe+piM+6CDQRerToo4W8TcQbHxXAOeRtIqY9FRHytqtYtQug7vMdx4TqNcEe\/hNLYSbo6AZ8wjGSm9F5JAFysnJS\/55+PLK7xjUsJ1vgOmSK\/glbdrj9ALf+9QpKZEKcrzpMPE7tmgnQYLyc2lgxw9j9uLeD\/Ve1HBPlJMKUVA\/NHHDxfltHpIPsbD2hjCyRCY3isEhzIfJwq3OlVkBdemTkOnDJJusSTlsJe71gHHdEhV70lNJ4bjrGhu0OCHkKh8buPAmgjBRVWqqEbBlISxHBToPvoBW2wiSjaTwaHiNwD5jIWYW+MNCLnnyNSYbAVJPFzBJP70daa0yqLwxugEWQxVSet8HhRphvOGNnCQYJxdEjxaNgEPSBXpD4VIjlBRD\/yuY1J69Vxv7bb8JoUYsxKYEaAAAAAElFTkSuQmCC551LYKoNAAA=","1f_rect":"H4sIAAAAAAAAAwEpC9b0iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAKQWlDQ1BJQ0MgUHJvZmlsZQAASA2dlndUU9kWh8+9N73QEiIgJfQaegkg0jtIFQRRiUmAUAKGhCZ2RAVGFBEpVmRUwAFHhyJjRRQLg4Ji1wnyEFDGwVFEReXdjGsJ7601896a\/cdZ39nnt9fZZ+9917oAUPyCBMJ0WAGANKFYFO7rwVwSE8vE9wIYEAEOWAHA4WZmBEf4RALU\/L09mZmoSMaz9u4ugGS72yy\/UCZz1v9\/kSI3QyQGAApF1TY8fiYX5QKUU7PFGTL\/BMr0lSkyhjEyFqEJoqwi48SvbPan5iu7yZiXJuShGlnOGbw0noy7UN6aJeGjjAShXJgl4GejfAdlvVRJmgDl9yjT0\/icTAAwFJlfzOcmoWyJMkUUGe6J8gIACJTEObxyDov5OWieAHimZ+SKBIlJYqYR15hp5ejIZvrxs1P5YjErlMNN4Yh4TM\/0tAyOMBeAr2+WRQElWW2ZaJHtrRzt7VnW5mj5v9nfHn5T\/T3IevtV8Sbsz55BjJ5Z32zsrC+9FgD2JFqbHbO+lVUAtG0GQOXhrE\/vIADyBQC03pzzHoZsXpLE4gwnC4vs7GxzAZ9rLivoN\/ufgm\/Kv4Y595nL7vtWO6YXP4EjSRUzZUXlpqemS0TMzAwOl89k\/fcQ\/+PAOWnNycMsnJ\/AF\/GF6FVR6JQJhIlou4U8gViQLmQKhH\/V4X8YNicHGX6daxRodV8AfYU5ULhJB8hvPQBDIwMkbj96An3rWxAxCsi+vGitka9zjzJ6\/uf6Hwtcim7hTEEiU+b2DI9kciWiLBmj34RswQISkAd0oAo0gS4wAixgDRyAM3AD3iAAhIBIEAOWAy5IAmlABLJBPtgACkEx2AF2g2pwANSBetAEToI2cAZcBFfADXALDIBHQAqGwUswAd6BaQiC8BAVokGqkBakD5lC1hAbWgh5Q0FQOBQDxUOJkBCSQPnQJqgYKoOqoUNQPfQjdBq6CF2D+qAH0CA0Bv0BfYQRmALTYQ3YALaA2bA7HAhHwsvgRHgVnAcXwNvhSrgWPg63whfhG\/AALIVfwpMIQMgIA9FGWAgb8URCkFgkAREha5EipAKpRZqQDqQbuY1IkXHkAwaHoWGYGBbGGeOHWYzhYlZh1mJKMNWYY5hWTBfmNmYQM4H5gqVi1bGmWCesP3YJNhGbjS3EVmCPYFuwl7ED2GHsOxwOx8AZ4hxwfrgYXDJuNa4Etw\/XjLuA68MN4SbxeLwq3hTvgg\/Bc\/BifCG+Cn8cfx7fjx\/GvyeQCVoEa4IPIZYgJGwkVBAaCOcI\/YQRwjRRgahPdCKGEHnEXGIpsY7YQbxJHCZOkxRJhiQXUiQpmbSBVElqIl0mPSa9IZPJOmRHchhZQF5PriSfIF8lD5I\/UJQoJhRPShxFQtlOOUq5QHlAeUOlUg2obtRYqpi6nVpPvUR9Sn0vR5Mzl\/OX48mtk6uRa5Xrl3slT5TXl3eXXy6fJ18hf0r+pvy4AlHBQMFTgaOwVqFG4bTCPYVJRZqilWKIYppiiWKD4jXFUSW8koGStxJPqUDpsNIlpSEaQtOledK4tE20Otpl2jAdRzek+9OT6cX0H+i99AllJWVb5SjlHOUa5bPKUgbCMGD4M1IZpYyTjLuMj\/M05rnP48\/bNq9pXv+8KZX5Km4qfJUilWaVAZWPqkxVb9UU1Z2qbapP1DBqJmphatlq+9Uuq43Pp893ns+dXzT\/5PyH6rC6iXq4+mr1w+o96pMamhq+GhkaVRqXNMY1GZpumsma5ZrnNMe0aFoLtQRa5VrntV4wlZnuzFRmJbOLOaGtru2nLdE+pN2rPa1jqLNYZ6NOs84TXZIuWzdBt1y3U3dCT0svWC9fr1HvoT5Rn62fpL9Hv1t\/ysDQINpgi0GbwaihiqG\/YZ5ho+FjI6qRq9Eqo1qjO8Y4Y7ZxivE+41smsImdSZJJjclNU9jU3lRgus+0zwxr5mgmNKs1u8eisNxZWaxG1qA5wzzIfKN5m\/krCz2LWIudFt0WXyztLFMt6ywfWSlZBVhttOqw+sPaxJprXWN9x4Zq42Ozzqbd5rWtqS3fdr\/tfTuaXbDdFrtOu8\/2DvYi+yb7MQc9h3iHvQ732HR2KLuEfdUR6+jhuM7xjOMHJ3snsdNJp9+dWc4pzg3OowsMF\/AX1C0YctFx4bgccpEuZC6MX3hwodRV25XjWuv6zE3Xjed2xG3E3dg92f24+ysPSw+RR4vHlKeT5xrPC16Il69XkVevt5L3Yu9q76c+Oj6JPo0+E752vqt9L\/hh\/QL9dvrd89fw5\/rX+08EOASsCegKpARGBFYHPgsyCRIFdQTDwQHBu4IfL9JfJFzUFgJC\/EN2hTwJNQxdFfpzGC4sNKwm7Hm4VXh+eHcELWJFREPEu0iPyNLIR4uNFksWd0bJR8VF1UdNRXtFl0VLl1gsWbPkRoxajCCmPRYfGxV7JHZyqffS3UuH4+ziCuPuLjNclrPs2nK15anLz66QX8FZcSoeGx8d3xD\/iRPCqeVMrvRfuXflBNeTu4f7kufGK+eN8V34ZfyRBJeEsoTRRJfEXYljSa5JFUnjAk9BteB1sl\/ygeSplJCUoykzqdGpzWmEtPi000IlYYqwK10zPSe9L8M0ozBDuspp1e5VE6JA0ZFMKHNZZruYjv5M9UiMJJslg1kLs2qy3mdHZZ\/KUcwR5vTkmuRuyx3J88n7fjVmNXd1Z752\/ob8wTXuaw6thdauXNu5Tnddwbrh9b7rj20gbUjZ8MtGy41lG99uit7UUaBRsL5gaLPv5sZCuUJR4b0tzlsObMVsFWzt3WazrWrblyJe0fViy+KK4k8l3JLr31l9V\/ndzPaE7b2l9qX7d+B2CHfc3em681iZYlle2dCu4F2t5czyovK3u1fsvlZhW3FgD2mPZI+0MqiyvUqvakfVp+qk6oEaj5rmvep7t+2d2sfb17\/fbX\/TAY0DxQc+HhQcvH\/I91BrrUFtxWHc4azDz+ui6rq\/Z39ff0TtSPGRz0eFR6XHwo911TvU1zeoN5Q2wo2SxrHjccdv\/eD1Q3sTq+lQM6O5+AQ4ITnx4sf4H++eDDzZeYp9qukn\/Z\/2ttBailqh1tzWibakNml7THvf6YDTnR3OHS0\/m\/989Iz2mZqzymdLz5HOFZybOZ93fvJCxoXxi4kXhzpXdD66tOTSna6wrt7LgZevXvG5cqnbvfv8VZerZ645XTt9nX297Yb9jdYeu56WX+x+aem172296XCz\/ZbjrY6+BX3n+l37L972un3ljv+dGwOLBvruLr57\/17cPel93v3RB6kPXj\/Mejj9aP1j7OOiJwpPKp6qP6391fjXZqm99Oyg12DPs4hnj4a4Qy\/\/lfmvT8MFz6nPK0a0RupHrUfPjPmM3Xqx9MXwy4yX0+OFvyn+tveV0auffnf7vWdiycTwa9HrmT9K3qi+OfrW9m3nZOjk03dp76anit6rvj\/2gf2h+2P0x5Hp7E\/4T5WfjT93fAn88ngmbWbm3\/eE8\/syOll+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVRYCe3QsQ2DYBDFYEBZh\/33SJll\/gDCI7g4yde4ezp9+3bdWut7d8j9Pu+j55CHnzePSc\/ya08jYTdpW5j9pJGwm7QtzH7SSNhN2hZmP2kk7CZtC7OfNBJ2k7aF2U8aCbtJ28LsJ42E3aRtYfaTRsJu0rYw+0kjYTdpW5j9pJGwm7QtzP5IaZ4f1T8HZAUwEXcZsAAAAABJRU5ErkJggj+ryHkpCwAA","1f_star":"H4sIAAAAAAAAAwGBA378iVBORw0KGgoAAAANSUhEUgAAADAAAAAuCAYAAABu3ppsAAADSElEQVRogdWZz4uVVRyHn3fmOjZNjmWlTmJqThOKihnkYpBgVoUouEiILIIgwv4Ady7aRb9WEVFt1EVIYbiIkFKDNrU2lEhEhTCnpjEomxx8WpwzebveO\/c9957rqw8cGHjP93w\/n\/PrnnMGeohaUx\/uZY6eou5SD6lF1VqSUQfUo+pVdbxqPcmoT6l\/GTh6R42COqi+7w2m1K1V6yqNOq7+7v95U11Qtba2qP3qh97MRXVL1fraEnt\/pokB1Q\/Ugao1tkQt1MMtxKv+qW6qWmdL1G1N5n4jH1etsylqn3qgjXjVy+qGqvXehPqEYbtsx3X1YK68fTkaUfuAZ4H7SlQvgAl1Y47cWQwAG4AXE+o\/BOyMxrui6waiiOeBkcTQl4B13eYvfT6JQlcDa4E1wCPAGLAc2AwMdpD\/DHAhlh+Bc8BZ4FxRFNNlGiiiuMH498JYHgBGCT20FngUWAUMxe8DseQ8oM0CM8A\/sVwCfqorpwlGr8bvs8DMnIHngN2EHl4DLM4oLCezBBPnge+At+fWwBlgBWEq3K7iAWqEqTsOTAJX\/vuiLlNPltjHq2ZKfaWpPXWV+mW1+uZlSt3jfNuvutzb08SkYa22R12pHqtYcD3T6p7ySyWYuFf9omLhqr+ou5PE15l4UD1SofjL6o6OxDeMxGcViP9Z3d6V+DoTy7y1I\/GrujOL+DoTi5z\/upiLi+rTWcXXmRhWP+2h+N\/UiRRNScfpoij+AL4HTIlLYBr4NiWgk\/vAevKeQusZIZyES9OpgV5RA5KeXZIMqCPAkpSYRPpJ7KDUERgD7kmMSaGPHhsYBRYlxqQyllI51cA64O7EmFRG1PvLVk41sDqxficMAY+VrVzagDoELE0Q8jfwOfAu4cWhLMOER4S8GG5rp0v+on6jvqr2x9hN6kfqpRKx19XXe2HgScPFYj6+Vneowy3aWK++YfsX7E96YWB77J1Grqmn1JdbCW9opxaNHFavtDBwQr0rt4G9TRKdUvepHT3FqBOG\/2A2GvlBXZlT\/AL1nboE59X31NEMbdfUFwzrZo5J9fEc2ueSLFG\/Mlw09qvZdwl1sWH9HI8mnsnZ+Ar1rTh3cz3Jt8o1rL5mt3fhO4V\/AdL7pYyQa3FdAAAAAElFTkSuQmCCsbN2BYEDAAA=","1w_6":"H4sIAAAAAAAAAwE4BMf7iVBORw0KGgoAAAANSUhEUgAAAD4AAAA1CAYAAAAZBliHAAAD\/0lEQVRogdWaS6hVVRjHv3W7PnroFdGSrIxeig40C7RMbNCD68SBRhQR9CAHNVAIGyhGEFEkOihICQoUpchBETmwwF5CZhlqlKGg9jRFEjPT1PtrsM+G\/z56PPes\/e217\/0Pz17f\/\/\/7Dvuss\/daK1gJAbeb2ZwyHiX0RgjhZGxxd2whMMTM1pvZLbEeJdVjZsuTpwLPUq\/+BSbE8ofIpq80s71mNrLx0UYzOxgL0aF6zWxynhtCeCBRrhnwpnzzPwDRP5mI7DuAPslPM8cAtwLnJPj+JMFFhnWS\/x3QlSL0cwn9sPLACzOMB04Ix1NVBz4oYf8Bdc3oBiwTlsNAT1VBlwIHJezVSoL6zzMcOCA8K6sKWi4hfwIj21dVK2BB0x040TvgGuAfCXnSNaCEgM+E6yNv8w1iviPJLNpPAdMo\/sv0ehnfSVGzXYwdBawRvh\/JHqdLGQZgu5i+68TqKmAscEw4F5c1fEzMTgLXObG6C1gsrH8BY2KNRgB\/iNkLzqyuAoYAPwnv6lijl8XkF+AyZ1Z3AXOF+SwwtVODG4FTYvJwRazuAjYJ95ZOi9+X4q0VMVYiYBLZw0yu+f0tvEeK+siWlwaVgFXSw35geLuCS4DdUvRWIlZXAaOAI9LH0nYFT8vg48C4RKzuAhZKLyeAq1sNHA0clcHPJWZ1VePu3Sn9rG018DUZtA8YlpjVXcDdTfPVjOYBk4EzMmheTazuAjZKX18BQS9ulouf1MjpLuB6sqXoXI\/mF+6jqGk1s7oLWCH9\/QZ0d5nZLjP7W8bdVRNfJWrc2rPko20hhLP5xSXyjRwFRtdCWYGAR6S3U8ANenFoYybP9XqNrG4CLgd+lb5eutCgeTLgDDClBlZXAS9KT78DV7Qa+LEM3JyY01UtZ\/MWg6eQvcfmGrT\/58B70sfX6P93iwJ9gtsLDE3E6iZgjvTQB8zsT1HzM\/uSBKxuArrINhJzreuk+BkpPA5cVSGrqzj\/rWx8J8XdwPdiMCjey4Eesg3EXMtiTO5t+p3cVgGrq4CVwnyAdisvFzH6QIy+dOZ0FTCR4lrbgjJmNwGnxewhR1ZXUVxd\/dTD8BUx\/JkBuL4O9ArjOTzeMMl2VA6J8YDaUSHbQdkjfGs8zR8X4wG1h0Zxz+wYMNbTvAv4RgLecTMvIWAM2QZhrnK7pC1CZlFU7QsWwGrh2UPZffGLBOnJiG+p8WQEMJXiSYi5VYZdS\/EszBOVhbVn2SIcm1IEPi+Bh6jh9BPnn3aalCK01vNuZOfb9kv+qpThesLxNHBzwuylkn0EGJUqOwf4gvq1MJY\/6rx6o\/HpZrbdzOqa2Xea2fQQQl9McTR0CGGHmb0dW++gRbFNm5n9D+f7ib7qlt8tAAAAAElFTkSuQmCCO2BcvTgEAAA=","1w_circle":"H4sIAAAAAAAAAwGrBFT7iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAEcklEQVRogdWaT2hUVxTGvzuS4J8EU7R\/aBpXmmiL2kVtrRSUIHbVTTdSENoiSBeGggvpsnUdShZduCsUlS5EbXHbJooiLV2YEiEGXJjaFKxVIdOIkzo\/F3cGz7udZOa9ufOe+TZ5uX\/O+b65751777nXqcMAuiT1Slor6ZGkeedcpdN+XUxjwBZJw5LelbRV0qCkFxo0LUuakTQt6VdJP0uacs4Rk09bADYDXwG3aA9zwCiws2hBu4ALQLUJ4QrwD\/AHcA943ILIcWB\/3oIGgLNLEHoI\/AB8DuwFXlnCxgZgD\/AZ8D1wdxmBr+ch6ihQDpxXgR+BD4HujHZXAQeA07URtqgAJ4BVsfUI6APONRB0GtgW2dcm4JsGAi8D\/TEdDQA3AieTwJ5oThr7fQO4FPj9E9gew\/ggMBsYH8v6ymXw74AvgEXj\/0FbPyrQD9w2Bh8DByPyTsNlHz4wWXHpRw7oBaaMoXlguAOc03DaAfwVvJbpvjngTDBS+c4pS6Amzo7cZVqNlsDh4Js61GG+qVB7Le03d6KVTi8C902nkzlwTY1aQKmjQrNJHPjWdJgBVufENRXw0dJOBePLNR4CnpjGB3Lkmhr4ec5O4o3jQDBaF3PmmQn4FcrSowZsDNTvLoBnauCXX5b3zrDBiKm8WhDPTMCvV+sYDSuvmcojBXHMBPyuoI45wNUr+kzQ+A\/oK5hrKgAlkvu57ZJUkrS39leSfnPOPSyMZQY456ryOZM6hiUv6B1TOJEjp5iYMM9vS17YkCn8PU82EWF5b5W8sEFTeDNXOvFgeXs9JLcCDZMvKwEks1\/dJUk9pr5cFLEImDfPvSVJa0zBo5zJxITlvqYkacEUrM2ZTExY7gslBUOYM5mYsNznS5LumoJNOZOJglrQ66r9+8A5t1hSMlQO\/b\/bioDlPSP5eWzaFL6ZK514sLynJS\/smiksNMXWBixvrwdYZzZr1ZU2SQPdJFNyW2zlT6biWIE8UwN\/ylPHrXp5fbtyyrT9OF9qbeMT83wqUYNPaf9rlL+fK7WMALbx7ES1Cmxu1GjMCLtSAM\/UIJnvuLBUo\/5ghfxRzjxTAX\/Ua8+\/dy3XeNQ0nOM5zX\/UIuGk4Xq2WYce4I7pcD4nrqkQfDZlYKCVTh+QxPEcuLYM4GDA72iazl+bjlWek6MkYDiIA+fSGugCJoyBxaLFAfvxJ6t13MgUA4D1wPVg5Ap5LYFDwUjNAq+1Y\/DlQBzA+Uy\/VDb\/q4GTgf\/bwGDz3s2Nrw9eS\/BTQUfnOXxOfibwO0XkSyxdJANKHVeIvPwCdgMXG\/g6A3QmdYGfCu40cDoJHCPjlgd\/MHIEuNrA9n3gcFqbqS9iAj2SvpQ0Iim8oYN8unlc0nX5tMOsfMJoQT7V1yvpVfnt\/A5J+yS9JSm81lCV9J2k4865v9PyzAz82nKM5K4gBir4Y+Ni8y\/4Lc+n+M1qeGOtVTzBHz6OABtj8Ip9J3idpPf07E7wkKSXlLzsXJZ0Tz6bdFPSL5IuxT6Xewo3U0M19aUXJAAAAABJRU5ErkJggi8+n4mrBAAA","1w_rect":"H4sIAAAAAAAAA+sM8HPn5ZLiYmBg4PX0cAkC0kYgzMEGJOXsOzYCqV5PF8eQjMa3tzbyNhjwMDiyb+RSzTlnFGDUs1LDqVOgctH+c3PjPV9Omhn9576h25E7Vd3mPGvFK05XzJ6uFm1j7HqkijfUQzP1f83cdqPNs3b\/jGq7IOGUzNGraEIM425LiLpM5f7uHxPz4pbMniDsuYJPyLog0QHoMAZPVz+XdU4JTQCLj93pxgAAAA==","1w_star":"H4sIAAAAAAAAAwFyBo35iVBORw0KGgoAAAANSUhEUgAAADoAAAA3CAYAAABdJVn2AAAGOUlEQVRogdWaa4xdVRXHf7t02kKhtFgpj7a0hQICKlJJAEGoBLAJJkCjhBgfIRFtRKLxg4\/EUBAIaEw0EvrFRA3ER+JIeCT6QUUhJDxEgoVbHlJKKQ7FAabttENLmZ8f9rrc02F6e++599zb\/pOd89p7rfU\/+7nW3tBjqEk9rNd6p\/RaIbAC+F4f9PYO6kz1EfU19fR+21MZ1C+oY+q4eke\/7akE6gz1rzbwkrq033Z1HerF6qh74lvqQf22rWtQD1f\/GOSeUX8X95vUk\/ptX9egXqLuDHJXq2eoW+N5tZr6bWPHUKerfwpSj6vz1AH19ni3WZ3fbzs7RvTN3eq76jWF92cX+uwt\/bSxY0RtPhhknlLnFr4NqL8v9NXT+mlrR1CvUndEbV4\/yfdPq8Mxr\/68HzZ2DHWa+peosXXqsZPkSepg5HlRPb4ftnYE9cLCyPrdJvnOi1pXve6Amldj3qzPlTV19j7y\/zrybjigalW9qDBvrmoh\/5nq9sj\/gwNiXo2R9v4w+kn16BbKHKyuiTJDk\/Xn\/Q7q+TFvqq5qtXbUc9VtUe6GbtvVURNRDwYWFdIJwKXAiUANuDCl9FqLsqYBvwFWAluA3wLPAy8DG4D1KaWRsrZObaJ4anwfAKYDC4GTgePJhJYAxwCHFFJR3mCrJAFSSrvUXwLLgSOArwECOyJtV4eBl4D\/AC8Cz8bzKLAbeAfYnVLyffLVQ4APADOAWcBRQWIJcFIQWxDf99YCtkXaEtd\/Az9MKW1slWgd6k3ABWHLbOCwSHubdnYD\/wXWA8\/FdT2wCRgh\/6TRpC4AbgXOJtdas3lsM\/AGMBxpCHiF3LxeITevoXbJTQZ1DvlnLwCOC9uOJVfK3EhHAtOaiHmVXPurp5KZ3wkso0FyFHiY3Ec2BJFh4E3yXxpJKW3rBqG9IaX0FvBEpPegzgDmkGv7iLhfSB4jFgPnklsl8e0e4JGigLPU9THqva3eqE6vkkw3oU5RV6qvBocd6pcmHfXV5erzkXFUvboPNpeCek6horap1+6rwHL1uSiw9UAgq35CXRs2b1Gva7Xgh9W\/R8Gd+\/OyTL280Fw3qSvbFXCi+s8Q8I56m\/uZZ6F+MZaMqq+rK8oKOlV9NASNq9+PhUTfoV6mvhG2Damf7VTgAvUeG1gTS7++Qf26+lbYs049r1uC56t\/KJC93byi6jnMjkLdoV+rfrLbCo5U\/1wg+yvz5N0TmMMu37EROXxBPbMqZcfY8DVVf6YeWomy9+v+qnmDqt5cz69a4Wz1FwWyg7bgXHegb5p6k42IxcPqqVXpm6h8lo2IwLh6VYW6FqojoeuBsiRL7XinlLYCg8BOYBfQst9ZAq8Db8f93SmlZ8oI6WRrfx7ZId8JlFLeInYB6+J+kTpQRkgpouoUcpQBGi5cJUgpjQNPxeOHyK5Z2yhbo4fSIFojhzyqRC2uJ5AjD22jLNHDgfq2\/NOTxWi6jDrRxWSHu22UJTqLBtFas4xdwiZy7OcgclilbZQlejS5r4zTGCiqxA7g6bj\/SIwRbaEs0fq5g43kyF9LMIc7lpo3gdsZPbeTI3wAp9A8IDYp2iYaBp4Sj88CYy2WWwLcDDwKPADcpS6zNbdvjD2JVu8qmk9\/\/a2w1m36d9XF6jdjfToRw+qP1TNa0HtllBlTj9pX\/o6hzgkDVb\/SJN8H1R\/ZiD8ZS7mfmM8XvVB4v1m9q9nyzhwXqi\/qP1UNuz0VnlYw8OJJvs8JIrVCvlGzP3t6vW+qx6m3mkMgdQypP41WMGWC3JPVjZHvG70g+rlQ9maxyalzzWeI1hYMH1HvVS+YaHih3FL1DnNgq1jD16uLJsh\/LL6v6QXR1aGsZnbGZ6pXqPcVDH3X3I+vtPVtw3PMu+QjBTlPmiMK8yPPvfH+wWpZZmV3h7KH1GvjOl4w7j51hSUccnMU4eNRw9sLMmvm6EL9uMDLVnm4OQyp970x89aF5nDov9RL1VJr0Ql6ppunnvsLhMdthFH+py7rBqe9GbDQRrC4rvwJ9Rp1ZkU6LzHHqoonQ0fVz1ehr670IhsRuJo5zjuvMoUNvQPql6Ob1HFjlQq\/bT7qtsq8r9pTmONVn1H\/oQ5Wqeij7gcnRsxTzcdsY9fg\/zLSOEmZC2\/WAAAAAElFTkSuQmCCv+nF4XIGAAA=","_s_fire":"H4sIAAAAAAAAAwHSAi39iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAAK\/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJkSURBVHjaxJeJbusgEEW94S1L\/\/83X18M2MSuLd2pbqc4wZGqRLrKBsyZhQHny7Jk73xVL8xpVhWrcmiB5lX+6GJ5YgQ2owbAm8oIwH1VgKZUmGcRqKGGPgtEQQAzGR8hQ59fAmhJHSAagigJ4E7GPWRXOYC6owAd1JM6wDQPADyMWUqZRMqmAojHp1Vn6EQQEgUNMJLnUjMyJsM49wygBkAPw9dVFwXRkncCIIW3GRgoTQUZn6HxCMAFEFd8TwEQ78X4rHbILoAUmeT+RFG4UhQ6MiIAE4W\/UsYFjuVjAIa2nIY4q1R0GFtQWG3E84lqw2GO2QOoCKBVu0BAPgDSU0eUDjjQenNkV\/AW\/pWChhpMTelo1a64AOKM30vk18GzTHXCNtI\/Knz3DFBgsUqBGIjTInXRY1yA9xkVoqW5tVq3pDR9A0hfF5BSARmVnh7RMDCaIdcNgbPBkgzn1Bu+SfIEFSpSBmkxyrMicb0fAEuCZrWnN89veA\/4XcakrPcjBWzkTuLjlbfTQPOlBhz+HwkqqPXmPQDdrQItxE1moGof1S74j\/8txk8EHhTQrAE8qlwfqS5yukm1x\/rAJ9Jiaa6nyATqD78aUVBhFo8b1V4DdTXdCW+IxA1zB4JhiOhZMEWO1HqnvdoHZ4FAMIhV9REF8FiUm0jsYPEJx\/Fm\/N8OhH90HI9YRHesWbXXZwAShU8qThe7H8YAuJmw5yOd989uRINKRTJAhoF8jbqrHKfeCYdIISZfSq26bk\/K+yO3YvfKrVgiwQBHnwt8ynPB25+M8hceTt\/ybPhnryJ78+tLgAEAuCFyiQgQB30AAAAASUVORK5CYIJZHYeC0gIAAA==","_s_snow":"H4sIAAAAAAAAAwHfBCD7iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A\/wD\/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9kDGxQNEmRlSaAAAARfSURBVFjD7ZdJjxV1FMV\/5\/FGupuGBxgmiaFJXDRBExESt2hYaGSjH8C4c+XC+B106ca1CxP3DiEaTTRxp+0QRWJEgkLQZmp7ekP3q+PCW3i7eCBiHBZWclOv8v63zrnzLfiXL\/1ZBdstoBa6AhxSSBr8LQQCtAHUQzaNITAC1kPW7pSM\/gC4CTSBVtybiUTN9v2SVoHzCXwYMgCGkoZ3RcB2GyilEyQyEdl+Q9InwEvhgUGSHtAH+pL6t8Kp3wK8E6Cbk3SCTBmOmqSPbZ+RtD2sHwRoL4WsZluSendEICzvABPAZMhEItECmraPSjoq6ZDtdUlnk+Ut2y1JZa7g31j0b0sgYt4OsElgCzBVIdEO6+aBbbaXJa0A28P6VaApKb\/bQGG7qOZE1QNVAlPAQeAQcAbYbLsjqS5pxvZC5MIBSfNBoAXstX1c0itAUamQ8QSi1Fop9mUIjtp+RtJrwLSkc+FiS9oFzNveBGwNHYAHJO1J71krxfaGEs0eaKSSyyTmIq7PhduvAx1Ju4EFYBRgV213JZ20\/YWkl+N9m1NyNgNnLIF6ItCuVMEO299I6tp+GpiTVLe9U9JinD8hScAPkpZsbw1Ly6popT6yMQTh\/nqFREmkLekisBIgk8CeyPI1YJPtXcC2OH9K0hlJtVS2GbweuoPsgVq013qFSCOkZXsS+E7SFeCwpKVIKsfzpegJvVQprZTYuY3XSMCkvr4POBDKL9i+F3jK9l5JxyRNhaUrZYiC2CKwJax+CNhv+1HgsO0ngMfCU0eChKrNZ8L2btsfFkWxYPtT2y6K4qrtNdurtodFUazZXi+Kol8URRFnbLtne2R7OZ7n478LcT9XFMVc\/HfM9kQ1CcuJ9mKUUxt4XtIHwOO2v5X0cGT6QUmN8F4j9BejP8xJ2mf7M0k7gdPApKQLwDvhtfOB9fswit6\/JcC7tndEf++Gy7tJ7gEeDNCapBEwDfwEfAlcS3I97leAq\/F7AVgsZ0OZAxu6VWT3MDWQAdCzPQvM2v4xGkrTdh04a3sKeMR2N86XusPUBdcDp9iQhFESuVUOUvPoRx\/YL2lguyHpvKSvgAVJl4CzkkZBZhqYsT0K3fJdw2TgoFoFVMDL5tGL4bIIHLe9FXjd9sXokjuA+8KiU5Lel3QMOCjpl9DtJSIlibHDaC0R6KWxOyvpBPAmsC2GTitITcX9+9DrAm8BB2w\/KenVRGKQwnozgdK9aZloAHVJM7HjvVsZx7NREevA58DPkYirwD5Jz8aesJJJVHdFjdkH8iieHrOUlATawMnI7PfCsnIfWAGWgaXw0FI8r952H5A0tF1La\/eNZSLc10+hOSzpSAB\/FNYPUu70Anw5SPXHLag3rWSS+rYzeLlsdlJu1IGvgbeBy7ZPh2tzAq8m6d1qMR27lErq2S4tX0\/uLa1vSlqIkrwciVkt4bvfipMnMoEb3wWSmnFs2vakpGu2R6mB\/fXvgv\/El9E\/8W34\/\/Uruzyl48\/l\/TgAAAAASUVORK5CYIIETkiy3wQAAA==","_s_stars":"H4sIAAAAAAAAAwE6BMX7iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A\/wD\/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9kDGxQUItm80BQAAAO6SURBVFjD7Zc\/aJx1GMc\/3\/eSy\/+aGChmsEOgFjtUWhxEqG5dBLu4KKJdFAU7uCmODqkitIMgFBEFRy2KgtRBUEEqDi1SEPHP4lCopk2b5HKXu7xfl+eVJ28vyaVQunjwwMH9fr\/n8\/x\/Du7yR7u9YHsEKOKuAIeUkjp3BCCUDgNDIY0+ABtAL6Q7KEzRR9nJ9L1pexKYBKaAe0KmgZkk0+m3KWDS9qTt5nbvE9bUD3xfluVVSfuA0ZAxYCSkWfNCtn4d6ISsAW3bhaR2vH0VOLYtQFEUl2y\/AfwNHAVawHhAjAbEVgAdoB3Kq5AVtvfavmz7ZFEUl3bywCjwKfAocBF4ogZReaEOsJ4sr3KmAdwH\/CTpPUkfbZuEEbPxFPMzwDHbL0laid9Gk3UVQA\/ohvUtYBVYAaZsn5P0OXACaEla3w6gSrg9KanetP2IpA+BXwYEWAEO2X4V+EbSy8BNYCUMuRUgSi0rn67E9mlgOiz5M7m4Augm968CB2w\/ByxKegpYAm4kiE4\/gFxqMzXZY\/s1YErSt8CVyIMCKCP+lfJ9tp8EliS9AlxPcgNYzl4oagnZDOuq0hsPmYgEatl+HDgIzCa5N0AfCuXLkhb6VE+znvhFcv9QDWKk1gcmJH0NdGwfAuZryh+wfRRYlfR+ulvvH0Ohb1MZFlEyQzWQ4ZCRyiOSfrZ92Pb94ebleHQOaEv6IuXIcFac+kdRD0HV1yuQRg1oOIdH0pUYPtO29wJz0f9\/TOBZYSMpVs69OsB2UmRPSVoDkDRie0PSb+nMIO9tAvAAUoZUbVeRP0hqRAVVZwZ5ry9ApWCjPl5Tq21HzMfD8r9s9yInZuJcN93N75VbAZQ1hb30UG4yLWAiEq4r6ddIxIupOubifDeB92pA5SaA6Ey9PiO1nabbKjBr+2Bk+w\/AInANuC7pq9Qn5tPd6q3\/QHInzI2oV3NzZXErdbiqzj8L5Ys1iA+AZdvHgQfj7loCqSD6bkTd2kjNU+1A6nBnQ+Ei8E8CWAJuSjoFLNk+ARxJEJ0U1l1Nw8O2345YLww6DW2\/I2kWeB64sOM03GIfmAe+BC4Dp25jH3jL9hFJDwN\/7LgPpI1oHNhv+4Kk80n5oBtRhliwfVzSfkm\/D7SW2x6z3ZJ0Dnj9NnfCVpJ3bT9dFMUt+oa2WNevSXoB+CSUVu7d9VYcJfuM7fO21ySN7RSCs8DHkr6LnGgmxXmyFQmgrPWRCmQ9x9z2Y8Czkl7cEqAsy0ZRFBt36p9R\/f27\/t\/w\/8+\/HM49ndEUx\/gAAAAASUVORK5CYILUhaIUOgQAAA==","line":"H4sIAAAAAAAAAwFIC7f0iVBORw0KGgoAAAANSUhEUgAAAFcAAAAaCAYAAADCDsDeAAAKQWlDQ1BJQ0MgUHJvZmlsZQAASA2dlndUU9kWh8+9N73QEiIgJfQaegkg0jtIFQRRiUmAUAKGhCZ2RAVGFBEpVmRUwAFHhyJjRRQLg4Ji1wnyEFDGwVFEReXdjGsJ7601896a\/cdZ39nnt9fZZ+9917oAUPyCBMJ0WAGANKFYFO7rwVwSE8vE9wIYEAEOWAHA4WZmBEf4RALU\/L09mZmoSMaz9u4ugGS72yy\/UCZz1v9\/kSI3QyQGAApF1TY8fiYX5QKUU7PFGTL\/BMr0lSkyhjEyFqEJoqwi48SvbPan5iu7yZiXJuShGlnOGbw0noy7UN6aJeGjjAShXJgl4GejfAdlvVRJmgDl9yjT0\/icTAAwFJlfzOcmoWyJMkUUGe6J8gIACJTEObxyDov5OWieAHimZ+SKBIlJYqYR15hp5ejIZvrxs1P5YjErlMNN4Yh4TM\/0tAyOMBeAr2+WRQElWW2ZaJHtrRzt7VnW5mj5v9nfHn5T\/T3IevtV8Sbsz55BjJ5Z32zsrC+9FgD2JFqbHbO+lVUAtG0GQOXhrE\/vIADyBQC03pzzHoZsXpLE4gwnC4vs7GxzAZ9rLivoN\/ufgm\/Kv4Y595nL7vtWO6YXP4EjSRUzZUXlpqemS0TMzAwOl89k\/fcQ\/+PAOWnNycMsnJ\/AF\/GF6FVR6JQJhIlou4U8gViQLmQKhH\/V4X8YNicHGX6daxRodV8AfYU5ULhJB8hvPQBDIwMkbj96An3rWxAxCsi+vGitka9zjzJ6\/uf6Hwtcim7hTEEiU+b2DI9kciWiLBmj34RswQISkAd0oAo0gS4wAixgDRyAM3AD3iAAhIBIEAOWAy5IAmlABLJBPtgACkEx2AF2g2pwANSBetAEToI2cAZcBFfADXALDIBHQAqGwUswAd6BaQiC8BAVokGqkBakD5lC1hAbWgh5Q0FQOBQDxUOJkBCSQPnQJqgYKoOqoUNQPfQjdBq6CF2D+qAH0CA0Bv0BfYQRmALTYQ3YALaA2bA7HAhHwsvgRHgVnAcXwNvhSrgWPg63whfhG\/AALIVfwpMIQMgIA9FGWAgb8URCkFgkAREha5EipAKpRZqQDqQbuY1IkXHkAwaHoWGYGBbGGeOHWYzhYlZh1mJKMNWYY5hWTBfmNmYQM4H5gqVi1bGmWCesP3YJNhGbjS3EVmCPYFuwl7ED2GHsOxwOx8AZ4hxwfrgYXDJuNa4Etw\/XjLuA68MN4SbxeLwq3hTvgg\/Bc\/BifCG+Cn8cfx7fjx\/GvyeQCVoEa4IPIZYgJGwkVBAaCOcI\/YQRwjRRgahPdCKGEHnEXGIpsY7YQbxJHCZOkxRJhiQXUiQpmbSBVElqIl0mPSa9IZPJOmRHchhZQF5PriSfIF8lD5I\/UJQoJhRPShxFQtlOOUq5QHlAeUOlUg2obtRYqpi6nVpPvUR9Sn0vR5Mzl\/OX48mtk6uRa5Xrl3slT5TXl3eXXy6fJ18hf0r+pvy4AlHBQMFTgaOwVqFG4bTCPYVJRZqilWKIYppiiWKD4jXFUSW8koGStxJPqUDpsNIlpSEaQtOledK4tE20Otpl2jAdRzek+9OT6cX0H+i99AllJWVb5SjlHOUa5bPKUgbCMGD4M1IZpYyTjLuMj\/M05rnP48\/bNq9pXv+8KZX5Km4qfJUilWaVAZWPqkxVb9UU1Z2qbapP1DBqJmphatlq+9Uuq43Pp893ns+dXzT\/5PyH6rC6iXq4+mr1w+o96pMamhq+GhkaVRqXNMY1GZpumsma5ZrnNMe0aFoLtQRa5VrntV4wlZnuzFRmJbOLOaGtru2nLdE+pN2rPa1jqLNYZ6NOs84TXZIuWzdBt1y3U3dCT0svWC9fr1HvoT5Rn62fpL9Hv1t\/ysDQINpgi0GbwaihiqG\/YZ5ho+FjI6qRq9Eqo1qjO8Y4Y7ZxivE+41smsImdSZJJjclNU9jU3lRgus+0zwxr5mgmNKs1u8eisNxZWaxG1qA5wzzIfKN5m\/krCz2LWIudFt0WXyztLFMt6ywfWSlZBVhttOqw+sPaxJprXWN9x4Zq42Ozzqbd5rWtqS3fdr\/tfTuaXbDdFrtOu8\/2DvYi+yb7MQc9h3iHvQ732HR2KLuEfdUR6+jhuM7xjOMHJ3snsdNJp9+dWc4pzg3OowsMF\/AX1C0YctFx4bgccpEuZC6MX3hwodRV25XjWuv6zE3Xjed2xG3E3dg92f24+ysPSw+RR4vHlKeT5xrPC16Il69XkVevt5L3Yu9q76c+Oj6JPo0+E752vqt9L\/hh\/QL9dvrd89fw5\/rX+08EOASsCegKpARGBFYHPgsyCRIFdQTDwQHBu4IfL9JfJFzUFgJC\/EN2hTwJNQxdFfpzGC4sNKwm7Hm4VXh+eHcELWJFREPEu0iPyNLIR4uNFksWd0bJR8VF1UdNRXtFl0VLl1gsWbPkRoxajCCmPRYfGxV7JHZyqffS3UuH4+ziCuPuLjNclrPs2nK15anLz66QX8FZcSoeGx8d3xD\/iRPCqeVMrvRfuXflBNeTu4f7kufGK+eN8V34ZfyRBJeEsoTRRJfEXYljSa5JFUnjAk9BteB1sl\/ygeSplJCUoykzqdGpzWmEtPi000IlYYqwK10zPSe9L8M0ozBDuspp1e5VE6JA0ZFMKHNZZruYjv5M9UiMJJslg1kLs2qy3mdHZZ\/KUcwR5vTkmuRuyx3J88n7fjVmNXd1Z752\/ob8wTXuaw6thdauXNu5Tnddwbrh9b7rj20gbUjZ8MtGy41lG99uit7UUaBRsL5gaLPv5sZCuUJR4b0tzlsObMVsFWzt3WazrWrblyJe0fViy+KK4k8l3JLr31l9V\/ndzPaE7b2l9qX7d+B2CHfc3em681iZYlle2dCu4F2t5czyovK3u1fsvlZhW3FgD2mPZI+0MqiyvUqvakfVp+qk6oEaj5rmvep7t+2d2sfb17\/fbX\/TAY0DxQc+HhQcvH\/I91BrrUFtxWHc4azDz+ui6rq\/Z39ff0TtSPGRz0eFR6XHwo911TvU1zeoN5Q2wo2SxrHjccdv\/eD1Q3sTq+lQM6O5+AQ4ITnx4sf4H++eDDzZeYp9qukn\/Z\/2ttBailqh1tzWibakNml7THvf6YDTnR3OHS0\/m\/989Iz2mZqzymdLz5HOFZybOZ93fvJCxoXxi4kXhzpXdD66tOTSna6wrt7LgZevXvG5cqnbvfv8VZerZ645XTt9nX297Yb9jdYeu56WX+x+aem172296XCz\/ZbjrY6+BX3n+l37L972un3ljv+dGwOLBvruLr57\/17cPel93v3RB6kPXj\/Mejj9aP1j7OOiJwpPKp6qP6391fjXZqm99Oyg12DPs4hnj4a4Qy\/\/lfmvT8MFz6nPK0a0RupHrUfPjPmM3Xqx9MXwy4yX0+OFvyn+tveV0auffnf7vWdiycTwa9HrmT9K3qi+OfrW9m3nZOjk03dp76anit6rvj\/2gf2h+2P0x5Hp7E\/4T5WfjT93fAn88ngmbWbm3\/eE8\/syOll+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAArUlEQVRoBe3V7QmAIBCA4Yz2qpZonGi05grC7ojzl6IJRcgrWH5m92DWdSQEEEAAAQQQQAABBBBAAIF\/CLia1\/DezzJvlKzzLeujrKx3Ta3VF+fceYeWvw75IdERk7Su0Z62G3sJrxhXB9ckXzOpgTn2RRaFAm4RUxj0CW5YjUJagJ2bton1PNq5tT+0XVbeJOvZa+evlVuuHxIvCQEEEEAAAQQQQAABBBB4R+ACn6443D6H8swAAAAASUVORK5CYIIBt82RSAsAAA==","smoke":"H4sIAAAAAAAAAwESD+3wiVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAYAAACMGIOFAAAO2UlEQVRogcVa224c13Jdq7rnQg6HlETJto4PJB1FhHPCEzkI9RAIyIMAf4M+kv6D5EEPQSzgQHRiJ77Fsuzo2NbRhZR4n0t3rTzs2mRzNCIp2XIaGPRMT1\/22lW1alX1Jn6jbXV1tVhaWuq7+0UAC+5emNlgNBqtS3p88+bN\/bf1bL6tGze3O3fulHNzc5dI\/lHSvKQuAJAckNyq63pjZmbm6+vXrz9\/G89\/6yBXV1eLq1evvu\/u\/0zyDEkDAEkOYAyglrQN4Meqqv7jbVi0PM1Jkri2tlYOBoNut9vtAJgF0KqqygCg1WpJkqqqsrIsfTwe161Wa1gUxb6ZtUej0T+Y2buSSncvAIBkTbKSNDQzSrrQarUuAnjwm4MMgDPuPl+WZZ\/korvPkZwzsw5Jc3dIsqIoand3MxtLquu6HtR1vSDp7yWRZGVmnp8tqRV7SOpLevc3BymJn3\/++ayk35vZBUkX3L0vqUOyNLNS0gzTBnevw0IAsCupInmB5PsAKgBjSWMADqCSNAJQmFktaURy9tcGCJwQk5999llvOBwumdkVSX0ACwBKkl1JJqmMGGuRrJIRLQMYkqSk3wP4Q9zSAdQAKpLu7lWQz7a7byFZ8T8BQNIeyf1ut7uzvr6+fevWrepXB\/nJJ5\/MtNvta+7+R6QYPG9mJYAZSSUAAWjlewQgAWhJGjCZsx0ALwJokzRJQyTCqQC4kh8LwDaAv8ZnTHLH3R8DeObuj8qy\/OHGjRt7vxrIO3fulPPz80vu\/nckL7u7AVg0sxGAWUkGwABIUnFwswRsFsC+pK6Zzbv7RZJzAOYb4Coka7YkGUmXVAH4EcAI4cok10n+HGC\/MbMv3gRoMXlgdXW1uHDhwiV3\/xPJ80H7JYA5kqW790gWkmZJzppZF0DLzAoAXQAzJAsA5wCcIbkAoEeyhWTZMiaoHed3Yj+I4zMAOiTbAHoA2mbWivvuf\/TRR+sff\/yxXgfkEeJZXV0tPvjgg8XhcPgnABdJnpM0BwAx8IJkJz4tSe1gTQ9X7cR+HkA\/BjmD5MLZawokNy8akzyOiZsHsB\/A241ri3jWztWrVx8BePZGICNVnK2q6iqA90i2M5GEQmkhueKMu59BIhsCGARLtgGcCyLqRJzN5kGSrMPNPc4pA3gVz28jEROR4h0AGPFfklyQdInkZUnrcf\/XA3n37t1uq9V6D8B7SCw6R3I2P0RSV9L5sOIMAJNU49C15uO6MgY3jAEbgCIZOHFAkE1CER4SHjCMyQQSC7cAGMn9CJmOu\/9+bW3tKwCnjs0ssdjtdt8xs3fc\/UKwKBAzS7KLFGMtJBcyBFuSrACIZK\/BqC0cZV4FeI9rLQirCBWU79sh2Y5JawfAKp9P8kyEz8JpASIejC+\/\/LLl7u9JegfAQlhtLid7SYuS5mM288RUJHeRmPBc3KsIINmVaiR3dZIIayrAWVgxW5MA2mHRcYCsGhO2DmAjAC4AeHRakCaJVVWdAXBRUt\/MBGBsZqNI9mck9RrXtJEIaIhEEi0zm4n\/CiSrZpBjkkOSdQw8u2+nMWF5cjKzdpFieQ4pFss4Phde9q67X4n4Ph3ItbW1cjQanQUwG24yI+msu\/cQLkoyKxshhVQG8Q6AC2HJWSRWbMUAktlS3I6BA1GeWbbO92t8MujMvmjkYSPZCw9bWltbO7e6uvpSCpy2lYPBoNvpdBZCg\/aDFIaRB4tw3XZmx9CpBVJ66JGcyakkgOT4O5jITF5I7qfYs\/HJsarGMcNhmunmyQ1xUpK8efny5a\/v3bu3AWDvwYMHw9u3b9dTQXa73Y6khZBlFhZphT6dQSIYxrEci51QMbPuni2dqb+QVDfiDGGZjqQxyQ4O3TP\/ny2ZwSmDi\/uWQTxdAPMx0f8URcMjSS+uXLmy+emnnz7Z3Nx8PqlzSwCzZtaJsicDNTNruzvDTWsA3YbOLCJOO\/G\/45B0EHGUc2dWN60Ih6YIyBMzKS8PQIaH5GtGoX\/Puftlkoo0twFgv67ri71e79G9e\/d+XFlZ2SbpiAG03L3T8P0qWLUf1srqIwMGUtyVMbg8gOb37GKZRLKgz5aatp\/8ZBfvxCfLwhZSDu8BOO\/u75jZIoBFAL8jeRnA39y9e\/dMjtkyqvlsLQs3zWQxjkH04kHjCTc6ICMcpo5Ww7LN2JwEyYn\/0DiWLdya+J0L7gx6AUlx7ZulzObuZ0lWRVHUly5dqiTtlGVZurvXSLHnccF8xONcnsFwE4VF2w0Kb+6bpFE2jtWN72pcc1w9exDjDWAeBpBSfVuQ3AMwcPcuUkrbkzQoy7IaDofP7t+\/PywRFmPqtxRB0x4zVEWwdyRlwvBw7aZV8qDYGFQmlzzQSSs196+KzXx+vk8njlUk+0jhsBufUfzXQhI0ZmYLm5ubOyWAPZKDuJCRPmaQiMLiojKRr9pI3bWsVg5yGA4pPwNsDnha4j4J6DTGzbE9g+S6u0ia2YM8t5mK7T0kQXOmqqr1cjAYDNvt9ovI0eNgs8yOeeC5YgBSPBYTD2\/G2GS8HeeSTaAnbc37ZhUEAPOSakm7kQY9wq0i2SvLslN2u92BpK2oGnYDRGa2EodCOVcQWYY11UYz751KhUwB2vz9KoBNBs\/adiZEfE1yhFR81yQLd++7e2ErKytVu91+juS2lZntAthCsmROE4rCNdeVOf9NMuWbNKtfBWraMQ9gmb1bOOwstMMAucjuAGiVZVkYSW1sbGyQ\/EnSLpIgyAI6u1JuW2SLTYu\/fPx1wHnj++R\/mvK7ma6yqungUNj3o+JxREtmPB6n5H7r1q1K0sOiKJ4B2CW5jVSU5lSgYNy6MTDgqDVfB1wd999G8picYzXxvQk2f8+NsDo\/N1TYGMlAhbu3AYwjNR7OfK\/Xe1zX9WMA65JGYfqDjS+3G5ouelorZoBjHM2X+b+mZacRGDMQHFYqWQUBqcyro6vYJlmVZekHD1leXh6Z2feSXiAVqJsxGI96sI5EnGPidZhxEkgWBy0cFQ1Nxm4+I29ZG2eAZcRfPt+QYrKWNMwF+JHZX1lZ2XD3r0iuNwaTe6JjMxvj5TpwcsaPA9jMe1n2TVpr2j2boPN1huhph5BhsGyuW\/ejm793BCRJL4riMYBvSP6M1G7YC2r2iMtmzBzM7im2Zn2YLdF082mTNQmUOJquMkCRzJJux93rCLmdwWAwfCmOVlZWBmVZPkbqbW4iybshgAHTe4shXm4dnrRNi99JqTe5aWKf3Ts3yGqk\/lIOn9x9cCTD7JjZTrfbHbwEkqR\/++2325KeAngYYAf5hhGX2aL54ceBnQZgWpnVPP+4Y83YRYAdAdiS9BgpOwzMbODuT1ZWVqqpjHj79u1a0nOSf5H0A5JFt5BoP79yA47G2WkAngSmec\/J85rXH\/wf+noUmnscZLNZ1\/VGu91+TPJomjjyJGlP0lOSMyRHkq4gvZ1CsG2u\/KfJuJPANQE1v09WKpP\/NXOpxzgdwK67Pya5IWnHzJ5L+vH69et7wDEvYYuieC7pdyQ34gG5wZtb\/sChuzVZ8jiAzd+THjAJjBPHJsUBkNLZEMAwiGdEcsPdf5idnf1rzu3HvWneBLDu7vNmtsfUP92TtB0Ae\/GATCLTXP+kovhVx14V4974VFHkb5HcdfenALbc\/avFxcWflpaWckgdq1I2SW6Z2U\/humUI9BIAIq1MklBzsG8q1qdpVjT22bpVaG1H4opNkv\/T7\/fvLy0tDZs3fSXIlZWVfaRW\/F6IgxcI10BSP4wac3L2TwtumuhuvmKYPPfAgpHScl7ckvStu\/83yW+Wl5dHkxe\/EmT48zMze4CURvYa15RTrj2OZacNurk1wU0SU1PtOFKrZoTDWNwwszV3\/\/5Vb6GPFdU3btwYb25uPgHwtaRPSb4IdVHgsOmc5V9zUJNuN7lN6tFJVs33zOHQFPaj2O9Keirp0263++\/HLXI6sXK4detWtb29\/cLdHyqt6OhHY7lZb+bBTkq+aWAny6nmeUeIBYeJPrvnKPYbAH4g+VVRFP+yvLy8cxyGExcrra6uFr1e7yKAvwUApZUdNcna3S1yZp6sZkUxSRTNyXiVlbPFDiZMacXWOATIUNILko8BfAfgz\/Pz89+chOHYfowkGwwG5wD8I4ALJC+SXIgG9Ey818gxOk255P00SzXBZ9escLhCpEbKeyMkPtgD8CQS\/v+a2ed1Xf\/bhx9+eOKiw2Mtef\/+\/VZd1++b2QLJuQBXZZWBw0ZXc9AHFTuOhkNOM5NvnpogESAVKit3EIaS9kluRVfu27qu7z58+PBUL2KPBbm+vt4piuIsyZ679xsD2UeqBjJdN4vdPPBcHdRKL3M9+rUjpM53lmUVEmOq8dslDeJeAwC7ZrYbAvwhgH+dm5v74VWv6l4LpLuXZtZlWgiB\/BoBSe2MA2x+UO63VNFM2o4BD5he+Q0DyC6Adiw5O3BdT6\/QcpuxE31TkdyXtOvuG2b2nZn9WdKD5eXl8WkAnggSAIqiUG4sh\/vsBsg2yU4QQoFwO0l7SE2k5wFiF8Ceme0E0AEO33XmFzezQWCz0SDey9WFpC0AzwH8F8nvhsPhZzdv3jw1wBNBmlnl7jskx7Gep0ay3m6jo97BIZkMkEqyfaZFEzXJgaSdAM+YlJzrWkhtxF2mF7tbseIru+ummf0s6WuSj8bj8cM3WfR7LMjFxcXh+vr6k6IohpIGZlYhdQr2oqHuSMSziST\/XkQTaRRN6pbSquQqLJgXJu1ki0qqzczcvUOyGy49inLpZ5I\/VlW10e\/3n0+TbL8Y5LVr18ZPnz5dL8vye0nXJD0HsBDxllNCS9KzIIZdJBJphXWydfdDKQ2j4\/DM3UdmNjCzqqqquiiKuqqqYVmWg4WFhcG1a9fGmZx+6XYsSJJ+586drW63+00MchfAVXfP+SsrEbn72MyGUXNuKy2o2ALwSNIzd3\/U7\/efvKk1fsl2KkF97969FoDzAC66e5\/keRwSRs6F41gyuheM+AjAX3q93s4XX3yxf1q6fxvbqWs+xVp0xIqouq7PlmWZVzGO6roeFEXxHCk+N1dWVvandN3\/X7b\/A6UoIh6GAKOKAAAAAElFTkSuQmCC8v6sbhIPAAA=","snow2":"H4sIAAAAAAAAAwHVBir5iVBORw0KGgoAAAANSUhEUgAAADYAAAA+CAYAAABgFuiwAAAGnElEQVRoge2aWWxVRRjH\/9MimAoIgixGlOISQ0WCEXd5oIooEXeLaMAHQSQRNS5xiYkLAkaNicqDgCuKcUGgbhAQlR3EBU0DAooIxA2tGxWk9ufD3Aun586cM21vL5D0n9yHO+fb\/ufMfPPNd45UIACmUL4kqagQToAySSuAmUC3QvhsdgBjgF3sxW\/Aec3ttxBPbJCk1pH\/HSWd1dxOCzIV9wVaiB1oaCGWBqAX8BpwD3BwA\/Q6AI8CbwFH5CuevAC4HNgZSembgeGAyQQcx\/3AQcDNwK+R8Wpg0L7mswfAvY7gAVYCXzjGFwAbPTrj8xFTq3wYScCpnvHyZvYbvsaAYuBOYBwQvyHzJFXlIZ6PJM2I+b0QeB24FjgoDz7qGe8ELI9MlyrgtJhMMXAj8ItniiVhA3Cpw++smNw2oLihwXfGU4ED\/RzBTPDIHgo8Rv360Idq4DagtcfWKoeO86lhk1Gv6EA34ElsVlsG9G8KsYjOsY47nkUtMBnonGIjlRg2816Ffeq7gceBtgJ2xBTrgBeA7inEHk4KKqL7mUN3WqBuIjFgIPCJQ2ZRkaSSmD0jaaSk9cDdQJuQIBJQFzgWDKAvMFfSB5JOcYi0T8qKbSVNkLRW0lCXfYfDwxoZaEei6yMZL0n6XNL5SUJFkipTDJVKuj\/Q6UzgGRpQGgEjJK2TlLO2PRgmO6t8qJY0ucgYc7GkcyQtDw0mG5NjrFjSaEkbgYlAB68ylAGLJL0oqUsDfbtQK+lpSccaY6bGnV0GrHMsRhdmASUx\/UUxmV+xKT2OrdgMFkVFzFYH\/GVXHO8BJyTSBlph+xQ\/BBjciq0ITEb348BAXKjI2GgN3Er94tiHKiBxrbkIjsTuNyFYAZwBfNQIQllcjT0RbAqU3wEMaQih\/sDiRgb3TyP1IOwJuTAX297zEuoCvIzdoPc31JE8e2qx2fiQLJ\/oPjZA0jXyp9J1ki6WNEnSruAp0HSslzRQUl9JCz0y2WzcI+cKcIXnbvyBLVSjpcwxwOzAu70Dm2mjv78C9P4FxhOrfIArge89OrmZERhE\/WlYBzwPdPXdSuBc0o8pIx16w1N0PgVOTPBbkiEdbUdUA0f6FPoAb2Cz3GlOob2yRwGVKQEuxn8UWpagV43dchJfZGBnzizgCaBTkmwqsPvc7cDfKaR2A30S7PQnPVEtB05qUsCBpFoDH6YEk8X0AHtvB9jZDdxaCHKHAU+TWxLF4Z\/z1k5X4M8UGzuBCUDbpgZdBFwHvAv4OkxZ2TJgXkpgcxP0n0vRnQmUpsRwNDAdGJ0k1ANYEzFcBzwLeCtvbH9jaUqAOU6BU0heX2+S0E0G2gOTqF\/pzMbV6AHO9jj5HbiFSMsN+2RHAT+nkAK7j62M\/UIK7C0ZH1G\/rYCxCX5zp2wCsSyqgHJgAPB5QGD5wnpgGHARsDZFdg8xEyF2jKQFknr6psB+joWSBhtjdkuRWtEY842k42Vrru\/2SWiNw9eShhpjyrOkvMA2H0cB2wOnyy7sq6CQfcmHx7HrLxQ7gZvIbbdL8vfuSyUNlhRSplRKKjPG3CHpzwB5H1ZJOl3SCEnbAuTbSLpEdpYlA3smm0z65gu2j35uTH9GTGY77qf+LVATG6uI2CkBHnDIuJDt\/rZ3ESoB7iO9EojifYedVyLXZwCHA6sdulOAUupP3QqHvbQCIIofgBFkCuciYJSkjZIelNQu9bGmY4ukIcaY4caYX3xCxphNxpiLZKfT5jz47SbbylsC9CmSNEVS92QdVUpKzjgWr0rqbYx5LzQaY8wcSb0lLQ1U+Srl+pmSxqS9+FsjqTzTVK1N82iMeccY83dggFG9GmPM1kDxUyWNkvRTkpCP2I+Srpd0sjHG12cIhet9VlPeTP5njJkm6ThJj8jXfwGGZhZpHTYLPYSj5iI3Q+Ukj5h8X2ChZ6HXYTti3mNNxoYrecTfj5ViT\/1gj0oTibwCE3A8kNvlaSAx7DlrKvBfQCarwab1Qzy2UolFZPvRmHMbsCQW0A2x622Au2jYlpHFNiKpOmLzqZjcBhr6DjqAWDFwBzCH2AEQOIvw1nQSPgF6xmwPxp75xpHvrwYCSPs+YGkMLshHTM39kdh8Sasd4+8qfT9qEvJF7EtJ0f1rrWz1MUi2EoljtaR+skek6H5UI2l7nmLKD4Du2BpwLPWP886PxCLX22E7UY+R0F\/Z75BGrLnQ8iHmgYYWYgcaCkGsUjaNZ\/GTpA8L4Lf5gf0Qej62X9+xED7\/B6+L\/lxGMJkKAAAAAElFTkSuQmCCIU7wCtUGAAA="};
+				var xml_base64='PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+YW5nbGU8L2tleT4KCTxyZWFsPl9fYW5nbGVfXzwvcmVhbD4KCTxrZXk+YW5nbGVWYXJpYW5jZTwva2V5PgoJPHJlYWw+X19hbmdsZVZhcl9fPC9yZWFsPgoJPGtleT5ibGVuZEZ1bmNEZXN0aW5hdGlvbjwva2V5PgoJPGludGVnZXI+X19ibGVuZEZ1bmNEZXN0aW5hdGlvbl9fPC9pbnRlZ2VyPgoJPGtleT5ibGVuZEZ1bmNTb3VyY2U8L2tleT4KCTxpbnRlZ2VyPl9fYmxlbmRGdW5jU291cmNlX188L2ludGVnZXI+Cgk8a2V5PmR1cmF0aW9uPC9rZXk+Cgk8cmVhbD5fX2R1cmF0aW9uX188L3JlYWw+Cgk8a2V5PmVtaXR0ZXJUeXBlPC9rZXk+Cgk8cmVhbD5fX2VtaXR0ZXJNb2RlX188L3JlYWw+Cgk8a2V5PmZpbmlzaENvbG9yQWxwaGE8L2tleT4KCTxyZWFsPl9fZW5kX2FfXzwvcmVhbD4KCTxrZXk+ZmluaXNoQ29sb3JCbHVlPC9rZXk+Cgk8cmVhbD5fX2VuZF9iX188L3JlYWw+Cgk8a2V5PmZpbmlzaENvbG9yR3JlZW48L2tleT4KCTxyZWFsPl9fZW5kX2dfXzwvcmVhbD4KCTxrZXk+ZmluaXNoQ29sb3JSZWQ8L2tleT4KCTxyZWFsPl9fZW5kX3JfXzwvcmVhbD4KCTxrZXk+ZmluaXNoQ29sb3JWYXJpYW5jZUFscGhhPC9rZXk+Cgk8cmVhbD5fX2VuZF9hX3Zhcl9fPC9yZWFsPgoJPGtleT5maW5pc2hDb2xvclZhcmlhbmNlQmx1ZTwva2V5PgoJPHJlYWw+X19lbmRfYl92YXJfXzwvcmVhbD4KCTxrZXk+ZmluaXNoQ29sb3JWYXJpYW5jZUdyZWVuPC9rZXk+Cgk8cmVhbD5fX2VuZF9nX3Zhcl9fPC9yZWFsPgoJPGtleT5maW5pc2hDb2xvclZhcmlhbmNlUmVkPC9rZXk+Cgk8cmVhbD5fX2VuZF9yX3Zhcl9fPC9yZWFsPgoJPGtleT5maW5pc2hQYXJ0aWNsZVNpemU8L2tleT4KCTxyZWFsPl9fZW5kU2l6ZV9fPC9yZWFsPgoJPGtleT5maW5pc2hQYXJ0aWNsZVNpemVWYXJpYW5jZTwva2V5PgoJPHJlYWw+X19lbmRTaXplVmFyX188L3JlYWw+Cgk8a2V5PmdyYXZpdHl4PC9rZXk+Cgk8cmVhbD5fX2dyYXZfeF9fPC9yZWFsPgoJPGtleT5ncmF2aXR5eTwva2V5PgoJPHJlYWw+X19ncmF2X3lfXzwvcmVhbD4KCTxrZXk+bWF4UGFydGljbGVzPC9rZXk+Cgk8cmVhbD5fX21heFBhcnRpY2xlc19fPC9yZWFsPgoJPGtleT5tYXhSYWRpdXM8L2tleT4KCTxyZWFsPl9fbWF4UmFkaXVzX188L3JlYWw+Cgk8a2V5Pm1heFJhZGl1c1ZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX21heFJhZGl1c1Zhcl9fPC9yZWFsPgoJPGtleT5taW5SYWRpdXM8L2tleT4KCTxyZWFsPl9fbWluUmFkaXVzX188L3JlYWw+Cgk8a2V5PnBhcnRpY2xlTGlmZXNwYW48L2tleT4KCTxyZWFsPl9fbGlmZV9fPC9yZWFsPgoJPGtleT5wYXJ0aWNsZUxpZmVzcGFuVmFyaWFuY2U8L2tleT4KCTxyZWFsPl9fbGlmZVZhcl9fPC9yZWFsPgoJPGtleT5yYWRpYWxBY2NlbFZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX3JhZF9hY2NlbF92YXJfXzwvcmVhbD4KCTxrZXk+cmFkaWFsQWNjZWxlcmF0aW9uPC9rZXk+Cgk8cmVhbD5fX3JhZF9hY2NlbF9fPC9yZWFsPgoJPGtleT5yb3RhdGVQZXJTZWNvbmQ8L2tleT4KCTxyZWFsPl9fcm90YXRlUGVyU2Vjb25kX188L3JlYWw+Cgk8a2V5PnJvdGF0ZVBlclNlY29uZFZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX3JvdGF0ZVBlclNlY29uZFZhcl9fPC9yZWFsPgoJPGtleT5yb3RhdGlvbkVuZDwva2V5PgoJPHJlYWw+X19lbmRTcGluX188L3JlYWw+Cgk8a2V5PnJvdGF0aW9uRW5kVmFyaWFuY2U8L2tleT4KCTxyZWFsPjAuMDwvcmVhbD4KCTxrZXk+cm90YXRpb25TdGFydDwva2V5PgoJPHJlYWw+X19zdGFydFNwaW5fXzwvcmVhbD4KCTxrZXk+cm90YXRpb25TdGFydFZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0U3BpblZhcl9fPC9yZWFsPgoJPGtleT5zb3VyY2VQb3NpdGlvblZhcmlhbmNleDwva2V5PgoJPHJlYWw+X19wb3N4X3Zhcl9fPC9yZWFsPgoJPGtleT5zb3VyY2VQb3NpdGlvblZhcmlhbmNleTwva2V5PgoJPHJlYWw+X19wb3N5X3Zhcl9fPC9yZWFsPgoJPGtleT5zb3VyY2VQb3NpdGlvbng8L2tleT4KCTxyZWFsPl9fcG9zeF9fPC9yZWFsPgoJPGtleT5zb3VyY2VQb3NpdGlvbnk8L2tleT4KCTxyZWFsPl9fcG9zeV9fPC9yZWFsPgoJPGtleT5zcGVlZDwva2V5PgoJPHJlYWw+X19zcGVlZF9fPC9yZWFsPgoJPGtleT5zcGVlZFZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX3NwZWVkVmFyX188L3JlYWw+Cgk8a2V5PnN0YXJ0Q29sb3JBbHBoYTwva2V5PgoJPHJlYWw+X19zdGFydF9hX188L3JlYWw+Cgk8a2V5PnN0YXJ0Q29sb3JCbHVlPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0X2JfXzwvcmVhbD4KCTxrZXk+c3RhcnRDb2xvckdyZWVuPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0X2dfXzwvcmVhbD4KCTxrZXk+c3RhcnRDb2xvclJlZDwva2V5PgoJPHJlYWw+X19zdGFydF9yX188L3JlYWw+Cgk8a2V5PnN0YXJ0Q29sb3JWYXJpYW5jZUFscGhhPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0X2FfdmFyX188L3JlYWw+Cgk8a2V5PnN0YXJ0Q29sb3JWYXJpYW5jZUJsdWU8L2tleT4KCTxyZWFsPl9fc3RhcnRfYl92YXJfXzwvcmVhbD4KCTxrZXk+c3RhcnRDb2xvclZhcmlhbmNlR3JlZW48L2tleT4KCTxyZWFsPl9fc3RhcnRfZ192YXJfXzwvcmVhbD4KCTxrZXk+c3RhcnRDb2xvclZhcmlhbmNlUmVkPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0X3JfdmFyX188L3JlYWw+Cgk8a2V5PnN0YXJ0UGFydGljbGVTaXplPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0U2l6ZV9fPC9yZWFsPgoJPGtleT5zdGFydFBhcnRpY2xlU2l6ZVZhcmlhbmNlPC9rZXk+Cgk8cmVhbD5fX3N0YXJ0U2l6ZVZhcl9fPC9yZWFsPgoJPGtleT50YW5nZW50aWFsQWNjZWxWYXJpYW5jZTwva2V5PgoJPHJlYWw+X190YW5fYWNjZWxfdmFyX188L3JlYWw+Cgk8a2V5PnRhbmdlbnRpYWxBY2NlbGVyYXRpb248L2tleT4KCTxyZWFsPl9fdGFuX2FjY2VsX188L3JlYWw+Cgk8a2V5PnRleHR1cmVGaWxlTmFtZTwva2V5PgoJPHN0cmluZz5fX3RleHR1cmVGaWxlTmFtZV9fLnBuZzwvc3RyaW5nPgoJPGtleT50ZXh0dXJlSW1hZ2VEYXRhPC9rZXk+Cgk8c3RyaW5nPl9fcG5nX2Jhc2U2NF9fPC9zdHJpbmc+CjwvZGljdD4KPC9wbGlzdD4K';
+				
+				var corona_base_json=$.ajax({ url: "particle/template_corona.json", async: false }).responseText;		
+				
+				var png_name=[];
+				png_name[slot]="_s_fire";
+				var emitter=[];
+				
+				$("input[type=range]").bind( 'mousedown' ,function(){ 
+					flg_mousedown=1; clog("mousedown"); 
+				});
+				$("input[type=range]").bind( 'mouseup', function(){ 
+					flg_mousedown=0; guiderect[slot].setVisible(false); clog("mouseup"); 
+				});
+			</script>
+
+</div><!-- pane_radius -->
+</div><!-- pane_motion -->
+
+</td></tr></tbody></table>
+<script>
+	var id = 0;
+	var uid = 0;
+	var bgid = 0;
+	var fgid = 0;
+	$('#panelink_save_btn').live('click',function(){
+	$('#uploadtext').toggle();
+	$.ajax({  
+            type:"POST" 
+            ,url:'http://www.effecthub.com/item/saveparticle2dx'  
+            ,data:{
+            	id: id,
+            	bgid: bgid,
+            	fgid: fgid,
+            	pic: document.getElementById("gameCanvas").toDataURL(),
+				png_filename: document.form_post_save.png_workname.value,
+				price: document.form_post_save.price.value,
+				price_type: document.form_post_save.price_type.value,
+				plist_xml: encodeURIComponent(xml)			
+			}              
+            ,success:function(data){  
+              	if(data!=0)
+              	window.top.location = 'http://www.effecthub.com/item/'+data; 
+              	else window.top.location = 'http://www.effecthub.com/login'; 
+            }//请求成功后  
+            ,error:function(data){
+            	alert('error' + data);
+            }//请求错误  
+         }); 
+     }); 
+</script>
+
+<div style="margin-left:10px;">
+	<a id="panelink_template" href="javascript:$(&#39;#plist_out&#39;).slideToggle(100);" style="font-size:80%;">RealtimePList</a>
+	<div id="plist_out" style="display:none;">
+		<h3>Plist  <span id="plist_changed" style="font-size:10px;"><span style="color:gray;">update</span></span>  </h3>
+		<pre id="plist" style="font-size:70%;margin-left:20px;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;angle&lt;/key&gt;
+	&lt;real&gt;146&lt;/real&gt;
+	&lt;key&gt;angleVariance&lt;/key&gt;
+	&lt;real&gt;50&lt;/real&gt;
+	&lt;key&gt;blendFuncDestination&lt;/key&gt;
+	&lt;integer&gt;1&lt;/integer&gt;
+	&lt;key&gt;blendFuncSource&lt;/key&gt;
+	&lt;integer&gt;770&lt;/integer&gt;
+	&lt;key&gt;duration&lt;/key&gt;
+	&lt;real&gt;-1&lt;/real&gt;
+	&lt;key&gt;emitterType&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorAlpha&lt;/key&gt;
+	&lt;real&gt;1&lt;/real&gt;
+	&lt;key&gt;finishColorBlue&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorGreen&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorRed&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorVarianceAlpha&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorVarianceBlue&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorVarianceGreen&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishColorVarianceRed&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;finishParticleSize&lt;/key&gt;
+	&lt;real&gt;40&lt;/real&gt;
+	&lt;key&gt;finishParticleSizeVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;gravityx&lt;/key&gt;
+	&lt;real&gt;-1000&lt;/real&gt;
+	&lt;key&gt;gravityy&lt;/key&gt;
+	&lt;real&gt;740&lt;/real&gt;
+	&lt;key&gt;maxParticles&lt;/key&gt;
+	&lt;real&gt;289&lt;/real&gt;
+	&lt;key&gt;maxRadius&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;maxRadiusVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;minRadius&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;particleLifespan&lt;/key&gt;
+	&lt;real&gt;1.1&lt;/real&gt;
+	&lt;key&gt;particleLifespanVariance&lt;/key&gt;
+	&lt;real&gt;0.4&lt;/real&gt;
+	&lt;key&gt;radialAccelVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;radialAcceleration&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;rotatePerSecond&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;rotatePerSecondVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;rotationEnd&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;rotationEndVariance&lt;/key&gt;
+	&lt;real&gt;0.0&lt;/real&gt;
+	&lt;key&gt;rotationStart&lt;/key&gt;
+	&lt;real&gt;720&lt;/real&gt;
+	&lt;key&gt;rotationStartVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;sourcePositionVariancex&lt;/key&gt;
+	&lt;real&gt;15&lt;/real&gt;
+	&lt;key&gt;sourcePositionVariancey&lt;/key&gt;
+	&lt;real&gt;-20&lt;/real&gt;
+	&lt;key&gt;sourcePositionx&lt;/key&gt;
+	&lt;real&gt;524&lt;/real&gt;
+	&lt;key&gt;sourcePositiony&lt;/key&gt;
+	&lt;real&gt;278&lt;/real&gt;
+	&lt;key&gt;speed&lt;/key&gt;
+	&lt;real&gt;244&lt;/real&gt;
+	&lt;key&gt;speedVariance&lt;/key&gt;
+	&lt;real&gt;5&lt;/real&gt;
+	&lt;key&gt;startColorAlpha&lt;/key&gt;
+	&lt;real&gt;1&lt;/real&gt;
+	&lt;key&gt;startColorBlue&lt;/key&gt;
+	&lt;real&gt;0.69&lt;/real&gt;
+	&lt;key&gt;startColorGreen&lt;/key&gt;
+	&lt;real&gt;0.4&lt;/real&gt;
+	&lt;key&gt;startColorRed&lt;/key&gt;
+	&lt;real&gt;0.2&lt;/real&gt;
+	&lt;key&gt;startColorVarianceAlpha&lt;/key&gt;
+	&lt;real&gt;0.1&lt;/real&gt;
+	&lt;key&gt;startColorVarianceBlue&lt;/key&gt;
+	&lt;real&gt;0.2&lt;/real&gt;
+	&lt;key&gt;startColorVarianceGreen&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;startColorVarianceRed&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;startParticleSize&lt;/key&gt;
+	&lt;real&gt;111&lt;/real&gt;
+	&lt;key&gt;startParticleSizeVariance&lt;/key&gt;
+	&lt;real&gt;10&lt;/real&gt;
+	&lt;key&gt;tangentialAccelVariance&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;tangentialAcceleration&lt;/key&gt;
+	&lt;real&gt;0&lt;/real&gt;
+	&lt;key&gt;textureFileName&lt;/key&gt;
+	&lt;string&gt;particle_texture.png&lt;/string&gt;
+	&lt;key&gt;textureImageData&lt;/key&gt;
+	&lt;string&gt;H4sIAAAAAAAAAwHSAi39iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJkSURBVHjaxJeJbusgEEW94S1L//83X18M2MSuLd2pbqc4wZGqRLrKBsyZhQHny7Jk73xVL8xpVhWrcmiB5lX+6GJ5YgQ2owbAm8oIwH1VgKZUmGcRqKGGPgtEQQAzGR8hQ59fAmhJHSAagigJ4E7GPWRXOYC6owAd1JM6wDQPADyMWUqZRMqmAojHp1Vn6EQQEgUNMJLnUjMyJsM49wygBkAPw9dVFwXRkncCIIW3GRgoTQUZn6HxCMAFEFd8TwEQ78X4rHbILoAUmeT+RFG4UhQ6MiIAE4W/UsYFjuVjAIa2nIY4q1R0GFtQWG3E84lqw2GO2QOoCKBVu0BAPgDSU0eUDjjQenNkV/AW/pWChhpMTelo1a64AOKM30vk18GzTHXCNtI/Knz3DFBgsUqBGIjTInXRY1yA9xkVoqW5tVq3pDR9A0hfF5BSARmVnh7RMDCaIdcNgbPBkgzn1Bu+SfIEFSpSBmkxyrMicb0fAEuCZrWnN89veA/4XcakrPcjBWzkTuLjlbfTQPOlBhz+HwkqqPXmPQDdrQItxE1moGof1S74j/8txk8EHhTQrAE8qlwfqS5yukm1x/rAJ9Jiaa6nyATqD78aUVBhFo8b1V4DdTXdCW+IxA1zB4JhiOhZMEWO1HqnvdoHZ4FAMIhV9REF8FiUm0jsYPEJx/Fm/N8OhH90HI9YRHesWbXXZwAShU8qThe7H8YAuJmw5yOd989uRINKRTJAhoF8jbqrHKfeCYdIISZfSq26bk/K+yO3YvfKrVgiwQBHnwt8ynPB25+M8hceTt/ybPhnryJ78+tLgAEAuCFyiQgQB30AAAAASUVORK5CYIJZHYeC0gIAAA==&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</pre>
+		<img id="img_check" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJkSURBVHjaxJeJbusgEEW94S1L//83X18M2MSuLd2pbqc4wZGqRLrKBsyZhQHny7Jk73xVL8xpVhWrcmiB5lX+6GJ5YgQ2owbAm8oIwH1VgKZUmGcRqKGGPgtEQQAzGR8hQ59fAmhJHSAagigJ4E7GPWRXOYC6owAd1JM6wDQPADyMWUqZRMqmAojHp1Vn6EQQEgUNMJLnUjMyJsM49wygBkAPw9dVFwXRkncCIIW3GRgoTQUZn6HxCMAFEFd8TwEQ78X4rHbILoAUmeT+RFG4UhQ6MiIAE4W/UsYFjuVjAIa2nIY4q1R0GFtQWG3E84lqw2GO2QOoCKBVu0BAPgDSU0eUDjjQenNkV/AW/pWChhpMTelo1a64AOKM30vk18GzTHXCNtI/Knz3DFBgsUqBGIjTInXRY1yA9xkVoqW5tVq3pDR9A0hfF5BSARmVnh7RMDCaIdcNgbPBkgzn1Bu+SfIEFSpSBmkxyrMicb0fAEuCZrWnN89veA/4XcakrPcjBWzkTuLjlbfTQPOlBhz+HwkqqPXmPQDdrQItxE1moGof1S74j/8txk8EHhTQrAE8qlwfqS5yukm1x/rAJ9Jiaa6nyATqD78aUVBhFo8b1V4DdTXdCW+IxA1zB4JhiOhZMEWO1HqnvdoHZ4FAMIhV9REF8FiUm0jsYPEJx/Fm/N8OhH90HI9YRHesWbXXZwAShU8qThe7H8YAuJmw5yOd989uRINKRTJAhoF8jbqrHKfeCYdIISZfSq26bk/K+yO3YvfKrVgiwQBHnwt8ynPB25+M8hceTt/ybPhnryJ78+tLgAEAuCFyiQgQB30AAAAASUVORK5CYII=">
+		<pre id="p2dx_out" style="font-size:70%;margin-left:20px;"></pre>
+	</div>
+</div>
+
+<div id="login" class="pop">
+        
+				<div id="register-header" class="pop-header">
+					<h2>Join EffectHub.com</h2>
+				</div>
+        <div id="idtabs"> 
+  <div class="apps-type" style="height:60px"> 	
+<ul class="tabs">
+	<li style="margin:20px 0 0 10px"><a href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#login-ct" style="color:#000"> Login </a></li>
+	<li style="margin:20px 0 0 20px"><a href="http://www.effecthub.com/editor/particle2dx/index_en.php?version=1&amp;id=0&amp;uid=0#register-ct" class="selected" style="color:#000"> Register </a></li>
+</ul>
+</div>
+
+	<div id="login-ct" style="display: none;">
+				  <br>
+				<span style="margin-left:20px;color:#333">Or Login with Your Email Address:</span>
+				<form action="http://www.effecthub.com/login/check" method="post">
+				  <div class="txt-fld">
+				    <label for="">Email</label>
+				    <input id="" name="email" type="text">
+
+				  </div>
+				  <div class="txt-fld">
+				    <label for="">Password</label>
+				    <input id="" name="password" type="password">
+				  </div>
+				  
+				  <div class="btn-fld" style="padding-left:20px;padding-right:20px;width:350px;vertical-align:center">
+					  <label for="remember_me" style="display:inline;color:#000">Remember
+				    <input type="checkbox" checked="" name="remember_me" id="remember_me"></label>
+					    <input class="save-btn" name="commit" type="submit" value="Login">
+					</div>
+					
+					<input type="hidden" name="redirectURL" value="http://www.effecthub.com/particle2dx">
+					</form>
+				</div>
+
+
+	<div id="register-ct" style="display: block;">
+				  <br>
+				<span style="margin-left:20px;color:#333">Or Sign Up with Your Email Address:</span>
+				<form id="signin_form" action="http://www.effecthub.com/register/save" method="post">
+				  <div class="txt-fld">
+				    <label for="">Your Email</label>
+				    <input id="email_address" name="email_address" type="text" value="">
+<span id="emailError" class="formErrorContent drop-shadow"></span>
+				  </div>
+				  <div class="txt-fld">
+				    <label for="">Set Password</label>
+				    <input id="password" name="password" type="password" value="">
+				    <span id="passwordError" class="formErrorContent drop-shadow"></span>
+				  </div>
+				  
+				  <div class="btn-fld" style="padding-left:20px;padding-right:20px;width:350px;vertical-align:center">
+					  <label for="remember_me" style="display:inline;color:#000">Stay informed via email	
+				    <input type="checkbox" checked="" name="consent" id="consent"></label>
+					    <input class="save-btn" name="commit" type="submit" value="Sign Up for Free" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;signup&#39;, &#39;clicked&#39;, &#39;Click Sign Up Button In particle2dx&#39;])">
+					</div>
+					<input type="hidden" name="redirectURL" value="http://www.effecthub.com/particle2dx">
+					
+					</form>
+				</div>	
+
+</div>
+<script type="text/javascript"> 
+  $("#idtabs div").idTabs(); 
+</script>
+
+		</div>
+		
+		<script type="text/javascript">
+			$(function() {
+    			$('a[rel*=leanModal]').leanModal({ top : 100, closeButton: ".modal_close" });
+			});
+		</script>
+<div id="texture" class="pop">
+	<div id="texture-header" class="pop-header">
+		<h2>My Recent Texture</h2>
+	</div>
+	<div id="texture-list">
+	</div>
+</div>	
+<script>
+	$('#mytexture_btn').live('click',function(){		
+	$.ajax({
+            type:"POST" 
+            ,url:'http://www.effecthub.com/disk/getMyAssets/3'  
+            ,data:{
+            	count: 24,
+            	uid: uid
+			}              
+            ,success:function(data){
+            	var result = JSON.parse(data);
+            	$('#texture-list').empty();
+            	var link = '<a href="javascript:void(0)" onClick=\'setUpload($(this).children("img").attr("id"));$("#texture-list").children("a").children("img").css("background-color","");$("#textures").children("a").children("img").css("background-color","");$(this).children("img").css("background-color","#aaaaff");\' style="font-weight:bold">';
+            	for(var index = 0; index < result.length; index++)
+	        	{
+	            	var texture_path = result[index].download_url;
+	        		texture_path = texture_path.replace("http://www.effecthub.com/", "../../");
+					var texture = "<img title='"+result[index].title+"' id='texture_"+result[index].id+"' style=\"width:49px;height:49px;padding:8px;float:left\" src='"+texture_path+"' />";
+	              	$('#texture-list').append(link+texture+"</a>");
+	        	}
+            }//请求成功后  
+            ,error:function(data){
+            	alert('error' + data);
+            }//请求错误  
+         }); 
+     }); 
+</script>	
+
+
+
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-40602328-2']);
+_gaq.push(['_setDomainName', '.effecthub.com']);
+
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+
+window._ga_init = function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+};
+if (window.addEventListener) {
+    window.addEventListener('load', _ga_init, false);
+} else {
+    window.attachEvent('onload', _ga_init);
+}

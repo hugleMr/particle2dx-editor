@@ -12,7 +12,7 @@ prev_emitter 11
 
 */
 var clog = function (str) {
-    //	console.log(str)
+    console.log(str);
 };
 
 var plist_changed = 0;
@@ -913,7 +913,8 @@ function prevSnapshot(index) {
 
     particle_dict = xml2ary(snap[index]);
     if (!particle_dict) {
-        alert("Plist fail");
+        console.log("plist fail prevSnapshot");
+        // alert("Plist fail");
         return false;
         exit();
     }
@@ -969,7 +970,8 @@ function prevParticle(p_filename) {
         success: function (data) {
             particle_dict = xml2ary(data);
             if (!particle_dict) {
-                alert("Plist fail");
+                console.log("plist fail prevParticle");
+                // alert("Plist fail");
                 return false;
                 exit();
             }
@@ -1126,8 +1128,6 @@ function xml2ary(xml_str) {
 
 //cocos2dxのplist > emitter
 function xmlStr2emitter(p_xml, p_slot) {
-    clog("xmlStr2emitter p_slot:" + p_slot);
-
     if (p_slot == null) {
         slot = p_slot = 0;
         clog("p_slot is NULL and override p_slot:" + p_slot);
@@ -1214,13 +1214,14 @@ function decodeP2DX(p2dx_JSON) {
     clog("decodeP2DX emitters:" + json.length);
 
     for (ind in json) {
-        clog("emit " + ind + "xml" + json[ind]);
+        console.log("emit " + ind + "xml" + json[ind]);
         slot = ind;
         xmlStr2emitter(json[ind], ind);
     }
 }
 
 function getSnapshot() {
+    console.log("getSnapshot");
     snap[snap.length] = xml;
     $("#snapshots").html(
         $("#snapshots").html() +
@@ -1623,7 +1624,9 @@ function keyShortCut(keycode) {
     if (keycode == 80) {
         document.form_post_dl.type.value = "plist_xml";
         document.form_post_dl.plist_xml.value = encodeURIComponent(xml);
-        document.form_post_dl.submit();
+        // document.form_post_dl.submit();
+        const text = document.form_post_dl.plist_xml.value;
+        saveFile(decodeURI(text), "particle", "plist");
     }
 
     // minus 189:remove
@@ -1771,36 +1774,37 @@ function downloadPng(p_slot) {
     } else {
         clog("png :length=" + png_gz_b64[p_slot].length);
         document.form_post_dl.type.value = "png_dl64gz";
-        document.form_post_dl.png_dl64gz.value = encodeURIComponent(
-            png_gz_b64[p_slot]
-        );
-        document.form_post_dl.submit();
+        document.form_post_dl.png_dl64gz.value = png_gz_b64[p_slot];
+        // document.form_post_dl.submit();
+        const text = document.form_post_dl.plist_xml.value;
+        saveFile(decodeURI(text), "particle", "plist");
     }
 }
 
 function downloadPlistNoImg(p_slot) {
     document.form_post_dl.type.value = "cocos_plist_dl";
-    document.form_post_dl.plist_xml.value = encodeURIComponent(
-        baseXML2Plist(
-            p_slot,
-            false,
-            "cocos",
-            cc.Codec.Base64.decode(xml_base64)
-        )
+    document.form_post_dl.plist_xml.value = baseXML2Plist(
+        p_slot,
+        false,
+        "cocos",
+        cc.Codec.Base64.decode(xml_base64)
     );
     const text = document.form_post_dl.plist_xml.value;
-    console.log("p_slot : ", document.form_post_dl.plist_xml.value);
-    // document.form_post_dl.submit();
-    saveFile(decodeURI(text), "particle", "plist");
+    saveFile(text, "particle", "plist");
 }
 
 function downloadJsonNoImg(p_slot) {
     console.log("p_slot : ", p_slot);
     document.form_post_dl.type.value = "corona_json_dl";
-    document.form_post_dl.plist_xml.value = encodeURIComponent(
-        baseXML2Plist(p_slot, false, "corona", corona_base_json)
+    document.form_post_dl.plist_xml.value = baseXML2Plist(
+        p_slot,
+        false,
+        "corona",
+        corona_base_json
     );
-    document.form_post_dl.submit();
+    // document.form_post_dl.submit();
+    const text = document.form_post_dl.plist_xml.value;
+    saveFile(text, "particle", "plist");
 }
 
 function duplicateSlot(p_slot) {
